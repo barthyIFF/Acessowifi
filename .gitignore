@@ -3,7 +3,7 @@
 *Db.script
 .settings
 .classpath
-
+.project
 eclipse
 stacktrace.log
 target
