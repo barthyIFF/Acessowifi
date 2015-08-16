@@ -2,7 +2,7 @@ package goaccess
 
 class Solicitacao {
 
-	String protocolo
+	String numProtocolo
 	String status
 	String tipo
 	OperadorCTI operador
@@ -12,7 +12,7 @@ class Solicitacao {
 	
 	
 	String toString(){
-		"${this.protocolo}"
+		"${this.numProtocolo}"
 	}
 	
 	static belongsTo = [OperadorCTI,AutorizadorProf,UsuarioSolicitante]
@@ -20,7 +20,7 @@ class Solicitacao {
 	static hasMany = [equipamentos:Equipamento]
 	
 	static constraints = {
-		protocolo(nullable:false,blank:false,unique:true)
+		numProtocolo(nullable:false,blank:false)
 		status(blank:false)
 		tipo(blank:false)
 		data(blank:false)

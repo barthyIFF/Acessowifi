@@ -7,7 +7,7 @@
 		<g:message code="equipamento.ip.label" default="Ip" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="ip" maxlength="15" required="" value="${equipamentoInstance?.ip}"/>
+	<g:textField name="ip" required="" value="${equipamentoInstance?.ip}"/>
 
 </div>
 
