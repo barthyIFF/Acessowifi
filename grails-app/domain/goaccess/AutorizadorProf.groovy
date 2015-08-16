@@ -12,7 +12,7 @@ class AutorizadorProf {
 	Integer numMemo
 	String celular
 	
-	String ToString () {
+	String toString () {
 		"${this.nome}"
 	}
 	

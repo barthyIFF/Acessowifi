@@ -6,7 +6,7 @@ class Equipamento {
 	String mac
 	Solicitacao solicitacao
 		
-	String ToString () {
+	String toString () {
 		"${this.mac}"
 	}
 	

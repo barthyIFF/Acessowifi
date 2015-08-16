@@ -11,6 +11,10 @@ class Solicitacao {
 	Date data
 	
 	
+	String toString(){
+		"${this.protocolo}"
+	}
+	
 	static belongsTo = [OperadorCTI,AutorizadorProf,UsuarioSolicitante]
 	
 	static hasMany = [equipamentos:Equipamento]

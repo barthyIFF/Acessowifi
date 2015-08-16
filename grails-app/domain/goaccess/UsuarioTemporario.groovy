@@ -7,7 +7,7 @@ class UsuarioTemporario extends UsuarioSolicitante {
 	String setorEvento
 	Integer numEvento
 	
-	String ToString () {
+	String toString () {
 		"${this.nome}"
 	}
 	

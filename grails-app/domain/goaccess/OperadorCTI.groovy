@@ -13,7 +13,7 @@ class OperadorCTI {
 		
 	static hasMany = [solicitacoes:Solicitacao]
 	
-	String ToString () {
+	String toString () {
 		"${this.nome}"
 	}
 	

@@ -11,7 +11,7 @@ class Endereco {
 		
 	static hasMany = [usuarios:UsuarioSolicitante]
 		
-	String ToString () {
+	String toString () {
 		"${this.cep}"
 	}
 	

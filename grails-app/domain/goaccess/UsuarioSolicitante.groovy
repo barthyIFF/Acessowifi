@@ -16,7 +16,7 @@ class UsuarioSolicitante {
 	
 	static belongsTo = Endereco
 	
-	String ToString () {
+	String toString () {
 		"${this.nome}"
 	}
 	
