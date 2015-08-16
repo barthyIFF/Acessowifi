@@ -21,7 +21,7 @@ class Solicitacao {
 	
 	static constraints = {
 		status(blank:false)
-		protocolo(blank:false,unique:true,maxSize:13)
+		protocolo(blank:false,unique:true)
 		tipo(blank:false)
 		data(blank:false)
     }

@@ -14,6 +14,6 @@ class Equipamento {
 	
     static constraints = {
 		ip(blank:false,unique:true,maxSize:15)
-		mac(blank:false,unique:true)
+		mac(blank:false)
     }
 }
