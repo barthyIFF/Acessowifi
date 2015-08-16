@@ -7,7 +7,7 @@ class UsuarioTemporario extends UsuarioSolicitante {
 	String setorEvento
 	Integer numEvento
 	
-	String ToString () {
+	String toString () {
 		"${this.nome}"
 	}
 	
@@ -15,6 +15,6 @@ class UsuarioTemporario extends UsuarioSolicitante {
 		tempoAcesso(nullable:false,blank:false)
 		evento(blank:false)
 		setorEvento(blank:false)
-		numEvento(nullable:false,blank:false)
+		numEvento(blank:false)
     }
 }

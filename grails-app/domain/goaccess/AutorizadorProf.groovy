@@ -12,7 +12,7 @@ class AutorizadorProf {
 	Integer numMemo
 	String celular
 	
-	String ToString () {
+	String toString () {
 		"${this.nome}"
 	}
 	
@@ -25,7 +25,7 @@ class AutorizadorProf {
 		senha(blank:false)
 		email(email:true,blank:false)
 		setorResponsavel(blank:false)
-		numMemo(blank:false,unique:true)
-		celular(blank:false,unique:true)
+		numMemo(blank:false)
+		celular(blank:false)
     }
 }

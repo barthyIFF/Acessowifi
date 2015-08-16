@@ -11,17 +11,17 @@ class Endereco {
 		
 	static hasMany = [usuarios:UsuarioSolicitante]
 		
-	String ToString () {
+	String toString () {
 		"${this.cep}"
 	}
 	
 	
 	static constraints = {
-		cep(blank:false,unique:true)
+		cep(blank:false)
 		logradouro(blank:false)
 		complemento(blank:false)
 		bairro(blank:false)
 		localidade(blank:false)
-		uf(nullable:false,blank:false,maxSize:2)
+		uf(blank:false)
     }
 }

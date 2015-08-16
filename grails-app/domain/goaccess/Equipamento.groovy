@@ -6,14 +6,14 @@ class Equipamento {
 	String mac
 	Solicitacao solicitacao
 		
-	String ToString () {
+	String toString () {
 		"${this.mac}"
 	}
 	
 	static belongsTo = Solicitacao
 	
     static constraints = {
-		ip(blank:false,unique:true,maxSize:12)
-		mac(blank:false,unique:true)
+		ip(blank:false,unique:true)
+		mac(nullable:false,blank:false)
     }
 }

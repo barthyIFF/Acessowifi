@@ -16,18 +16,18 @@ class UsuarioSolicitante {
 	
 	static belongsTo = Endereco
 	
-	String ToString () {
+	String toString () {
 		"${this.nome}"
 	}
 	
 	
     static constraints = {
-		nome(nullable:false,blank:false,unique:true)
+		nome(nullable:false,blank:false)
 		cpf(blank:false,unique:true)
 		email(email:true,blank:false)
 		setor(blank:false)
 		celular(blank:false)
-		login(blank:false,unique:true)
-		senha(blank:false,unique:true)
+		login(blank:false)
+		senha(blank:false)
     }
 }
