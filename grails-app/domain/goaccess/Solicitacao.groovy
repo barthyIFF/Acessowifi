@@ -3,7 +3,7 @@ package goaccess
 class Solicitacao {
 
 	String status
-	Integer protocolo
+	String protocolo
 	String tipo
 	OperadorCTI operador
 	AutorizadorProf autorizador
