@@ -18,7 +18,7 @@ class OperadorCTI {
 	}
 	
     static constraints = {
-		nome(nullable:false,blank:false,unique:true)
+		nome(nullable:false,blank:false)
 		cpf(blank:false,unique:true)
 		login(blank:false,unique:true)
 		senha(blank:false)
