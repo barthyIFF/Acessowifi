@@ -24,9 +24,9 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="status" title="${message(code: 'solicitacao.status.label', default: 'Status')}" />
+						<g:sortableColumn property="numProtocolo" title="${message(code: 'solicitacao.numProtocolo.label', default: 'Num Protocolo')}" />
 					
-						<g:sortableColumn property="protocolo" title="${message(code: 'solicitacao.protocolo.label', default: 'Protocolo')}" />
+						<g:sortableColumn property="status" title="${message(code: 'solicitacao.status.label', default: 'Status')}" />
 					
 						<g:sortableColumn property="tipo" title="${message(code: 'solicitacao.tipo.label', default: 'Tipo')}" />
 					
@@ -42,9 +42,9 @@
 				<g:each in="${solicitacaoInstanceList}" status="i" var="solicitacaoInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${solicitacaoInstance.id}">${fieldValue(bean: solicitacaoInstance, field: "status")}</g:link></td>
+						<td><g:link action="show" id="${solicitacaoInstance.id}">${fieldValue(bean: solicitacaoInstance, field: "numProtocolo")}</g:link></td>
 					
-						<td>${fieldValue(bean: solicitacaoInstance, field: "protocolo")}</td>
+						<td>${fieldValue(bean: solicitacaoInstance, field: "status")}</td>
 					
 						<td>${fieldValue(bean: solicitacaoInstance, field: "tipo")}</td>
 					
