@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list solicitacao">
 			
+				<g:if test="${solicitacaoInstance?.numProtocolo}">
+				<li class="fieldcontain">
+					<span id="numProtocolo-label" class="property-label"><g:message code="solicitacao.numProtocolo.label" default="Num Protocolo" /></span>
+					
+						<span class="property-value" aria-labelledby="numProtocolo-label"><g:fieldValue bean="${solicitacaoInstance}" field="numProtocolo"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${solicitacaoInstance?.status}">
 				<li class="fieldcontain">
 					<span id="status-label" class="property-label"><g:message code="solicitacao.status.label" default="Status" /></span>
 					
 						<span class="property-value" aria-labelledby="status-label"><g:fieldValue bean="${solicitacaoInstance}" field="status"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${solicitacaoInstance?.protocolo}">
-				<li class="fieldcontain">
-					<span id="protocolo-label" class="property-label"><g:message code="solicitacao.protocolo.label" default="Protocolo" /></span>
-					
-						<span class="property-value" aria-labelledby="protocolo-label"><g:fieldValue bean="${solicitacaoInstance}" field="protocolo"/></span>
 					
 				</li>
 				</g:if>

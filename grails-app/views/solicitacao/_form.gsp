@@ -2,21 +2,21 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'numProtocolo', 'error')} required">
+	<label for="numProtocolo">
+		<g:message code="solicitacao.numProtocolo.label" default="Num Protocolo" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="numProtocolo" required="" value="${solicitacaoInstance?.numProtocolo}"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'status', 'error')} required">
 	<label for="status">
 		<g:message code="solicitacao.status.label" default="Status" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="status" required="" value="${solicitacaoInstance?.status}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'protocolo', 'error')} required">
-	<label for="protocolo">
-		<g:message code="solicitacao.protocolo.label" default="Protocolo" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="protocolo" type="number" value="${solicitacaoInstance.protocolo}" required=""/>
 
 </div>
 
