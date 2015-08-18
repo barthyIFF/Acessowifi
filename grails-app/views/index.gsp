@@ -7,12 +7,12 @@
 <body>
 <h1>Sistema de solicitação de acesso à rede Wireless</h1> 
 <p>
-	Por favor informe o seu perfil abaixo.
+	Por favor informe o seu perfil abaixo. 
 </p>
 <ul>
 	<li>Novo Usuário (Solicitação de acesso)</li>
 	<li>Aprovador de solicitações </li>
-	<li>Operador</li>
+	<li><a>Operador</a></li>
 </ul>
 <br>
 <br>
