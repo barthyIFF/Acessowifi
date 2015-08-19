@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>GoGrailsAjax</title>
-<g:javascript library="jquery"/>
+<g:javascript src="jquery.js"/>
 <style>
 header {
     background-color:black;
@@ -19,7 +19,7 @@ nav {
     padding:5px;	      
 }
 section {
-    width:350px;
+    width:500px;
     float:left;
     padding:10px;	 	 
 }
@@ -47,12 +47,12 @@ menu3<br>
 <section>
 <h1>Consulta</h1>
 <p>
-Essa é uma aplicação que usa Ajax
+<div id="subtraction">
+        <g:render template="/ajax/subtractForm"/>
+    </div>
 </p>
-<p>
-<g:remoteField controller="ajax" action="atualiza" 
-update="div"/>
-</p>
+	
+	
 </section>
 
 <footer>
