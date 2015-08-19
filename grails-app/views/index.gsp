@@ -3,9 +3,22 @@
 <head>
 	<%--Sem estilo - <meta name="layout" content="main"/>--%>
 	<title>Sistema de solicitação de acesso à rede Wireless</title>
+	
+<style>
+header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;	
+}
+
+</style>
+   
 </head>
 <body>
+<header>
 <h1>Sistema de solicitação de acesso à rede Wireless</h1> 
+</header>
 <p>
 	Por favor informe o seu perfil abaixo. 
 </p>
@@ -18,13 +31,13 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
+
 
 <p>
 	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga!
+</p>
+<p>
+	Click <a href="ajax/indexajax">aqui</a> para acessar a página de teste do ajax!
 </p>
 </body>
 </html> 

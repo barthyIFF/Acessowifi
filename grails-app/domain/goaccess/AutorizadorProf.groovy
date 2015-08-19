@@ -10,7 +10,7 @@ class AutorizadorProf {
 	String email
 	String setorResponsavel
 	Integer numMemo
-	String celular
+	String celularNum
 	
 	String toString () {
 		"${this.nome}"
@@ -26,6 +26,6 @@ class AutorizadorProf {
 		email(email:true,blank:false)
 		setorResponsavel(blank:false)
 		numMemo(blank:false)
-		celular(blank:false)
+		celularNum(blank:false)
     }
 }
