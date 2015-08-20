@@ -33,11 +33,12 @@ header {
 <br>
 
 
+------------------------------------------{Área de desenvolvimento. Será apagada antes da primeira entrega}------------------------------------------
 <p>
-	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga!
+	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 20/08/15 - 20/08
 </p>
 <p>
-	Click <a href="status/status">aqui</a> para acessar a página de teste do ajax!
+	Click <a href="status/status">aqui</a> para acessar a página de teste do ajax! - Ultima atualizacao de Denis = 20/08/15 - 20/08
 </p>
 </body>
 </html> 
