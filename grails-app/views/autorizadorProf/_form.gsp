@@ -65,12 +65,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: autorizadorProfInstance, field: 'celular', 'error')} required">
-	<label for="celular">
-		<g:message code="autorizadorProf.celular.label" default="Celular" />
+<div class="fieldcontain ${hasErrors(bean: autorizadorProfInstance, field: 'celularNum', 'error')} required">
+	<label for="celularNum">
+		<g:message code="autorizadorProf.celularNum.label" default="Celular Num" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="celular" required="" value="${autorizadorProfInstance?.celular}"/>
+	<g:textField name="celularNum" required="" value="${autorizadorProfInstance?.celularNum}"/>
 
 </div>
 

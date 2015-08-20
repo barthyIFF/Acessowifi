@@ -86,11 +86,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${autorizadorProfInstance?.celular}">
+				<g:if test="${autorizadorProfInstance?.celularNum}">
 				<li class="fieldcontain">
-					<span id="celular-label" class="property-label"><g:message code="autorizadorProf.celular.label" default="Celular" /></span>
+					<span id="celularNum-label" class="property-label"><g:message code="autorizadorProf.celularNum.label" default="Celular Num" /></span>
 					
-						<span class="property-value" aria-labelledby="celular-label"><g:fieldValue bean="${autorizadorProfInstance}" field="celular"/></span>
+						<span class="property-value" aria-labelledby="celularNum-label"><g:fieldValue bean="${autorizadorProfInstance}" field="celularNum"/></span>
 					
 				</li>
 				</g:if>
