@@ -20,26 +20,24 @@ header {
 <h1>Sistema de solicitação de acesso à rede Wireless</h1> 
 </header>
 <p>
-	Por favor informe o seu perfil abaixo. 
+	Por favor informe o seu perfil abaixo.
 </p>
 <ul>
 	<li>Novo Usuário (Solicitação de acesso)</li>
 	<li>Aprovador de solicitações </li>
-	<li><a>Operador</a></li>
+	<li>Operador</li>
 </ul>
 <br>
 <br>
 <br>
 <br>
 
---------------------------{Área de desenvolvimento, será apagada antes da 1a entrega }------------------------------------
+
 <p>
-	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga!<br>
-	Ultima atualizacao de Claudio = 20/08/2015 - 10:13
+	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga!
 </p>
 <p>
-	Click <a href="ajax/indexajax">aqui</a> para acessar a página de teste do ajax!<br>
-	Ultima atualizacao de Denis =
+	Click <a href="status/status">aqui</a> para acessar a página de teste do ajax!
 </p>
 </body>
 </html> 
