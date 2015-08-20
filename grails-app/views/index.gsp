@@ -37,7 +37,7 @@ header {
 	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga!
 </p>
 <p>
-	Click <a href="ajax/indexajax">aqui</a> para acessar a página de teste do ajax!
+	Click <a href="status/status">aqui</a> para acessar a página de teste do ajax!
 </p>
 </body>
 </html> 

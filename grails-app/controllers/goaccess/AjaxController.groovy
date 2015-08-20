@@ -6,9 +6,11 @@ class AjaxController {
 }
 
 def indexajax() {}
-def atualiza(){
-	render "Teste alo"
-	
-	}
-
+    def difference(int a, int b) {
+        [a:a, b:b, difference:a-b]
+    }
 }
+	
+	
+
+
