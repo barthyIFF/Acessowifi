@@ -17,9 +17,20 @@ hibernate {
 // environment specific settings
 environments {
     development {
-        dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+        dataSource {			
+			/*Claudio-20/08/15: Alterando o banco de desenvolvimento para o postgree local
+			 Comentando 2 proximas linhas*/
+			 //dbCreate = "update"
+			 //url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+			 //Adicionando 6 linhas
+			 //Atencao ao nome do database, nome do usuario e senha. Todos iguais, "estoque". Isso precisa ser criado manualmente
+			 dbCreate = "create"
+			 url = "jdbc:postgresql://localhost:5432/acessowifi"
+			 username = "acessowifi"
+			 password = "acessowifi"
+			 driverClassName = "org.postgresql.Driver"
+			 dialect = "org.hibernate.dialect.PostgreSQLDialect"
+			 //Fim da configuracao do banco local
         }
     }
     test {
