@@ -24,10 +24,10 @@ environments {
 			 //url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
 			 //Adicionando 6 linhas
 			 //Atencao ao nome do database, nome do usuario e senha. Todos iguais, "estoque". Isso precisa ser criado manualmente
-			 dbCreate = "dbCreate"
-			 url = "jdbc:postgresql://localhost:5432/estoque"
-			 username = "estoque"
-			 password = "estoque"
+			 dbCreate = "create"
+			 url = "jdbc:postgresql://localhost:5432/acessowifi"
+			 username = "acessowifi"
+			 password = "acessowifi"
 			 driverClassName = "org.postgresql.Driver"
 			 dialect = "org.hibernate.dialect.PostgreSQLDialect"
 			 //Fim da configuracao do banco local
