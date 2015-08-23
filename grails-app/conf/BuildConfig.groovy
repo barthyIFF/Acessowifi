@@ -56,6 +56,8 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
+		//Claudio - 22/08/15 - Tentando instalar o plugin de autenticacao 
+		compile ':spring-security-core:2.0-RC5'
         // plugins for the build system only
         build ":tomcat:7.0.55"
 
