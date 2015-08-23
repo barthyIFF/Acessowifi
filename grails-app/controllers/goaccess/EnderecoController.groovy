@@ -1,4 +1,7 @@
 package goaccess
+import grails.plugin.springsecurity.annotation.Secured
+@Secured('ROLE_ADMIN')
+
 
 
 
@@ -9,7 +12,7 @@ import grails.transaction.Transactional
 class EnderecoController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+	@Secured('ROLE_ADMIN')
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Endereco.list(params), model:[enderecoInstanceCount: Endereco.count()]
@@ -18,12 +21,13 @@ class EnderecoController {
     def show(Endereco enderecoInstance) {
         respond enderecoInstance
     }
-
+	@Secured('ROLE_ADMIN')
     def create() {
         respond new Endereco(params)
     }
 
     @Transactional
+	@Secured('ROLE_ADMIN')
     def save(Endereco enderecoInstance) {
         if (enderecoInstance == null) {
             notFound()
@@ -45,12 +49,13 @@ class EnderecoController {
             '*' { respond enderecoInstance, [status: CREATED] }
         }
     }
-
+	@Secured('ROLE_ADMIN')
     def edit(Endereco enderecoInstance) {
         respond enderecoInstance
     }
 
     @Transactional
+	@Secured('ROLE_ADMIN')
     def update(Endereco enderecoInstance) {
         if (enderecoInstance == null) {
             notFound()
@@ -74,6 +79,7 @@ class EnderecoController {
     }
 
     @Transactional
+	@Secured('ROLE_ADMIN')
     def delete(Endereco enderecoInstance) {
 
         if (enderecoInstance == null) {

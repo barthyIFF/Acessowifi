@@ -24,17 +24,23 @@ header {
 </p>
 <ul>
 	<li>Novo Usuário (Solicitação de acesso)</li>
-	<li>Aprovador de solicitações </li>
-	<li>Operador</li>
+	<li><a href="OutrasTarefas/autorizador">Autorizador de solicitações</a> </li>
+	<li><a href="OutrasTarefas/operador">Operador do sistema</a> </li>
 </ul>
 <br>
 <br>
 <br>
 <br>
+</p>
+	Fazer <a href="j_spring_security_logout">logout</a>
+<p>
+
 ------------------------------------------{Área de desenvolvimento. Será apagada antes da primeira entrega}------------------------------------------
 <p>
 	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 22/08/15 - 19:45
+		
 </p>
+
 <p>
 	Click <a href="status/status">aqui</a> para acessar a página de teste do ajax! - Ultima atualizacao de Denis = 19/08/15 - 20:08
 </p>
