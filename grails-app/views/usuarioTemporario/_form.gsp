@@ -106,7 +106,7 @@
 		<g:message code="usuarioTemporario.endereco.label" default="Endereco" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="endereco" name="endereco.id" from="${goaccess.Endereco.list()}" optionKey="id" required="" value="${usuarioTemporarioInstance?.endereco?.id}" class="many-to-one"/>
+	<g:textField name="endereco" required="" value="${usuarioTemporarioInstance?.endereco}"/>
 
 </div>
 

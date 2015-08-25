@@ -126,7 +126,7 @@
 				<li class="fieldcontain">
 					<span id="endereco-label" class="property-label"><g:message code="usuarioTemporario.endereco.label" default="Endereco" /></span>
 					
-						<span class="property-value" aria-labelledby="endereco-label"><g:link controller="endereco" action="show" id="${usuarioTemporarioInstance?.endereco?.id}">${usuarioTemporarioInstance?.endereco?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="endereco-label"><g:fieldValue bean="${usuarioTemporarioInstance}" field="endereco"/></span>
 					
 				</li>
 				</g:if>

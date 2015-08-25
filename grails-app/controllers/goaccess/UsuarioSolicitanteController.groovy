@@ -1,10 +1,6 @@
 package goaccess
+
 import grails.plugin.springsecurity.annotation.Secured
-
-
-
-
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
