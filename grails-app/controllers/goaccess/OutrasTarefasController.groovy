@@ -27,6 +27,12 @@ class OutrasTarefasController {
 	def autorizador() {
 		render "ambiente restrito, somente AUTORIZADORES!"
 	}
+	
+	//@Secured('ROLE_ADMIN')
+	def usuario() {
+		render "ambiente restrito, somente USUARIOS!"
+	}
+	
 	//@Secured('ROLE_ADMIN')
 	def cadastronovo() {
 		render "CADASTRO DE NOVO USUARIO"
