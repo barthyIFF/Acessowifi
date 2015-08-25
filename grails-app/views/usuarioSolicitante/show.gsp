@@ -90,7 +90,7 @@
 				<li class="fieldcontain">
 					<span id="endereco-label" class="property-label"><g:message code="usuarioSolicitante.endereco.label" default="Endereco" /></span>
 					
-						<span class="property-value" aria-labelledby="endereco-label"><g:link controller="endereco" action="show" id="${usuarioSolicitanteInstance?.endereco?.id}">${usuarioSolicitanteInstance?.endereco?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="endereco-label"><g:fieldValue bean="${usuarioSolicitanteInstance}" field="endereco"/></span>
 					
 				</li>
 				</g:if>

@@ -1,66 +1,115 @@
-
-<%@ page import="goaccess.OperadorCTI" %>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'operadorCTI.label', default: 'OperadorCTI')}" />
-		<title><g:message code="default.list.label" args="[entityName]" /></title>
-	</head>
-	<body>
-		<a href="#list-operadorCTI" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
-		<div id="list-operadorCTI" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
-				<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			<table>
-			<thead>
-					<tr>
+<head>
+<meta name="layout" content="main"/>
+<title>Sistema de Solicitação de Acesso Wifi</title>
+<style type="text/css" media="screen">
+	#status {
+		background-color: #eee;
+		border: .2em solid #fff;
+		margin: 2em 2em 1em;
+		padding: 1em;
+		width: 12em;
+		float: left;
+		-moz-box-shadow: 0px 0px 1.25em #ccc;
+		-webkit-box-shadow: 0px 0px 1.25em #ccc;
+		box-shadow: 0px 0px 1.25em #ccc;
+		-moz-border-radius: 0.6em;
+		-webkit-border-radius: 0.6em;
+		border-radius: 0.6em;
+	}
+
+	.ie6 #status {
+		display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
+	}
+
+	#status ul {
+		font-size: 0.9em;
+		list-style-type: none;
+		margin-bottom: 0.6em;
+		padding: 0;
+	}
+
+	#status li {
+		line-height: 2.1;
+	}
+
+	#status h1 {
+		text-transform: uppercase;
+		font-size: 1.1em;
+		margin: 0 0 0.3em;
+	}
+
+	#page-body {
+		margin: 2em 1em 1.25em 18em;
+	}
+
+	h2 {
+		margin-top: 1em;
+		margin-bottom: 0.3em;
+		font-size: 1em;
+	}
+
+	p {
+		line-height: 1.5;
+		margin: 0.25em 0;
+	}
+
+	#controller-list ul {
+		list-style-position: inside;
+	}
+
+	#controller-list li {
+		line-height: 1.3;
+		list-style-position: inside;
+		margin: 0.25em 0;
+	}
+
+	@media screen and (max-width: 480px) {
+		#status {
+			display: none;
+		}
+
+		#page-body {
+			margin: 0 1em 1em;
+		}
+
+		#page-body h1 {
+			margin-top: 0;
+		}
+			}
+	</style>
+</head>
+<body>
+<div id="status" role="complementary">
+	<h1>Menu</h1>
+	<ul>
+		<li><g:remoteLink controller="Solicitacao" action="index" update="page-body">Solicitações</g:remoteLink></li>
+		<li><g:remoteLink controller="OperadorCTI" action="indexAntigo" update="page-body">Operadores (P)</g:remoteLink></li>
+		<li><g:remoteLink controller="UsuarioSolicitante" action="index" update="page-body">Usuários</g:remoteLink></li>
+		<li><g:remoteLink controller="UsuarioTemporario" action="index" update="page-body">Usuários temporários</g:remoteLink></li>
+		<li><g:remoteLink controller="Equipamento" action="index" update="page-body">Equipamentos</g:remoteLink></li>
+		<li><g:remoteLink controller="Equipamento" action="index" update="page-body">Autorizador</g:remoteLink></li>
+		<li><g:remoteLink controller="OutrasTarefas" action="autorizador" update="page-body">Encerrar Solicitacoes (P)</g:remoteLink></li>
+		<li><a href="j_spring_security_logout">Fazer logout</a></li>		
+	</ul>
+</div>
+
+<div id="page-body" role="main">
+	<h1>Sem bem Vindo, Operador</h1>
+	<p>
+		Texto para o operador...Texto para o operador...Texto para o operador...<br>
+		Texto para o operador...Texto para o operador...Texto para o operador...<br>
+		Texto para o operador...Texto para o operador...Texto para o operador...<br>
+		<br>
+		PENDENCIA: tentar colocar aqui uma lista das solicitacoes pendentes, a serem encerradas!<br>
+		<br>
+		PENDENCIA EM CADASTRO DE OPERADORES E AUTORIZADORES: Tem que pegar o usuario e a senha<br>
+		informados e, automaticamente, tb fazer o cadastro em clientes, papelcliente e papel (autenticacao).
+		
 					
-						<g:sortableColumn property="nome" title="${message(code: 'operadorCTI.nome.label', default: 'Nome')}" />
-					
-						<g:sortableColumn property="cpf" title="${message(code: 'operadorCTI.cpf.label', default: 'Cpf')}" />
-					
-						<g:sortableColumn property="login" title="${message(code: 'operadorCTI.login.label', default: 'Login')}" />
-					
-						<g:sortableColumn property="senha" title="${message(code: 'operadorCTI.senha.label', default: 'Senha')}" />
-					
-						<g:sortableColumn property="hashSenha" title="${message(code: 'operadorCTI.hashSenha.label', default: 'Hash Senha')}" />
-					
-						<g:sortableColumn property="email" title="${message(code: 'operadorCTI.email.label', default: 'Email')}" />
-					
-					</tr>
-				</thead>
-				<tbody>
-				<g:each in="${operadorCTIInstanceList}" status="i" var="operadorCTIInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
-						<td><g:link action="show" id="${operadorCTIInstance.id}">${fieldValue(bean: operadorCTIInstance, field: "nome")}</g:link></td>
-					
-						<td>${fieldValue(bean: operadorCTIInstance, field: "cpf")}</td>
-					
-						<td>${fieldValue(bean: operadorCTIInstance, field: "login")}</td>
-					
-						<td>${fieldValue(bean: operadorCTIInstance, field: "senha")}</td>
-					
-						<td>${fieldValue(bean: operadorCTIInstance, field: "hashSenha")}</td>
-					
-						<td>${fieldValue(bean: operadorCTIInstance, field: "email")}</td>
-					
-					</tr>
-				</g:each>
-				</tbody>
-			</table>
-			<div class="pagination">
-				<g:paginate total="${operadorCTIInstanceCount ?: 0}" />
-			</div>
-		</div>
-	</body>
+	</p>
+	<div id="controller-list" role="navigation"></div>
+</div>
+</body>
 </html>

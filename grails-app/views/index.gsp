@@ -88,7 +88,7 @@
 			<h1>Clique no seu perfil</h1>
 			<ul>
 				
-				<li><a href="status/status">Operador</a> </li>
+				<li><a href="operadorCTI">Operador</a> </li>
 				 <li><a href="OutrasTarefas/autorizador">Autorizador de solicitações</a> </li>
 				<li>Usuário</li>
 				<li><a href="j_spring_security_logout">Logout</a></li>
@@ -120,7 +120,7 @@
 		------------------------------------------{Área de desenvolvimento. Será apagada antes da primeira entrega}------------------------------------------
 <p>
 
-	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 23/08/15 - 11:56
+	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 25/08/15 - 10:53
 		
 </p>
 

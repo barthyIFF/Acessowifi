@@ -81,7 +81,7 @@
 		</style>
 	</head>
 	<body>
-			<div id="status" role="complementary">
+		<div id="status" role="complementary">
 			<h1>Menu</h1>
 			<ul>
 				<li><a href="">Home</a> </li>
@@ -95,6 +95,8 @@
 			<br>
 			<h1>Sem bem Vindo Operador</h1>
 			<p>Esse sistema bla bla bla</p>
+
+			
 			
 			<div id="controller-list" role="navigation">
 				
