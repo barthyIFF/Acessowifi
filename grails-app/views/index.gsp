@@ -89,9 +89,9 @@
 			<ul>
 				
 				<li><a href="status/status">Operador</a> </li>
-				<li>Autorizador</li>
+				 <li><a href="OutrasTarefas/autorizador">Autorizador de solicitações</a> </li>
 				<li>Usuário</li>
-				<li><a href="j_spring_security_logout">logout</a></li>
+				<li><a href="j_spring_security_logout">Logout</a></li>
 				
 				
 			</ul>
@@ -103,5 +103,25 @@
 				
 			</div>
 		</div>
+		<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+		------------------------------------------{Área de desenvolvimento. Será apagada antes da primeira entrega}------------------------------------------
+<p>
+
+	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 23/08/15 - 11:56
+		
+</p>
+
+<p>
+<br>
+	Click <a href="status/status">aqui</a> para acessar a página de teste do ajax! - Ultima atualizacao de Denis = 19/08/15 - 20:08
+</p>
 	</body>
 </html>
