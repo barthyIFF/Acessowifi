@@ -31,7 +31,7 @@
 			}
 
 			#status li {
-				line-height: 1.3;
+				line-height: 2.1;
 			}
 
 			#status h1 {
@@ -84,8 +84,10 @@
 			<div id="status" role="complementary">
 			<h1>Menu</h1>
 			<ul>
-				<li>Novo Usuário</li>
-				<g:remoteLink controller="outrasTarefas" action="operador" update="page-body">Operador Ajax</g:remoteLink>
+				<li><a href="">Home</a> </li>
+				<li><g:remoteLink controller="outrasTarefas" action="cadastronovo" update="page-body">Cadastrar Novo Usuário</g:remoteLink></li>
+				<li><g:remoteLink controller="outrasTarefas" action="cadastroequipamento" update="page-body">Cadastrar Equipamento</g:remoteLink></li>
+				<li><a href="../j_spring_security_logout">Logout</a></li>
 			</ul>
 		</div>
 		<div id="page-body" role="main">
