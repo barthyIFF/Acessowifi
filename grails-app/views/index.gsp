@@ -37,7 +37,7 @@ header {
 
 ------------------------------------------{Área de desenvolvimento. Será apagada antes da primeira entrega}------------------------------------------
 <p>
-	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 23/08/15 - 11:56
+	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 24/08/15 - 22:05
 		
 </p>
 
