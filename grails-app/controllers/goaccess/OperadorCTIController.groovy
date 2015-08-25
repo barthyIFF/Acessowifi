@@ -105,4 +105,8 @@ class OperadorCTIController {
             '*'{ render status: NOT_FOUND }
         }
     }
+	
+	def indexAntigo() {
+		
+	}
 }

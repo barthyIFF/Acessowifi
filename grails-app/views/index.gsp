@@ -25,7 +25,7 @@ header {
 <ul>
 	<li>Novo Usuário (Solicitação de acesso)</li>
 	<li><a href="OutrasTarefas/autorizador">Autorizador de solicitações</a> </li>
-	<li><a href="OutrasTarefas/operador">Operador do sistema</a> </li>
+	<li><a href="OperadorCTI">Operador do sistema</a> </li>
 </ul>
 <br>
 <br>
