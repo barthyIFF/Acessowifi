@@ -88,7 +88,7 @@
 			<h1>Clique no seu perfil</h1>
 			<ul>
 				
-				<li><a href="status/status">Operador</a> </li>
+				<li><a href="operadorCTI">Operador</a> </li>
 				 <li><a href="OutrasTarefas/autorizador">Autorizador de solicitações</a> </li>
 				<li>Usuário</li>
 				<li><a href="j_spring_security_logout">Logout</a></li>
