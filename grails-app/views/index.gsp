@@ -97,6 +97,8 @@
 			</ul>
 		</div>
 		<div id="page-body" role="main">
+			<br>
+			<br>
 			<h1>Bem vindo ao Sistema Acesso Wifi</h1>
 			<p>Esse sistema bla bla bla</p>
 			<div id="controller-list" role="navigation">
@@ -106,6 +108,9 @@
 		<br>
 <br>
 
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
