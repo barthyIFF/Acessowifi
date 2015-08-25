@@ -66,8 +66,8 @@ body {
 }
 
 a:link, a:visited, a:hover {
-	color: #4b4b4b;
-}
+	color: #000000;
+	}
 
 a:hover, a:active {
 	outline: none; /* prevents outline in webkit on active links but retains it for tab focus */
