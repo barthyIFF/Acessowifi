@@ -10,11 +10,13 @@ class UsuarioSolicitante {
 	String login
 	String senha
 	String hashSenha
-	Endereco endereco
+	String endereco
 		
 	static hasMany = [solicitacao:Solicitacao]	
 	
-	static belongsTo = Endereco
+	/*Para simplificar eu coloquei o endereco como um string simples
+	Claudio 24/08/15*/
+	//static belongsTo = Endereco
 	
 	String toString () {
 		"${this.nome}"

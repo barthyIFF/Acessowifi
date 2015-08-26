@@ -5,9 +5,9 @@ package goaccess
 import grails.test.mixin.*
 import spock.lang.*
 
-@TestFor(EnderecoController)
-@Mock(Endereco)
-class EnderecoControllerSpec extends Specification {
+@TestFor(ClientePapelController)
+@Mock(ClientePapel)
+class ClientePapelControllerSpec extends Specification {
 
     def populateValidParams(params) {
         assert params != null
@@ -21,8 +21,8 @@ class EnderecoControllerSpec extends Specification {
             controller.index()
 
         then:"The model is correct"
-            !model.enderecoInstanceList
-            model.enderecoInstanceCount == 0
+            !model.clientePapelInstanceList
+            model.clientePapelInstanceCount == 0
     }
 
     void "Test the create action returns the correct model"() {
@@ -30,7 +30,7 @@ class EnderecoControllerSpec extends Specification {
             controller.create()
 
         then:"The model is correctly created"
-            model.enderecoInstance!= null
+            model.clientePapelInstance!= null
     }
 
     void "Test the save action correctly persists an instance"() {
@@ -38,25 +38,25 @@ class EnderecoControllerSpec extends Specification {
         when:"The save action is executed with an invalid instance"
             request.contentType = FORM_CONTENT_TYPE
             request.method = 'POST'
-            def endereco = new Endereco()
-            endereco.validate()
-            controller.save(endereco)
+            def clientePapel = new ClientePapel()
+            clientePapel.validate()
+            controller.save(clientePapel)
 
         then:"The create view is rendered again with the correct model"
-            model.enderecoInstance!= null
+            model.clientePapelInstance!= null
             view == 'create'
 
         when:"The save action is executed with a valid instance"
             response.reset()
             populateValidParams(params)
-            endereco = new Endereco(params)
+            clientePapel = new ClientePapel(params)
 
-            controller.save(endereco)
+            controller.save(clientePapel)
 
         then:"A redirect is issued to the show action"
-            response.redirectedUrl == '/endereco/show/1'
+            response.redirectedUrl == '/clientePapel/show/1'
             controller.flash.message != null
-            Endereco.count() == 1
+            ClientePapel.count() == 1
     }
 
     void "Test that the show action returns the correct model"() {
@@ -68,11 +68,11 @@ class EnderecoControllerSpec extends Specification {
 
         when:"A domain instance is passed to the show action"
             populateValidParams(params)
-            def endereco = new Endereco(params)
-            controller.show(endereco)
+            def clientePapel = new ClientePapel(params)
+            controller.show(clientePapel)
 
         then:"A model is populated containing the domain instance"
-            model.enderecoInstance == endereco
+            model.clientePapelInstance == clientePapel
     }
 
     void "Test that the edit action returns the correct model"() {
@@ -84,11 +84,11 @@ class EnderecoControllerSpec extends Specification {
 
         when:"A domain instance is passed to the edit action"
             populateValidParams(params)
-            def endereco = new Endereco(params)
-            controller.edit(endereco)
+            def clientePapel = new ClientePapel(params)
+            controller.edit(clientePapel)
 
         then:"A model is populated containing the domain instance"
-            model.enderecoInstance == endereco
+            model.clientePapelInstance == clientePapel
     }
 
     void "Test the update action performs an update on a valid domain instance"() {
@@ -98,28 +98,28 @@ class EnderecoControllerSpec extends Specification {
             controller.update(null)
 
         then:"A 404 error is returned"
-            response.redirectedUrl == '/endereco/index'
+            response.redirectedUrl == '/clientePapel/index'
             flash.message != null
 
 
         when:"An invalid domain instance is passed to the update action"
             response.reset()
-            def endereco = new Endereco()
-            endereco.validate()
-            controller.update(endereco)
+            def clientePapel = new ClientePapel()
+            clientePapel.validate()
+            controller.update(clientePapel)
 
         then:"The edit view is rendered again with the invalid instance"
             view == 'edit'
-            model.enderecoInstance == endereco
+            model.clientePapelInstance == clientePapel
 
         when:"A valid domain instance is passed to the update action"
             response.reset()
             populateValidParams(params)
-            endereco = new Endereco(params).save(flush: true)
-            controller.update(endereco)
+            clientePapel = new ClientePapel(params).save(flush: true)
+            controller.update(clientePapel)
 
         then:"A redirect is issues to the show action"
-            response.redirectedUrl == "/endereco/show/$endereco.id"
+            response.redirectedUrl == "/clientePapel/show/$clientePapel.id"
             flash.message != null
     }
 
@@ -130,23 +130,23 @@ class EnderecoControllerSpec extends Specification {
             controller.delete(null)
 
         then:"A 404 is returned"
-            response.redirectedUrl == '/endereco/index'
+            response.redirectedUrl == '/clientePapel/index'
             flash.message != null
 
         when:"A domain instance is created"
             response.reset()
             populateValidParams(params)
-            def endereco = new Endereco(params).save(flush: true)
+            def clientePapel = new ClientePapel(params).save(flush: true)
 
         then:"It exists"
-            Endereco.count() == 1
+            ClientePapel.count() == 1
 
         when:"The domain instance is passed to the delete action"
-            controller.delete(endereco)
+            controller.delete(clientePapel)
 
         then:"The instance is deleted"
-            Endereco.count() == 0
-            response.redirectedUrl == '/endereco/index'
+            ClientePapel.count() == 0
+            response.redirectedUrl == '/clientePapel/index'
             flash.message != null
     }
 }
