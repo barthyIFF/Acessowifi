@@ -120,7 +120,7 @@
 		------------------------------------------{Área de desenvolvimento. Será apagada antes da primeira entrega}------------------------------------------
 <p>
 
-	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 25/08/15 - 10:53
+	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 25/08/15 - 21:02
 		
 </p>
 
