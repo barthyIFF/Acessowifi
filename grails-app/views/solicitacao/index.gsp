@@ -4,26 +4,19 @@
 <html>
 	<head>
 		<meta name="layout" content="main2">
-		<g:set var="entityName" value="${message(code: 'solicitacao.label', default: 'Solicitacao')}" />
+		<g:set var="entityName" value="${message(code: 'solicitacao.label', default: 'Solicitação')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
 		<a href="#list-solicitacao" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		
 		<div class="nav" role="navigation">
 			<ul>
-				<%-- Denis, essa é a linha que tem que  apagar nos index
-				<<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				 --%>
-				<%--Denis, essa linha abaixo é o botao nova solicitacao. Estou comentando o antigo e vou 
-				deixar o novo que funcionará da forma que agente quer--%>
 				<li><g:remoteLink controller="Solicitacao" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]"/></g:remoteLink></li>
-				<%-- Essa linha abaixo é a antiga.
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-				 --%>		
 			</ul>
 		</div>
 		<div id="list-solicitacao" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<br><h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
