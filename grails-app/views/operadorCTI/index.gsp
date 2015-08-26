@@ -95,7 +95,7 @@
 	</ul>
 </div>
 
-<div id="page-body" role="main">
+<div id="page-body" >
 	<h1>Sem bem Vindo, Operador</h1>
 	<p>
 		Texto para o operador...Texto para o operador...Texto para o operador...<br>
@@ -106,8 +106,7 @@
 		<br>
 		PENDENCIA EM CADASTRO DE OPERADORES E AUTORIZADORES: Tem que pegar o usuario e a senha<br>
 		informados e, automaticamente, tb fazer o cadastro em clientes, papelcliente e papel (autenticacao).
-		
-					
+			
 	</p>
 	<div id="controller-list" role="navigation"></div>
 </div>

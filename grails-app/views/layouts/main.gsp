@@ -9,7 +9,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><g:layoutTitle default="Grails"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<style type="text/css" media="screen">
+		
+			<style type="text/css" media="screen">
 			
 			#menusuperior {
 				background-color: #eee;
@@ -21,8 +22,7 @@
 				float: left;
 				text-align:right;
 				
-				
-			}
+				}
 			
 			.ie6 #status {
 				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
@@ -83,11 +83,8 @@
 				margin: 0.25em 0;
 			}
 			}
-			
 						
-			
 		</style>
-		
 		<asset:stylesheet src="application.css"/>
 		<asset:javascript src="application.js"/>
 		<g:layoutHead/>
@@ -97,7 +94,7 @@
 	<div id="grailsLogo" role="banner"><a href="http://www.cin.ufpe.br/"><asset:image src="awifi_logo.png" alt="Awifi"/></a>
 		<div id="menusuperior" role="complementary">
 					<ul>
-					<li><a href="../j_spring_security_logout">Logout</a></li>
+					<li><a href="j_spring_security_logout">Logout</a></li>
 			</ul>
 		</div>
 		</div>
