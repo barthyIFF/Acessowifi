@@ -82,9 +82,12 @@ a:hover, a:active {
 
 h1 {
 	color: #000000;
-
 	font-size: 1em;
 	margin: 0.8em 0 0.3em 0;
+	display: inline-block; 
+	padding: 0 40px 0 40px;
+	margin-top: -110px;
+	letter-spacing: 1px;
 }
 
 ul {
@@ -141,7 +144,7 @@ img {
 
 .nav {
 	background-color: #efefef;
-	padding: 0.5em 0.75em;
+	padding: 0.1em 1em;
 	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
 	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
 	        box-shadow: 0 0 3px 1px #aaaaaa;
@@ -173,7 +176,8 @@ img {
 }
 
 .nav a:active, .nav a:visited {
-	color: #666666;
+	color: #000000;
+	
 }
 
 .nav a:focus, .nav a:hover {
