@@ -45,9 +45,12 @@ body {
 
 
 			#page-body {
-				margin: 0em 0em 0em 19em;
+				margin: 0em 0em 1em 19em;
 			}
 			
+			#page {
+				margin: 0em 0em 10em 1.4em;
+			}
 
 /* FINAL MENU */
 
@@ -78,9 +81,9 @@ a:hover, a:active {
 }
 
 h1 {
-	color: #0000ff;
-	font-weight: normal;
-	font-size: 1.25em;
+	color: #000000;
+
+	font-size: 1em;
 	margin: 0.8em 0 0.3em 0;
 }
 
