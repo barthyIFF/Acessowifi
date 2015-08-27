@@ -94,7 +94,8 @@
     <li><g:link controller="solicitacao" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
-<g:link controller="solicitacao" action="create" params="['usuarioSolicitante.id': usuarioSolicitanteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'solicitacao.label', default: 'Solicitacao')])}</g:link>
+<g:remoteLink controller="solicitacao" action="create" params="['usuarioSolicitante.id': usuarioSolicitanteInstance?.id]" update="page-body">${message(code: 'default.add.label', args: [message(code: 'solicitacao.label', default: 'Solicitacao')])}</g:remoteLink>
+
 </li>
 </ul>
 
