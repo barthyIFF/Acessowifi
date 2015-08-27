@@ -15,6 +15,7 @@ class GostudentController {
 		def response = [:]
 		
 		def solicita = Solicitacao.findByNumProtocolo(protocolo)
+
 			if (solicita && solicitacao.status == "AUTORIZADO"){
 				response.Nome = usuario.nome
 				response.Login = usuario.login
