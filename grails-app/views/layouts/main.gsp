@@ -36,7 +36,7 @@
 			}
 
 			#menusuperior li {
-				line-height: 0.5;
+				line-height: 2;
 				font-size: 1.3em;
 			}
 
@@ -91,11 +91,12 @@
 	</head>
 	<body>	
 	<div id="grailsLogo" role="banner"><a href="/goAccess/"><asset:image src="awifi_logo.png" alt="Awifi"/></a>
+		
+		</div>
 		<div id="menusuperior" role="complementary">
 					<ul>
 					<li><a href="j_spring_security_logout">Logout</a></li>
 			</ul>
-		</div>
 		</div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
