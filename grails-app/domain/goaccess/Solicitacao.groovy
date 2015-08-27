@@ -3,7 +3,7 @@ package goaccess
 class Solicitacao {
 
 	String numProtocolo
-	String status
+	String status			//Vamos combinar dois estados (pendente ou autorizado)
 	String tipo
 	OperadorCTI operador
 	AutorizadorProf autorizador
