@@ -2,7 +2,7 @@ package goaccess
 
 import grails.converters.*;
 
-class GostudentController {
+class WsController {
 
     def index() {
 	}
@@ -16,7 +16,7 @@ class GostudentController {
 		
 		def solicita = Solicitacao.findByNumProtocolo(protocolo)
 
-			if (solicita && solicitacao.status == "AUTORIZADO"){
+			if (solicita){
 				response.Nome = usuario.nome
 				response.Login = usuario.login
 				response.HashSenha = usuario.hashSenha
