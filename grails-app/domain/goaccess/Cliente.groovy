@@ -13,6 +13,8 @@ class Cliente implements Serializable {
 	boolean accountLocked
 	boolean passwordExpired
 
+	static hasMany = [bonecos:Boneco]
+	
 	Cliente(String username, String password) {
 		this()
 		this.username = username
