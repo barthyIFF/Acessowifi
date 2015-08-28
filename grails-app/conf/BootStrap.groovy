@@ -10,6 +10,7 @@ class BootStrap {
 		 *Depois de rodar a app a primeira vez essas linhas podem ser apagadas
 		 *ROLE_USER = AUTORIZADOR
 		 *ROLE_ADMIN = OPERADOR
+		 *Teste autorizador como ROLE_SUPERUSER e usuario como ROLE_USER 
 		 *Por enquanto, somente para testes, o autorizador so tem acesso a action OutrasTarefas/autorizador.
 		 *Tb pra testes o operador NAO tem acesso a OutrasTarefas/autorizador.
 		 *Operador tem acesso ao resto da app, por enquanto.
@@ -19,7 +20,7 @@ class BootStrap {
 		if(ClientePapel.list().size() == 0){
 			println("Criando primeiros PAPEIS: operador e autorizador %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
 			Papel p_op = new Papel('ROLE_ADMIN').save()
-			Papel p_at = new Papel('ROLE_USER').save()
+			Papel p_at = new Papel('ROLE_SUPERUSER').save()
 			
 			println("Criando primeiros CLIENTES: operador e autorizador %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
 			Cliente c_op = new Cliente('operador', 'operador').save()

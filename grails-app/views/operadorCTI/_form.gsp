@@ -83,16 +83,15 @@
 
 </div>
 
-<%-- O papel está sendo selecionado automaticamente no controlador. Todo operador tem papel = ROLE_ADMIN
-<div class="fieldcontain ${hasErrors(bean: operadorCTIInstance, field: 'papel', 'error')} required">
-	<label for="papel">
-		<g:message code="operadorCTI.papel.label" default="Papel" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="papel" name="papel.id" from="${goaccess.Papel.list()}" optionKey="id" required="" value="${operadorCTIInstance?.papel?.id}" class="many-to-one"/>
+<%--Setando o papel automaticamente. Todo operador tem o papel = ROLE_ADMIN --%>
+<div class="fieldcontain ${hasErrors(bean: operadorCTIInstance, field: 'papel', 'error')} ">	
+	<%--<g:select type="hidden" id="papel" name="papel.id" from="${goaccess.Papel.list()}" optionKey="id" required="" value="${operadorCTIInstance?.papel?.id}" class="many-to-one"  /> --%>
+	<g:hiddenField name="papel.id" value="1"/>
+	
+	
 
 </div>
- --%>
+
 
 <div class="fieldcontain ${hasErrors(bean: operadorCTIInstance, field: 'passwordExpired', 'error')} ">
 	<label for="passwordExpired">

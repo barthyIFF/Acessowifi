@@ -11,7 +11,7 @@
 	<h1>Menu</h1>
 	<ul>
 		<li><g:remoteLink controller="Solicitacao" action="index" update="page-body">Solicitações</g:remoteLink></li>
-		<li><g:remoteLink controller="OperadorCTI" action="indexAntigo" update="page-body">Operadores (P)</g:remoteLink></li>
+		<li><g:remoteLink controller="OperadorCTI" action="indexAntigo" update="page-body">Operadores</g:remoteLink></li>
 		<li><g:remoteLink controller="UsuarioSolicitante" action="index" update="page-body">Usuários</g:remoteLink></li>
 		<li><g:remoteLink controller="UsuarioTemporario" action="index" update="page-body">Usuários temporários</g:remoteLink></li>
 		<li><g:remoteLink controller="Equipamento" action="index" update="page-body">Equipamentos</g:remoteLink></li>

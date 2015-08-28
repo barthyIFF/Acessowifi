@@ -23,9 +23,7 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="username" title="${message(code: 'operadorCTI.username.label', default: 'Username')}" />
-					
-						<g:sortableColumn property="password" title="${message(code: 'operadorCTI.password.label', default: 'Password')}" />
+						<g:sortableColumn property="username" title="${message(code: 'operadorCTI.username.label', default: 'Login')}" />		
 					
 						<g:sortableColumn property="nome" title="${message(code: 'operadorCTI.nome.label', default: 'Nome')}" />
 					
@@ -42,8 +40,6 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${operadorCTIInstance.id}">${fieldValue(bean: operadorCTIInstance, field: "username")}</g:link></td>
-					
-						<td>${fieldValue(bean: operadorCTIInstance, field: "password")}</td>
 					
 						<td>${fieldValue(bean: operadorCTIInstance, field: "nome")}</td>
 					
