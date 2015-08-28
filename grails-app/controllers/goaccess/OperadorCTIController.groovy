@@ -1,10 +1,5 @@
 package goaccess
 import grails.plugin.springsecurity.annotation.Secured
-
-
-
-
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -14,6 +9,9 @@ class OperadorCTIController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+	def indexAntigo(){
+		render (view:'indexAntigo.gsp')
+	}
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond OperadorCTI.list(params), model:[operadorCTIInstanceCount: OperadorCTI.count()]
@@ -44,12 +42,16 @@ class OperadorCTIController {
 		/* As duas proximas linhas sao usadas para autenticacao.
 		 * Desta forma pega o papel que foi escolhi na visao
 		 * Vou deixar comentado pq eu nao quero que haja essa escolha,
-		 * todo operador vai receber o papel "ROLE_ADMIN"		 
+		 * todo operador vai receber o papel "ROLE_ADMIN"
 		Papel p = operadorCTIInstance.papel;
 		ClientePapel.create(operadorCTIInstance,p);*/
-		//Definindo o papel obrigatoriamente 
-		Papel p = new Papel("ROLE_ADMIN");
+		//Definindo o papel obrigatoriamente
+		/*Note que estou procurando e selecionando um papel pelo atributo
+		 * authority
+		 */
+		Papel p = Papel.findByAuthority('ROLE_ADMIN')
 		ClientePapel.create(operadorCTIInstance,p);
+
 
         request.withFormat {
             form multipartForm {
@@ -115,8 +117,4 @@ class OperadorCTIController {
             '*'{ render status: NOT_FOUND }
         }
     }
-	
-	def indexAntigo() {
-		
-	}
 }
