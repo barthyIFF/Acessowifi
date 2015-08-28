@@ -8,12 +8,12 @@
 	<body>
 		<a href="#create-operadorCTI" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
-			<ul>
-				<li><g:remoteLink controller="operadorCTI" action="indexAntigo" update="page-body"><g:message code="default.list.label" args="[entityName]"/></g:remoteLink></li>
+			<ul>				
+				<li><g:remoteLink class="list" action="indexAntigo" update="page-body"><g:message code="default.list.label" args="[entityName]" /></g:remoteLink></li>				
 			</ul>
 		</div>
 		<div id="create-operadorCTI" class="content scaffold-create" role="main">
-			<br><h1><g:message code="default.create.label" args="[entityName]" /></h1>
+			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>

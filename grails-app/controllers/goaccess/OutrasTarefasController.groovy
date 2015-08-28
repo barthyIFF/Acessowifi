@@ -23,7 +23,7 @@ class OutrasTarefasController {
 	}
 	
 	//@Secured(["ROLE_ADMIN", "ROLE_USER"])
-	@Secured('ROLE_USER')
+	@Secured('ROLE_SUPERUSER')
 	def autorizador() {
 		render "ambiente restrito, somente AUTORIZADORES!"
 	}

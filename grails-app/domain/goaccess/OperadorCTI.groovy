@@ -1,16 +1,17 @@
 package goaccess
 
-class OperadorCTI {
+//É filho de Cliente, dentro outras coisas tem username e password
+class OperadorCTI extends Cliente {
 
+	
 	String nome
 	String cpf
-	String login
-	String senha
-	String hashSenha
 	String email
 	String celular
 	
-		
+	//Sempre que um operador for salvo ou apagado o papel tb será
+	static belongsTo = [papel:Papel]
+	
 	static hasMany = [solicitacoes:Solicitacao]
 	
 	String toString () {
@@ -20,9 +21,6 @@ class OperadorCTI {
     static constraints = {
 		nome(nullable:false,blank:false)
 		cpf(blank:false,unique:true)
-		login(blank:false,unique:true)
-		senha(blank:false)
-		hashSenha (blank:false)
 		email(email:true,blank:false)
 		celular(blank:false)
     }

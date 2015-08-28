@@ -27,7 +27,7 @@ class Papel implements Serializable {
 	}
 
 	static constraints = {
-		authority blank: false, unique: true
+		authority unique: true
 	}
 
 	static mapping = {

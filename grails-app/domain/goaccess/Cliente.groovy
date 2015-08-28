@@ -11,8 +11,8 @@ class Cliente implements Serializable {
 	boolean enabled = true
 	boolean accountExpired
 	boolean accountLocked
-	boolean passwordExpired
-
+	boolean passwordExpired	
+	
 	Cliente(String username, String password) {
 		this()
 		this.username = username
