@@ -95,16 +95,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${operadorCTIInstance?.bonecos}">
-				<li class="fieldcontain">
-					<span id="bonecos-label" class="property-label"><g:message code="operadorCTI.bonecos.label" default="Bonecos" /></span>
-					
-						<g:each in="${operadorCTIInstance.bonecos}" var="b">
-						<span class="property-value" aria-labelledby="bonecos-label"><g:link controller="boneco" action="show" id="${b.id}">${b?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
 			
 				<g:if test="${operadorCTIInstance?.enabled}">
 				<li class="fieldcontain">
