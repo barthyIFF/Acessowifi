@@ -4,7 +4,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: operadorCTIInstance, field: 'username', 'error')} required">
 	<label for="username">
-		<g:message code="operadorCTI.username.label" default="Username" />
+		<g:message code="operadorCTI.username.label" default="Login" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="username" required="" value="${operadorCTIInstance?.username}"/>
@@ -13,7 +13,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: operadorCTIInstance, field: 'password', 'error')} required">
 	<label for="password">
-		<g:message code="operadorCTI.password.label" default="Password" />
+		<g:message code="operadorCTI.password.label" default="Senha" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="password" required="" value="${operadorCTIInstance?.password}"/>
@@ -74,15 +74,6 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: operadorCTIInstance, field: 'bonecos', 'error')} ">
-	<label for="bonecos">
-		<g:message code="operadorCTI.bonecos.label" default="Bonecos" />
-		
-	</label>
-	<g:select name="bonecos" from="${goaccess.Boneco.list()}" multiple="multiple" optionKey="id" size="5" value="${operadorCTIInstance?.bonecos*.id}" class="many-to-many"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: operadorCTIInstance, field: 'enabled', 'error')} ">
 	<label for="enabled">
 		<g:message code="operadorCTI.enabled.label" default="Enabled" />
@@ -92,6 +83,7 @@
 
 </div>
 
+<%-- O papel está sendo selecionado automaticamente no controlador. Todo operador tem papel = ROLE_ADMIN
 <div class="fieldcontain ${hasErrors(bean: operadorCTIInstance, field: 'papel', 'error')} required">
 	<label for="papel">
 		<g:message code="operadorCTI.papel.label" default="Papel" />
@@ -100,6 +92,7 @@
 	<g:select id="papel" name="papel.id" from="${goaccess.Papel.list()}" optionKey="id" required="" value="${operadorCTIInstance?.papel?.id}" class="many-to-one"/>
 
 </div>
+ --%>
 
 <div class="fieldcontain ${hasErrors(bean: operadorCTIInstance, field: 'passwordExpired', 'error')} ">
 	<label for="passwordExpired">

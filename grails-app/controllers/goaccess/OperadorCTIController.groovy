@@ -9,9 +9,11 @@ class OperadorCTIController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-	def indexAntigo(){
-		render (view:'indexAntigo.gsp')
-	}
+    def indexAntigo(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        respond OperadorCTI.list(params), model:[operadorCTIInstanceCount: OperadorCTI.count()]
+    }
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond OperadorCTI.list(params), model:[operadorCTIInstanceCount: OperadorCTI.count()]
