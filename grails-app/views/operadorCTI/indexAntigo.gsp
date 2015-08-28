@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main2">
+		<%--<meta name="layout" content="main2"> --%>
 		<g:set var="entityName" value="${message(code: 'operadorCTI.label', default: 'OperadorCTI')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>

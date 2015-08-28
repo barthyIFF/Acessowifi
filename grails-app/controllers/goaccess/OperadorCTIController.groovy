@@ -40,6 +40,16 @@ class OperadorCTIController {
         }
 
         operadorCTIInstance.save flush:true
+		
+		/* As duas proximas linhas sao usadas para autenticacao.
+		 * Desta forma pega o papel que foi escolhi na visao
+		 * Vou deixar comentado pq eu nao quero que haja essa escolha,
+		 * todo operador vai receber o papel "ROLE_ADMIN"		 
+		Papel p = operadorCTIInstance.papel;
+		ClientePapel.create(operadorCTIInstance,p);*/
+		//Definindo o papel obrigatoriamente 
+		Papel p = new Papel("ROLE_ADMIN");
+		ClientePapel.create(operadorCTIInstance,p);
 
         request.withFormat {
             form multipartForm {

@@ -15,7 +15,7 @@
 		<li><g:remoteLink controller="UsuarioSolicitante" action="index" update="page-body">Usuários</g:remoteLink></li>
 		<li><g:remoteLink controller="UsuarioTemporario" action="index" update="page-body">Usuários temporários</g:remoteLink></li>
 		<li><g:remoteLink controller="Equipamento" action="index" update="page-body">Equipamentos</g:remoteLink></li>
-		<li><g:remoteLink controller="autorizadorProf" action="index" update="page-body">Autorizador</g:remoteLink></li>
+		<li><g:remoteLink controller="autorizadorProf" action="index" update="page-body">Autorizador (P)</g:remoteLink></li>
 		<li><g:remoteLink controller="OutrasTarefas" action="autorizador" update="page-body">Encerrar Solicitacoes (P)</g:remoteLink></li>
 		<li><a href="j_spring_security_logout">Fazer logout</a></li>		
 	</ul>
