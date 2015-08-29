@@ -23,6 +23,24 @@
 			</g:if>
 			<ol class="property-list autorizadorProf">
 			
+				<g:if test="${autorizadorProfInstance?.username}">
+				<li class="fieldcontain">
+					<span id="username-label" class="property-label"><g:message code="autorizadorProf.username.label" default="Username" /></span>
+					
+						<span class="property-value" aria-labelledby="username-label"><g:fieldValue bean="${autorizadorProfInstance}" field="username"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${autorizadorProfInstance?.password}">
+				<li class="fieldcontain">
+					<span id="password-label" class="property-label"><g:message code="autorizadorProf.password.label" default="Password" /></span>
+					
+						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${autorizadorProfInstance}" field="password"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${autorizadorProfInstance?.nome}">
 				<li class="fieldcontain">
 					<span id="nome-label" class="property-label"><g:message code="autorizadorProf.nome.label" default="Nome" /></span>
@@ -37,24 +55,6 @@
 					<span id="cpf-label" class="property-label"><g:message code="autorizadorProf.cpf.label" default="Cpf" /></span>
 					
 						<span class="property-value" aria-labelledby="cpf-label"><g:fieldValue bean="${autorizadorProfInstance}" field="cpf"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${autorizadorProfInstance?.login}">
-				<li class="fieldcontain">
-					<span id="login-label" class="property-label"><g:message code="autorizadorProf.login.label" default="Login" /></span>
-					
-						<span class="property-value" aria-labelledby="login-label"><g:fieldValue bean="${autorizadorProfInstance}" field="login"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${autorizadorProfInstance?.senha}">
-				<li class="fieldcontain">
-					<span id="senha-label" class="property-label"><g:message code="autorizadorProf.senha.label" default="Senha" /></span>
-					
-						<span class="property-value" aria-labelledby="senha-label"><g:fieldValue bean="${autorizadorProfInstance}" field="senha"/></span>
 					
 				</li>
 				</g:if>
@@ -95,11 +95,47 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${autorizadorProfInstance?.hashSenha}">
+				<g:if test="${autorizadorProfInstance?.accountExpired}">
 				<li class="fieldcontain">
-					<span id="hashSenha-label" class="property-label"><g:message code="autorizadorProf.hashSenha.label" default="Hash Senha" /></span>
+					<span id="accountExpired-label" class="property-label"><g:message code="autorizadorProf.accountExpired.label" default="Account Expired" /></span>
 					
-						<span class="property-value" aria-labelledby="hashSenha-label"><g:fieldValue bean="${autorizadorProfInstance}" field="hashSenha"/></span>
+						<span class="property-value" aria-labelledby="accountExpired-label"><g:formatBoolean boolean="${autorizadorProfInstance?.accountExpired}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${autorizadorProfInstance?.accountLocked}">
+				<li class="fieldcontain">
+					<span id="accountLocked-label" class="property-label"><g:message code="autorizadorProf.accountLocked.label" default="Account Locked" /></span>
+					
+						<span class="property-value" aria-labelledby="accountLocked-label"><g:formatBoolean boolean="${autorizadorProfInstance?.accountLocked}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${autorizadorProfInstance?.enabled}">
+				<li class="fieldcontain">
+					<span id="enabled-label" class="property-label"><g:message code="autorizadorProf.enabled.label" default="Enabled" /></span>
+					
+						<span class="property-value" aria-labelledby="enabled-label"><g:formatBoolean boolean="${autorizadorProfInstance?.enabled}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${autorizadorProfInstance?.papel}">
+				<li class="fieldcontain">
+					<span id="papel-label" class="property-label"><g:message code="autorizadorProf.papel.label" default="Papel" /></span>
+					
+						<span class="property-value" aria-labelledby="papel-label"><g:link controller="papel" action="show" id="${autorizadorProfInstance?.papel?.id}">${autorizadorProfInstance?.papel?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${autorizadorProfInstance?.passwordExpired}">
+				<li class="fieldcontain">
+					<span id="passwordExpired-label" class="property-label"><g:message code="autorizadorProf.passwordExpired.label" default="Password Expired" /></span>
+					
+						<span class="property-value" aria-labelledby="passwordExpired-label"><g:formatBoolean boolean="${autorizadorProfInstance?.passwordExpired}" /></span>
 					
 				</li>
 				</g:if>

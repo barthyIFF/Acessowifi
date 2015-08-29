@@ -68,24 +68,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${usuarioTemporarioInstance?.login}">
-				<li class="fieldcontain">
-					<span id="login-label" class="property-label"><g:message code="usuarioTemporario.login.label" default="Login" /></span>
-					
-						<span class="property-value" aria-labelledby="login-label"><g:fieldValue bean="${usuarioTemporarioInstance}" field="login"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${usuarioTemporarioInstance?.senha}">
-				<li class="fieldcontain">
-					<span id="senha-label" class="property-label"><g:message code="usuarioTemporario.senha.label" default="Senha" /></span>
-					
-						<span class="property-value" aria-labelledby="senha-label"><g:fieldValue bean="${usuarioTemporarioInstance}" field="senha"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${usuarioTemporarioInstance?.tempoAcesso}">
 				<li class="fieldcontain">
 					<span id="tempoAcesso-label" class="property-label"><g:message code="usuarioTemporario.tempoAcesso.label" default="Tempo Acesso" /></span>

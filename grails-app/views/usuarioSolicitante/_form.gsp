@@ -47,24 +47,6 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: usuarioSolicitanteInstance, field: 'login', 'error')} required">
-	<label for="login">
-		<g:message code="usuarioSolicitante.login.label" default="Login" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="login" required="" value="${usuarioSolicitanteInstance?.login}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: usuarioSolicitanteInstance, field: 'senha', 'error')} required">
-	<label for="senha">
-		<g:message code="usuarioSolicitante.senha.label" default="Senha" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="senha" required="" value="${usuarioSolicitanteInstance?.senha}"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: usuarioSolicitanteInstance, field: 'endereco', 'error')} required">
 	<label for="endereco">
 		<g:message code="usuarioSolicitante.endereco.label" default="Endereco" />
@@ -94,8 +76,7 @@
     <li><g:link controller="solicitacao" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
-<g:remoteLink controller="solicitacao" action="create" params="['usuarioSolicitante.id': usuarioSolicitanteInstance?.id]" update="page-body">${message(code: 'default.add.label', args: [message(code: 'solicitacao.label', default: 'Solicitacao')])}</g:remoteLink>
-
+<g:link controller="solicitacao" action="create" params="['usuarioSolicitante.id': usuarioSolicitanteInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'solicitacao.label', default: 'Solicitacao')])}</g:link>
 </li>
 </ul>
 
