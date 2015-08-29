@@ -7,8 +7,10 @@ class UsuarioSolicitante {
 	String email
 	String setor
 	String celular
-	String login
-	String senha
+	/*Acho que ficara mais simples sem autenticacao do usuario, ja que ele
+	 * so vai usar a app pra consultar o status de sua solicitacao.*/
+	//String login
+	//String senha
 	String hashSenha
 	String endereco
 		
@@ -29,7 +31,7 @@ class UsuarioSolicitante {
 		email(email:true,blank:false)
 		setor(blank:false)
 		celular(blank:false)
-		login(blank:false)
-		senha(blank:false)
+		//login(blank:false)
+		//senha(blank:false)
     }
 }

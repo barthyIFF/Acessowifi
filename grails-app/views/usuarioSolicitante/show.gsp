@@ -68,24 +68,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${usuarioSolicitanteInstance?.login}">
-				<li class="fieldcontain">
-					<span id="login-label" class="property-label"><g:message code="usuarioSolicitante.login.label" default="Login" /></span>
-					
-						<span class="property-value" aria-labelledby="login-label"><g:fieldValue bean="${usuarioSolicitanteInstance}" field="login"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${usuarioSolicitanteInstance?.senha}">
-				<li class="fieldcontain">
-					<span id="senha-label" class="property-label"><g:message code="usuarioSolicitante.senha.label" default="Senha" /></span>
-					
-						<span class="property-value" aria-labelledby="senha-label"><g:fieldValue bean="${usuarioSolicitanteInstance}" field="senha"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${usuarioSolicitanteInstance?.endereco}">
 				<li class="fieldcontain">
 					<span id="endereco-label" class="property-label"><g:message code="usuarioSolicitante.endereco.label" default="Endereco" /></span>

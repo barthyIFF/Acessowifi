@@ -90,7 +90,7 @@
 		<g:layoutHead/>
 	</head>
 	<body>	
-	<div id="grailsLogo" role="banner"><a href="/goAccess/"><asset:image src="awifi_logo.png" alt="Awifi"/></a>
+	<div id="grailsLogo" role="banner"><a class="home" href="${createLink(uri: '/')}"><asset:image src="awifi_logo.png" alt="Awifi"/></a>	
 		
 		</div>
 		<div id="menusuperior" role="complementary">

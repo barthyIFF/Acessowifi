@@ -1,15 +1,14 @@
 package goaccess
-
-
-import grails.plugin.springsecurity.annotation.Secured
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import grails.plugin.springsecurity.annotation.Secured
 
 @Transactional(readOnly = true)
 @Secured('ROLE_ADMIN')
 class AutorizadorProfController {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]	
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond AutorizadorProf.list(params), model:[autorizadorProfInstanceCount: AutorizadorProf.count()]
@@ -36,6 +35,9 @@ class AutorizadorProfController {
         }
 
         autorizadorProfInstance.save flush:true
+		Papel p = Papel.findByAuthority('ROLE_SUPERUSER')
+		ClientePapel.create(autorizadorProfInstance,p);
+
 
         request.withFormat {
             form multipartForm {
