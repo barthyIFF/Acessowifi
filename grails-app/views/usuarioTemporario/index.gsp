@@ -1,4 +1,3 @@
-
 <%@ page import="goaccess.UsuarioTemporario" %>
 <!DOCTYPE html>
 <html>
@@ -10,12 +9,12 @@
 	<body>
 		<a href="#list-usuarioTemporario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
-			<ul>
-				<li><g:remoteLink controller="usuarioTemporario" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]"/></g:remoteLink></li>
+			<ul>				
+				<li><g:remoteLink class="create" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]" /></g:remoteLink></li>
 			</ul>
 		</div>
 		<div id="list-usuarioTemporario" class="content scaffold-list" role="main">
-			<br><h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -33,7 +32,7 @@
 					
 						<g:sortableColumn property="celular" title="${message(code: 'usuarioTemporario.celular.label', default: 'Celular')}" />
 					
-						<g:sortableColumn property="login" title="${message(code: 'usuarioTemporario.login.label', default: 'Login')}" />
+						<g:sortableColumn property="tempoAcesso" title="${message(code: 'usuarioTemporario.tempoAcesso.label', default: 'Tempo Acesso')}" />
 					
 					</tr>
 				</thead>
@@ -51,7 +50,7 @@
 					
 						<td>${fieldValue(bean: usuarioTemporarioInstance, field: "celular")}</td>
 					
-						<td>${fieldValue(bean: usuarioTemporarioInstance, field: "login")}</td>
+						<td><g:formatDate date="${usuarioTemporarioInstance.tempoAcesso}" /></td>
 					
 					</tr>
 				</g:each>

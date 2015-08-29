@@ -1,16 +1,15 @@
 package goaccess
 
-class AutorizadorProf {
+class AutorizadorProf extends Cliente {
 
 	String nome
-	String cpf
-	String login
-	String senha
-	String hashSenha
+	String cpf	
 	String email
 	String setorResponsavel
 	Integer numMemo
 	String celularNum
+	
+	static belongsTo = [papel:Papel]
 	
 	String toString () {
 		"${this.nome}"
@@ -21,8 +20,6 @@ class AutorizadorProf {
     static constraints = {
 		nome(nullable:false,blank:false)
 		cpf(blank:false,unique:true)
-		login(blank:false)
-		senha(blank:false)
 		email(email:true,blank:false)
 		setorResponsavel(blank:false)
 		numMemo(blank:false)

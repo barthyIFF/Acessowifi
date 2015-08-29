@@ -47,24 +47,6 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: usuarioTemporarioInstance, field: 'login', 'error')} required">
-	<label for="login">
-		<g:message code="usuarioTemporario.login.label" default="Login" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="login" required="" value="${usuarioTemporarioInstance?.login}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: usuarioTemporarioInstance, field: 'senha', 'error')} required">
-	<label for="senha">
-		<g:message code="usuarioTemporario.senha.label" default="Senha" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="senha" required="" value="${usuarioTemporarioInstance?.senha}"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: usuarioTemporarioInstance, field: 'tempoAcesso', 'error')} required">
 	<label for="tempoAcesso">
 		<g:message code="usuarioTemporario.tempoAcesso.label" default="Tempo Acesso" />
@@ -130,9 +112,7 @@
     <li><g:link controller="solicitacao" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
-<%--<g:link controller="solicitacao" action="create" params="['usuarioTemporario.id': usuarioTemporarioInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'solicitacao.label', default: 'Solicitacao')])}</g:link>--%>
-<g:remoteLink controller="solicitacao" action="create" params="['usuarioTemporario.id': usuarioTemporarioInstance?.id]" update="page-body">${message(code: 'default.add.label', args: [message(code: 'solicitacao.label', default: 'Solicitacao')])}</g:remoteLink>
-
+<g:link controller="solicitacao" action="create" params="['usuarioTemporario.id': usuarioTemporarioInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'solicitacao.label', default: 'Solicitacao')])}</g:link>
 </li>
 </ul>
 

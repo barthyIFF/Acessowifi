@@ -2,6 +2,24 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: autorizadorProfInstance, field: 'username', 'error')} required">
+	<label for="username">
+		<g:message code="autorizadorProf.username.label" default="Login" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="username" required="" value="${autorizadorProfInstance?.username}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: autorizadorProfInstance, field: 'password', 'error')} required">
+	<label for="password">
+		<g:message code="autorizadorProf.password.label" default="Senha" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="password" required="" value="${autorizadorProfInstance?.password}"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: autorizadorProfInstance, field: 'nome', 'error')} required">
 	<label for="nome">
 		<g:message code="autorizadorProf.nome.label" default="Nome" />
@@ -17,24 +35,6 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="cpf" required="" value="${autorizadorProfInstance?.cpf}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: autorizadorProfInstance, field: 'login', 'error')} required">
-	<label for="login">
-		<g:message code="autorizadorProf.login.label" default="Login" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="login" required="" value="${autorizadorProfInstance?.login}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: autorizadorProfInstance, field: 'senha', 'error')} required">
-	<label for="senha">
-		<g:message code="autorizadorProf.senha.label" default="Senha" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="senha" required="" value="${autorizadorProfInstance?.senha}"/>
 
 </div>
 
@@ -74,12 +74,44 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: autorizadorProfInstance, field: 'hashSenha', 'error')} required">
-	<label for="hashSenha">
-		<g:message code="autorizadorProf.hashSenha.label" default="Hash Senha" />
-		<span class="required-indicator">*</span>
+<div class="fieldcontain ${hasErrors(bean: autorizadorProfInstance, field: 'accountExpired', 'error')} ">
+	<label for="accountExpired">
+		<g:message code="autorizadorProf.accountExpired.label" default="Account Expired" />
+		
 	</label>
-	<g:textField name="hashSenha" required="" value="${autorizadorProfInstance?.hashSenha}"/>
+	<g:checkBox name="accountExpired" value="${autorizadorProfInstance?.accountExpired}" />
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: autorizadorProfInstance, field: 'accountLocked', 'error')} ">
+	<label for="accountLocked">
+		<g:message code="autorizadorProf.accountLocked.label" default="Account Locked" />
+		
+	</label>
+	<g:checkBox name="accountLocked" value="${autorizadorProfInstance?.accountLocked}" />
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: autorizadorProfInstance, field: 'enabled', 'error')} ">
+	<label for="enabled">
+		<g:message code="autorizadorProf.enabled.label" default="Enabled" />
+		
+	</label>
+	<g:checkBox name="enabled" value="${autorizadorProfInstance?.enabled}" />
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: autorizadorProfInstance, field: 'papel', 'error')} required">
+	<%--<g:select id="papel" name="papel.id" from="${goaccess.Papel.list()}" optionKey="id" required="" value="${autorizadorProfInstance?.papel?.id}" class="many-to-one"/>--%> 
+	<g:hiddenField name="papel.id" value="2"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: autorizadorProfInstance, field: 'passwordExpired', 'error')} ">
+	<label for="passwordExpired">
+		<g:message code="autorizadorProf.passwordExpired.label" default="Password Expired" />
+		
+	</label>
+	<g:checkBox name="passwordExpired" value="${autorizadorProfInstance?.passwordExpired}" />
 
 </div>
 
@@ -94,9 +126,7 @@
     <li><g:link controller="solicitacao" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
-<%--<g:link controller="solicitacao" action="create" params="['autorizadorProf.id': autorizadorProfInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'solicitacao.label', default: 'Solicitacao')])}</g:link>--%>
-<g:remoteLink controller="solicitacao" action="create" params="['autorizadorProf.id': autorizadorProfInstance?.id]" update="page-body">${message(code: 'default.add.label', args: [message(code: 'solicitacao.label', default: 'Solicitacao')])}</g:remoteLink>
-
+<g:link controller="solicitacao" action="create" params="['autorizadorProf.id': autorizadorProfInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'solicitacao.label', default: 'Solicitacao')])}</g:link>
 </li>
 </ul>
 
