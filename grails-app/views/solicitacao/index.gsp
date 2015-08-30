@@ -9,10 +9,10 @@
 	</head>
 	<body>
 		<a href="#list-solicitacao" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		
+		</div>
 		<div class="nav" role="navigation">
-			<ul>
-				<li><g:remoteLink controller="Solicitacao" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]"/></g:remoteLink></li>
+			<ul>				
+				<li><g:remoteLink class="create" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]" /></g:remoteLink></li>				
 			</ul>
 		</div>
 		<div id="list-solicitacao" class="content scaffold-list" role="main">
