@@ -58,8 +58,6 @@
     <li><g:link controller="equipamento" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
-<%--Denis, essa é a linha original, vou deixa-la comentada e fazer a que agente quer abaixo. Depois que vc entender vc apaga, blz?
-<g:link controller="equipamento" action="create" params="['solicitacao.id': solicitacaoInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'equipamento.label', default: 'Equipamento')])}</g:link> --%>
 <g:remoteLink controller="equipamento" action="create" params="['solicitacao.id': solicitacaoInstance?.id]" update="page-body">${message(code: 'default.add.label', args: [message(code: 'equipamento.label', default: 'Equipamento')])}</g:remoteLink>
 </li>
 </ul>

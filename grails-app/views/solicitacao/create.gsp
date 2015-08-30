@@ -8,8 +8,8 @@
 	<body>
 		<a href="#create-solicitacao" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
-			<ul>
-				<li><g:remoteLink controller="Solicitacao" action="index" update="page-body"><g:message code="default.list.label" args="[entityName]"/></g:remoteLink></li>
+			<ul>				
+				<li><g:remoteLink class="list" action="index" update="page-body"><g:message code="default.list.label" args="[entityName]" /></g:remoteLink></li>				
 			</ul>
 		</div>
 		<div id="create-solicitacao" class="content scaffold-create" role="main">
