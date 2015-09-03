@@ -1,3 +1,4 @@
+
 <%@ page import="goaccess.UsuarioTemporario" %>
 <!DOCTYPE html>
 <html>
@@ -9,12 +10,12 @@
 	<body>
 		<a href="#list-usuarioTemporario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
-			<ul>				
+			<ul>
 				<li><g:remoteLink class="create" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]" /></g:remoteLink></li>
 			</ul>
 		</div>
 		<div id="list-usuarioTemporario" class="content scaffold-list" role="main">
-			<br><h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>

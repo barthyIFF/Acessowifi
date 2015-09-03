@@ -1,4 +1,6 @@
 package goaccess
+import groovy.json.internal.Dates;
+import java.text.DateFormat;
 
 class UsuarioSolicitante {
 
@@ -11,8 +13,12 @@ class UsuarioSolicitante {
 	 * so vai usar a app pra consultar o status de sua solicitacao.*/
 	//String login
 	//String senha
-	String hashSenha
-	String endereco
+	String cep
+	String logradouro
+	String complemento
+	String bairro
+	String localidade
+	String uf
 		
 	static hasMany = [solicitacao:Solicitacao]	
 	

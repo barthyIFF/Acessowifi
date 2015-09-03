@@ -1,8 +1,64 @@
 <%@ page import="goaccess.UsuarioSolicitante" %>
 
 
+<div class="fieldcontain ${hasErrors(bean: usuarioSolicitanteInstance, field: 'cep', 'error')} required">	
+	<label for="cep">
+		<g:message code="usuarioSolicitante.cep.label" default="Informe o Cep do endereço" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="cep" required="" value="${usuarioSolicitanteInstance?.cep}"/>
 
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: usuarioSolicitanteInstance, field: 'logradouro', 'error')} required">	
+	<label for="logradouro">
+		<g:message code="usuarioSolicitante.logradouro.label" default="Logradouro" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="logradouro" required="" value="${usuarioSolicitanteInstance?.logradouro}" />
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: usuarioSolicitanteInstance, field: 'bairro', 'error')} required">	
+	<label for="bairro">
+		<g:message code="usuarioSolicitante.bairro.label" default="Bairro" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="bairro" required="" value="${usuarioSolicitanteInstance?.bairro}" />
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: usuarioSolicitanteInstance, field: 'localidade', 'error')} required">	
+	<label for="localidade">
+		<g:message code="usuarioSolicitante.localidade.label" default="Localidade" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="localidade" required="" value="${usuarioSolicitanteInstance?.localidade}" />
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: usuarioSolicitanteInstance, field: 'uf', 'error')} required">	
+	<label for="uf">
+		<g:message code="usuarioSolicitante.uf.label" default="UF" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="uf" required="" value="${usuarioSolicitanteInstance?.uf}" />
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: usuarioSolicitanteInstance, field: 'complemento', 'error')} required">	
+	<label for="complemento">
+		<g:message code="usuarioSolicitante.complemento.label" default="Complemento" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="complemento" required="" value="${usuarioSolicitanteInstance?.complemento}"/>
+
+</div>
+
+
+<br><h1>Outros Dados do Usuário Solicitante</h1><br>
 <div class="fieldcontain ${hasErrors(bean: usuarioSolicitanteInstance, field: 'nome', 'error')} required">
+	
 	<label for="nome">
 		<g:message code="usuarioSolicitante.nome.label" default="Nome" />
 		<span class="required-indicator">*</span>
@@ -47,23 +103,6 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: usuarioSolicitanteInstance, field: 'endereco', 'error')} required">
-	<label for="endereco">
-		<g:message code="usuarioSolicitante.endereco.label" default="Endereco" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="endereco" required="" value="${usuarioSolicitanteInstance?.endereco}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: usuarioSolicitanteInstance, field: 'hashSenha', 'error')} required">
-	<label for="hashSenha">
-		<g:message code="usuarioSolicitante.hashSenha.label" default="Hash Senha" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="hashSenha" required="" value="${usuarioSolicitanteInstance?.hashSenha}"/>
-
-</div>
 
 <div class="fieldcontain ${hasErrors(bean: usuarioSolicitanteInstance, field: 'solicitacao', 'error')} ">
 	<label for="solicitacao">
