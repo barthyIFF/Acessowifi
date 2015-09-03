@@ -17,12 +17,60 @@
 			</ul>
 		</div>
 		<div id="show-usuarioSolicitante" class="content scaffold-show" role="main">
-			<br><h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<ol class="property-list usuarioSolicitante">
-			
+			<br><h1>Endereço do Usuário Solicitante</h1><br>
+				<g:if test="${usuarioSolicitanteInstance?.cep}">
+				<li class="fieldcontain">
+					<span id="cep-label" class="property-label"><g:message code="usuarioSolicitante.cep.label" default="Cep" /></span>
+					
+						<span class="property-value" aria-labelledby="cep-label"><g:fieldValue bean="${usuarioSolicitanteInstance}" field="cep"/></span>
+				</li>
+				</g:if>
+
+				<g:if test="${usuarioSolicitanteInstance?.logradouro}">
+				<li class="fieldcontain">
+					<span id="logradouro-label" class="property-label"><g:message code="usuarioSolicitante.logradouro.label" default="Logradouro" /></span>
+					
+						<span class="property-value" aria-labelledby="logradouro-label"><g:fieldValue bean="${usuarioSolicitanteInstance}" field="logradouro"/></span>
+				</li>
+				</g:if>
+
+				<g:if test="${usuarioSolicitanteInstance?.bairro}">
+				<li class="fieldcontain">
+					<span id="bairro-label" class="property-label"><g:message code="usuarioSolicitante.bairro.label" default="Bairro" /></span>
+					
+						<span class="property-value" aria-labelledby="bairro-label"><g:fieldValue bean="${usuarioSolicitanteInstance}" field="bairro"/></span>
+				</li>
+				</g:if>
+
+				<g:if test="${usuarioSolicitanteInstance?.localidade}">
+				<li class="fieldcontain">
+					<span id="localidade-label" class="property-label"><g:message code="usuarioSolicitante.localidade.label" default="Localidade" /></span>
+					
+						<span class="property-value" aria-labelledby="localidade-label"><g:fieldValue bean="${usuarioSolicitanteInstance}" field="localidade"/></span>
+				</li>
+				</g:if>
+
+				<g:if test="${usuarioSolicitanteInstance?.uf}">
+				<li class="fieldcontain">
+					<span id="uf-label" class="property-label"><g:message code="usuarioSolicitante.uf.label" default="UF" /></span>
+					
+						<span class="property-value" aria-labelledby="uf-label"><g:fieldValue bean="${usuarioSolicitanteInstance}" field="uf"/></span>
+				</li>
+				</g:if>
+				
+				<g:if test="${usuarioSolicitanteInstance?.complemento}">
+				<li class="fieldcontain">
+					<span id="complemento-label" class="property-label"><g:message code="usuarioSolicitante.complemento.label" default="Complemento" /></span>
+					
+						<span class="property-value" aria-labelledby="complemento-label"><g:fieldValue bean="${usuarioSolicitanteInstance}" field="complemento"/></span>
+				</li>
+				</g:if>
+
+			<br><h1>Outros dados do Usuário Solicitante</h1><br>
 				<g:if test="${usuarioSolicitanteInstance?.nome}">
 				<li class="fieldcontain">
 					<span id="nome-label" class="property-label"><g:message code="usuarioSolicitante.nome.label" default="Nome" /></span>
@@ -68,23 +116,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${usuarioSolicitanteInstance?.endereco}">
-				<li class="fieldcontain">
-					<span id="endereco-label" class="property-label"><g:message code="usuarioSolicitante.endereco.label" default="Endereco" /></span>
-					
-						<span class="property-value" aria-labelledby="endereco-label"><g:fieldValue bean="${usuarioSolicitanteInstance}" field="endereco"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${usuarioSolicitanteInstance?.hashSenha}">
-				<li class="fieldcontain">
-					<span id="hashSenha-label" class="property-label"><g:message code="usuarioSolicitante.hashSenha.label" default="Hash Senha" /></span>
-					
-						<span class="property-value" aria-labelledby="hashSenha-label"><g:fieldValue bean="${usuarioSolicitanteInstance}" field="hashSenha"/></span>
-					
-				</li>
-				</g:if>
 			
 				<g:if test="${usuarioSolicitanteInstance?.solicitacao}">
 				<li class="fieldcontain">

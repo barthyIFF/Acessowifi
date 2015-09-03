@@ -1,5 +1,4 @@
 package goaccess
-
 class UsuarioTemporario extends UsuarioSolicitante {
 
 	Date tempoAcesso
@@ -11,10 +10,10 @@ class UsuarioTemporario extends UsuarioSolicitante {
 		"${this.nome}"
 	}
 	
-    static constraints = {
+	static constraints = {
 		tempoAcesso(nullable:false,blank:false)
 		evento(blank:false)
 		setorEvento(blank:false)
 		numEvento(blank:false)
-    }
+	}
 }

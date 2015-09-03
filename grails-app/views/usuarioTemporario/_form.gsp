@@ -1,6 +1,60 @@
 <%@ page import="goaccess.UsuarioTemporario" %>
 
+<div class="fieldcontain ${hasErrors(bean: usuarioTemporarioInstance, field: 'cep', 'error')} required">
+	<label for="cep">
+		<g:message code="usuarioTemporario.cep.label" default="Informe o Cep do endereço" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="cep" required="" value="${usuarioTemporarioInstance?.cep}"/>
 
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: usuarioTemporarioInstance, field: 'logradouro', 'error')} required">
+	<label for="logradouro">
+		<g:message code="usuarioTemporario.logradouro.label" default="Logradouro" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="logradouro" required="" value="${usuarioTemporarioInstance?.logradouro}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: usuarioTemporarioInstance, field: 'bairro', 'error')} required">
+	<label for="bairro">
+		<g:message code="usuarioTemporario.bairro.label" default="Bairro" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="bairro" required="" value="${usuarioTemporarioInstance?.bairro}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: usuarioTemporarioInstance, field: 'complemento', 'error')} required">
+	<label for="complemento">
+		<g:message code="usuarioTemporario.complemento.label" default="Complemento" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="complemento" required="" value="${usuarioTemporarioInstance?.complemento}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: usuarioTemporarioInstance, field: 'localidade', 'error')} required">
+	<label for="localidade">
+		<g:message code="usuarioTemporario.localidade.label" default="Localidade" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="localidade" required="" value="${usuarioTemporarioInstance?.localidade}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: usuarioTemporarioInstance, field: 'uf', 'error')} required">
+	<label for="uf">
+		<g:message code="usuarioTemporario.uf.label" default="Uf" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="uf" required="" value="${usuarioTemporarioInstance?.uf}"/>
+
+</div>
+
+<br><h1>Outros Dados do Usuário Temporário</h1><br>
 
 <div class="fieldcontain ${hasErrors(bean: usuarioTemporarioInstance, field: 'nome', 'error')} required">
 	<label for="nome">
@@ -83,24 +137,6 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: usuarioTemporarioInstance, field: 'endereco', 'error')} required">
-	<label for="endereco">
-		<g:message code="usuarioTemporario.endereco.label" default="Endereco" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="endereco" required="" value="${usuarioTemporarioInstance?.endereco}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: usuarioTemporarioInstance, field: 'hashSenha', 'error')} required">
-	<label for="hashSenha">
-		<g:message code="usuarioTemporario.hashSenha.label" default="Hash Senha" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="hashSenha" required="" value="${usuarioTemporarioInstance?.hashSenha}"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: usuarioTemporarioInstance, field: 'solicitacao', 'error')} ">
 	<label for="solicitacao">
 		<g:message code="usuarioTemporario.solicitacao.label" default="Solicitacao" />
@@ -112,10 +148,12 @@
     <li><g:link controller="solicitacao" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
-<g:remoteLink controller="solicitacao" action="create" params="['operadorCTI.id': operadorCTIInstance?.id]" update="page-body">${message(code: 'default.add.label', args: [message(code: 'solicitacao.label', default: 'Solicitacao')])}</g:remoteLink>
+<g:link controller="solicitacao" action="create" params="['usuarioTemporario.id': usuarioTemporarioInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'solicitacao.label', default: 'Solicitacao')])}</g:link>
 </li>
 </ul>
 
 
 </div>
+
+
 

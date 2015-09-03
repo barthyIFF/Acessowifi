@@ -12,17 +12,73 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:remoteLink class="list" action="index" update="page-body"><g:message code="default.list.label" args="[entityName]" /></g:remoteLink></li>				
-				<li><g:remoteLink class="create" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]" /></g:remoteLink></li>				
+				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
-		<div id="show-usuarioTemporario" class="content scaffold-show" role="main">
-			<br><h1><g:message code="default.show.label" args="[entityName]" /></h1>
+		<div id="show-usuarioTemporario" class="content scaffold-show" role="main">			
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<ol class="property-list usuarioTemporario">
+			<br><h1>Endereço do Usuário Temporário</h1><br>
 			
+				<g:if test="${usuarioTemporarioInstance?.cep}">
+				<li class="fieldcontain">
+					<span id="cep-label" class="property-label"><g:message code="usuarioTemporario.cep.label" default="Cep" /></span>
+					
+						<span class="property-value" aria-labelledby="cep-label"><g:fieldValue bean="${usuarioTemporarioInstance}" field="cep"/></span>
+					
+				</li>
+				</g:if>				
+				
+				<g:if test="${usuarioTemporarioInstance?.logradouro}">
+				<li class="fieldcontain">
+					<span id="logradouro-label" class="property-label"><g:message code="usuarioTemporario.logradouro.label" default="Logradouro" /></span>
+					
+						<span class="property-value" aria-labelledby="logradouro-label"><g:fieldValue bean="${usuarioTemporarioInstance}" field="logradouro"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${usuarioTemporarioInstance?.bairro}">
+				<li class="fieldcontain">
+					<span id="bairro-label" class="property-label"><g:message code="usuarioTemporario.bairro.label" default="Bairro" /></span>
+					
+						<span class="property-value" aria-labelledby="bairro-label"><g:fieldValue bean="${usuarioTemporarioInstance}" field="bairro"/></span>
+					
+				</li>
+				</g:if>		
+
+			
+				<g:if test="${usuarioTemporarioInstance?.complemento}">
+				<li class="fieldcontain">
+					<span id="complemento-label" class="property-label"><g:message code="usuarioTemporario.complemento.label" default="Complemento" /></span>
+					
+						<span class="property-value" aria-labelledby="complemento-label"><g:fieldValue bean="${usuarioTemporarioInstance}" field="complemento"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${usuarioTemporarioInstance?.localidade}">
+				<li class="fieldcontain">
+					<span id="localidade-label" class="property-label"><g:message code="usuarioTemporario.localidade.label" default="Localidade" /></span>
+					
+						<span class="property-value" aria-labelledby="localidade-label"><g:fieldValue bean="${usuarioTemporarioInstance}" field="localidade"/></span>
+					
+				</li>
+				</g:if>		
+				
+				<g:if test="${usuarioTemporarioInstance?.uf}">
+				<li class="fieldcontain">
+					<span id="uf-label" class="property-label"><g:message code="usuarioTemporario.uf.label" default="Uf" /></span>
+					
+						<span class="property-value" aria-labelledby="uf-label"><g:fieldValue bean="${usuarioTemporarioInstance}" field="uf"/></span>
+					
+				</li>
+				</g:if>
+			
+				<br><h1>Outros dados do Usuário Temporário</h1><br>
 				<g:if test="${usuarioTemporarioInstance?.nome}">
 				<li class="fieldcontain">
 					<span id="nome-label" class="property-label"><g:message code="usuarioTemporario.nome.label" default="Nome" /></span>
@@ -103,24 +159,7 @@
 					
 				</li>
 				</g:if>
-			
-				<g:if test="${usuarioTemporarioInstance?.endereco}">
-				<li class="fieldcontain">
-					<span id="endereco-label" class="property-label"><g:message code="usuarioTemporario.endereco.label" default="Endereco" /></span>
-					
-						<span class="property-value" aria-labelledby="endereco-label"><g:fieldValue bean="${usuarioTemporarioInstance}" field="endereco"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${usuarioTemporarioInstance?.hashSenha}">
-				<li class="fieldcontain">
-					<span id="hashSenha-label" class="property-label"><g:message code="usuarioTemporario.hashSenha.label" default="Hash Senha" /></span>
-					
-						<span class="property-value" aria-labelledby="hashSenha-label"><g:fieldValue bean="${usuarioTemporarioInstance}" field="hashSenha"/></span>
-					
-				</li>
-				</g:if>
+	
 			
 				<g:if test="${usuarioTemporarioInstance?.solicitacao}">
 				<li class="fieldcontain">
@@ -131,8 +170,8 @@
 						</g:each>
 					
 				</li>
-				</g:if>
-			
+				</g:if>	
+		
 			</ol>
 			<g:form url="[resource:usuarioTemporarioInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
