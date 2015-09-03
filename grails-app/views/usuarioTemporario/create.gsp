@@ -89,8 +89,7 @@
 			</ul>
 		</div>
 		<div id="create-usuarioTemporario" class="content scaffold-create" role="main">
-		<br><h1>Endereço do Usuário Temporário</h1><br>
-			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
+		<br><h1>Endereço do Usuário Temporário</h1><br>			
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
