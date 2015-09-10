@@ -20,7 +20,7 @@
 </div>
 
 <div id="page-body" >
-	<h1>Senhor ${sec.username()}, as solicitações abaixo estão aguardando a sua aprovação:</h1><br>
+	<h1>Senhor ${sec.username()}, as solicitações abaixo estão em seu nome:</h1><br>
 	<%--
 	<%def user = springSecurityService.currentUser%>	
 	<%= user %>
@@ -29,17 +29,19 @@
 	Username logado = ${sec.loggedInUserInfo(field:'username')}<br>
 	${sec.username()}<br>
 
-	<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">		
-		${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}<br/>
+	<%--Somente aguardando aprovacao --%>
+	<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">
+		<g:if test="${sol.status == 'Aguardando Aprovacao'}">
+    		${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}; ${sol.status} <br/>
+		</g:if>
 	</g:each><br>
 
 	<hr>
-	
-	<%--
-	<g:findall in="${solicitacoesPorAutorizador}" expr="true">
-    	<p>${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}</p>
-	</g:findall>
-	 --%>
+	<%--Nao somente aguardando aprovacao, todas em seu nome --%>
+	<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">		
+    		${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}; ${sol.status} <br/>		
+	</g:each><br>
+
 	<p>
 
 			<table>
