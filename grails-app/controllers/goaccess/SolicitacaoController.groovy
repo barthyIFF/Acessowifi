@@ -1,5 +1,6 @@
 package goaccess
 import grails.plugin.springsecurity.annotation.Secured
+import grails.plugin.springsecurity.*
 
 
 
@@ -9,25 +10,35 @@ import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
-@Secured('ROLE_ADMIN')
+
 class SolicitacaoController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+	
+	@Secured('ROLE_ADMIN')
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Solicitacao.list(params), model:[solicitacaoInstanceCount: Solicitacao.count()]
     }
-
+	@Secured('ROLE_SUPERUSER')
+	def indexAutorizador(Integer max) {
+		params.max = Math.min(max ?: 10, 100)
+		respond Solicitacao.list(params), model:[solicitacaoInstanceCount: Solicitacao.count()]
+		//AutorizadorProf currentLoggedInUser = springSecurityService.getCurrentUser();
+		//[currentLoggedInUser:currentLoggedInUser]
+	}
+	
+	@Secured('ROLE_ADMIN')
     def show(Solicitacao solicitacaoInstance) {
         respond solicitacaoInstance
     }
-
+	@Secured('ROLE_ADMIN')
     def create() {
         respond new Solicitacao(params)
     }
 
     @Transactional
+	@Secured('ROLE_ADMIN')
     def save(Solicitacao solicitacaoInstance) {
         if (solicitacaoInstance == null) {
             notFound()
@@ -49,12 +60,14 @@ class SolicitacaoController {
             '*' { respond solicitacaoInstance, [status: CREATED] }
         }
     }
-
+	
+	@Secured('ROLE_ADMIN')
     def edit(Solicitacao solicitacaoInstance) {
         respond solicitacaoInstance
     }
 
     @Transactional
+	@Secured('ROLE_ADMIN')
     def update(Solicitacao solicitacaoInstance) {
         if (solicitacaoInstance == null) {
             notFound()
@@ -78,6 +91,7 @@ class SolicitacaoController {
     }
 
     @Transactional
+	@Secured('ROLE_ADMIN')
     def delete(Solicitacao solicitacaoInstance) {
 
         if (solicitacaoInstance == null) {
