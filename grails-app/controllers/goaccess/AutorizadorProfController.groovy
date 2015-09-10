@@ -13,6 +13,10 @@ class AutorizadorProfController {
         params.max = Math.min(max ?: 10, 100)
         respond AutorizadorProf.list(params), model:[autorizadorProfInstanceCount: AutorizadorProf.count()]
     }
+	
+	
+
+	
 
     def show(AutorizadorProf autorizadorProfInstance) {
         respond autorizadorProfInstance

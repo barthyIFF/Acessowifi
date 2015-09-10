@@ -17,7 +17,8 @@
 			</ul>
 		</div>
 		<div id="show-solicitacao" class="content scaffold-show" role="main">
-			<br><h1><g:message code="default.show.label" args="[entityName]" /></h1>
+			<br><h1>Essa solicitação já foi definida com éxito. Clique aqui para <g:remoteLink controller="equipamento" action="create" params="['solicitacao.id': solicitacaoInstance?.id]" update="page-body">${message(code: 'default.add.label', args: [message(code: 'equipamento.label', default: 'Equipamento')])}</g:remoteLink> a essa solicitação.</h1>
+			
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
