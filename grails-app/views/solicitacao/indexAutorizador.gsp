@@ -11,19 +11,35 @@
 <div id="menu" role="complementary">
 	<h1>Menu</h1>
 	<ul>
-		<li><g:remoteLink controller="Solicitacao" action="index" update="page-body">Solicitações</g:remoteLink></li>
+		<%--Solicitacoes aguardando aprovacao --%>
+		<li><g:remoteLink controller="Solicitacao" action="indexAutorizador" update="page-body">Solicitações</g:remoteLink></li>
+		<%--Todas as solicitacoes --%>
+		<li><g:remoteLink controller="Solicitacao" action="index" update="page-body">Ver solicitações aprovadas</g:remoteLink></li>
 		<li><a href="../j_spring_security_logout">Fazer logout</a></li>		
 	</ul>
 </div>
 
 <div id="page-body" >
-	<h1>Solicitações aguardando a sua aprovação:</h1><br>
+	<h1>Senhor ${sec.username()}, as solicitações abaixo estão aguardando a sua aprovação:</h1><br>
 	<%--
 	<%def user = springSecurityService.currentUser%>	
 	<%= user %>
 	${user}
 	 --%>
-	 ${sec.loggedInUserInfo(field:'username')}
+	Username logado = ${sec.loggedInUserInfo(field:'username')}<br>
+	${sec.username()}<br>
+
+	<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">		
+		${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}<br/>
+	</g:each><br>
+
+	<hr>
+	
+	<%--
+	<g:findall in="${solicitacoesPorAutorizador}" expr="true">
+    	<p>${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}</p>
+	</g:findall>
+	 --%>
 	<p>
 
 			<table>

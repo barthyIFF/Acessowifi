@@ -19,7 +19,7 @@ class AutorizadorProf extends Cliente {
 	
     static constraints = {
 		nome(nullable:false,blank:false)
-		cpf(blank:false,unique:true)
+		cpf(blank:false)
 		email(email:true,blank:false)
 		setorResponsavel(blank:false)
 		numMemo(blank:false)

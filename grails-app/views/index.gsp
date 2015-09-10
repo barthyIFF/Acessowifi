@@ -23,10 +23,11 @@
 			</div>
 		</div>
 <br><br><br><br><br><br><br><br><br><br><br>
-		------------------------------------------{Área de desenvolvimento. Será apagada antes da primeira entrega}------------------------------------------
+		------------------------------------------{Área de desenvolvimento. Será apagada antes da}------------------------------------------
 <p>
 
-	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 09/09/15 - 14:38
+	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 09/09/15 - 14:38<br>
+	Username logado = ${sec.loggedInUserInfo(field:'username')}
 		
 </p>
 
