@@ -1,61 +1,37 @@
-
-<%@ page import="goaccess.AutorizadorProf" %>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="layout" content="main2">
-		<g:set var="entityName" value="${message(code: 'autorizadorProf.label', default: 'AutorizadorProf')}" />
-		<title><g:message code="default.list.label" args="[entityName]" /></title>
-	</head>
-	<body>
-		<a href="#list-autorizadorProf" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>				
-				<li><g:remoteLink class="create" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]" /></g:remoteLink></li>
-			</ul>
-		</div>
-		<div id="list-autorizadorProf" class="content scaffold-list" role="main">
-			<br><h1><g:message code="default.list.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
-				<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			<table>
-			<thead>
-					<tr>
-					
-						<g:sortableColumn property="username" title="${message(code: 'autorizadorProf.username.label', default: 'Username')}" />
-						
-						<g:sortableColumn property="nome" title="${message(code: 'autorizadorProf.nome.label', default: 'Nome')}" />
-					
-						<g:sortableColumn property="cpf" title="${message(code: 'autorizadorProf.cpf.label', default: 'Cpf')}" />
-					
-						<g:sortableColumn property="email" title="${message(code: 'autorizadorProf.email.label', default: 'Email')}" />
-					
-						<g:sortableColumn property="setorResponsavel" title="${message(code: 'autorizadorProf.setorResponsavel.label', default: 'Setor Responsavel')}" />
-					
-					</tr>
-				</thead>
-				<tbody>
-				<g:each in="${autorizadorProfInstanceList}" status="i" var="autorizadorProfInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
-						<td><g:remoteLink class="show" action="show" update="page-body" id="${autorizadorProfInstance.id}">${fieldValue(bean: autorizadorProfInstance, field: "username")}</g:remoteLink></td>
-					
-						<td>${fieldValue(bean: autorizadorProfInstance, field: "nome")}</td>
-					
-						<td>${fieldValue(bean: autorizadorProfInstance, field: "cpf")}</td>
-					
-						<td>${fieldValue(bean: autorizadorProfInstance, field: "email")}</td>
-					
-						<td>${fieldValue(bean: autorizadorProfInstance, field: "setorResponsavel")}</td>
-					
-					</tr>
-				</g:each>
-				</tbody>
-			</table>
-			<div class="pagination">
-				<g:paginate total="${autorizadorProfInstanceCount ?: 0}" />
-			</div>
-		</div>
-	</body>
+<head>
+<meta name="layout" content="main"/>
+<title>Sistema de Solicitação de Acesso Wifi</title>
+
+	
+</head>
+<body>
+<div id="menu" role="complementary">
+	<h1>Menu - </h1>
+	<ul>
+		<%--Solicitacoes aguardando aprovacao --%>
+		<li><g:remoteLink controller="Solicitacao" action="indexAutorizador" update="page-body">Solicitações</g:remoteLink></li>
+		<%--Todas as solicitacoes --%>
+		<li><g:remoteLink controller="Solicitacao" action="index" update="page-body">Ver solicitações aprovadas</g:remoteLink></li>
+		<li><a href="j_spring_security_logout">Fazer logout</a></li>	
+	</ul>
+</div>
+
+<div id="page-body" >
+	<h1>Sem bem Vindo, Autorizador</h1>
+	<p>
+		Texto para o operador...Texto para o operador...Texto para o operador...<br>
+		Texto para o operador...Texto para o operador...Texto para o operador...<br>
+		Texto para o operador...Texto para o operador...Texto para o operador...<br>
+		<br>
+		PENDENCIA: tentar colocar aqui uma lista das solicitacoes pendentes, a serem encerradas!<br>
+		<br>
+		PENDENCIA EM CADASTRO DE OPERADORES E AUTORIZADORES: Tem que pegar o usuario e a senha<br>
+		informados e, automaticamente, tb fazer o cadastro em clientes, papelcliente e papel (autenticacao).
+			
+	</p>
+	<div id="controller-list" role="navigation"></div>
+</div>
+</body>
 </html>

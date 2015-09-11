@@ -41,9 +41,9 @@ class SolicitacaoController {
 		}	
 		//def Solicitacao s = Solicitacao.get(solicitacaoInstance.id)
 		//s.save(flush:true)
-		solicitacaoInstance.status = "Aguardando Aprovaca"
+		solicitacaoInstance.status = "Aguardando Aprovacao"
 		solicitacaoInstance.save(flush:true)
-		render "Solicitação aprovada!"
+	    render "Solicitacao APROVADA com sucesso!"
 		
 				
 	}
