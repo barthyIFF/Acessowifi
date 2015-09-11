@@ -39,7 +39,7 @@
 				<g:each in="${operadorCTIInstanceList}" status="i" var="operadorCTIInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${operadorCTIInstance.id}">${fieldValue(bean: operadorCTIInstance, field: "username")}</g:link></td>
+						<td><g:remoteLink class="show" action="show" update="page-body" id="${operadorCTIInstance.id}">${fieldValue(bean: operadorCTIInstance, field: "username")}</g:remoteLink></td>
 					
 						<td>${fieldValue(bean: operadorCTIInstance, field: "nome")}</td>
 					

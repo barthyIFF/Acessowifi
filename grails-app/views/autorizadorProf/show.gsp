@@ -154,7 +154,7 @@
 			</ol>
 			<g:form url="[resource:autorizadorProfInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
-					<g:link class="edit" action="edit" resource="${autorizadorProfInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+				    <g:remoteLink class="edit" action="edit" resource="${autorizadorProfInstance}" update="page-body"><g:message code="default.button.edit.label" default="Edit" /></g:remoteLink>				
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>

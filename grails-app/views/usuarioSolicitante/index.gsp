@@ -40,7 +40,7 @@
 				<g:each in="${usuarioSolicitanteInstanceList}" status="i" var="usuarioSolicitanteInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${usuarioSolicitanteInstance.id}">${fieldValue(bean: usuarioSolicitanteInstance, field: "nome")}</g:link></td>
+						<td><g:remoteLink class="show" action="show" update="page-body" id="${usuarioSolicitanteInstance.id}">${fieldValue(bean: usuarioSolicitanteInstance, field: "nome")}</g:remoteLink></td>
 					
 						<td>${fieldValue(bean: usuarioSolicitanteInstance, field: "cpf")}</td>
 					

@@ -11,7 +11,7 @@
 		<a href="#list-equipamento" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><g:remoteLink controller="equipamento" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]"/></g:remoteLink></li>
+				<li><g:remoteLink class="create" controller="equipamento" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]"/></g:remoteLink></li>
 			</ul>
 		</div>
 		<div id="list-equipamento" class="content scaffold-list" role="main">
@@ -35,7 +35,7 @@
 				<g:each in="${equipamentoInstanceList}" status="i" var="equipamentoInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${equipamentoInstance.id}">${fieldValue(bean: equipamentoInstance, field: "ip")}</g:link></td>
+						<td><g:remoteLink class="show" action="show" update="page-body" id="${equipamentoInstance.id}">${fieldValue(bean: equipamentoInstance, field: "ip")}</g:remoteLink></td>
 					
 						<td>${fieldValue(bean: equipamentoInstance, field: "mac")}</td>
 					
