@@ -20,7 +20,7 @@
 </div>
 
 <div id="page-body" >
-	<h1>Senhor ${sec.username()}, as solicitações abaixo estão em seu nome:</h1><br>
+	<h1>Sr. ${sec.username()}, as solicitações abaixo estão em seu nome:</h1><br>
 	<%--
 	<%def user = springSecurityService.currentUser%>	
 	<%= user %>

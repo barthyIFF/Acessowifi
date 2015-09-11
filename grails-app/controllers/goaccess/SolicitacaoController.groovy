@@ -43,7 +43,7 @@ class SolicitacaoController {
 		//s.save(flush:true)
 		solicitacaoInstance.status = "Aguardando Aprovaca"
 		solicitacaoInstance.save(flush:true)
-		//render view:'indexAutorizador'
+		render "Solicitação aprovada!"
 		
 				
 	}
