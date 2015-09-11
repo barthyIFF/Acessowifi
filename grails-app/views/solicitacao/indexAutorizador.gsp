@@ -11,19 +11,42 @@
 <div id="menu" role="complementary">
 	<h1>Menu</h1>
 	<ul>
-		<li><g:remoteLink controller="Solicitacao" action="index" update="page-body">Solicitações</g:remoteLink></li>
+		<%--Solicitacoes aguardando aprovacao --%>
+		<li><g:remoteLink controller="Solicitacao" action="indexAutorizador" update="page-body">Solicitações</g:remoteLink></li>
+		<%--Todas as solicitacoes --%>
+		<li><g:remoteLink controller="Solicitacao" action="index" update="page-body">Ver solicitações aprovadas</g:remoteLink></li>
 		<li><a href="../j_spring_security_logout">Fazer logout</a></li>		
 	</ul>
 </div>
 
 <div id="page-body" >
-	<h1>Solicitações aguardando a sua aprovação:</h1><br>
+	<h1>Sr. ${sec.username()}, as solicitações abaixo estão em seu nome:</h1><br>
 	<%--
 	<%def user = springSecurityService.currentUser%>	
 	<%= user %>
 	${user}
 	 --%>
-	 ${sec.loggedInUserInfo(field:'username')}
+	Username logado = ${sec.loggedInUserInfo(field:'username')}<br>
+	${sec.username()}<br>
+
+	<%--Somente aguardando aprovacao --%>
+	<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">
+		<g:if test="${sol.status == 'Aguardando Aprovacao'}">
+    		<p>${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}; ${sol.status} 
+    		<g:remoteLink class="mudaStatus" action="mudaStatus" update="page-body" id="${sol.id}">APROVAR</g:remoteLink> 
+    		<g:remoteLink class="show" action="show" update="page-body" id="${sol.id}">REPROVAR</g:remoteLink></p>
+		</g:if>
+	</g:each><br>
+
+	<hr>
+	<%--Nao somente aguardando aprovacao, todas em seu nome --%>
+	<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">		
+    		<p>${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}; ${sol.status};
+    		<g:remoteLink class="mudaStatus" action="mudaStatus" update="page-body" id="${sol.id}">APROVAR</g:remoteLink></p> 
+    		<g:javascript library="jquery" /> 
+    		  				
+	</g:each><br>
+
 	<p>
 
 			<table>

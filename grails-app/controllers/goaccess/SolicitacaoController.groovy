@@ -1,16 +1,12 @@
 package goaccess
 import grails.plugin.springsecurity.annotation.Secured
-import grails.plugin.springsecurity.*
-
-
-
-
-
+import org.springframework.security.core.userdetails.User
+import org.springframework.security.core.Authentication
+import org.springframework.security.core.context.SecurityContextHolder
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
-@Transactional(readOnly = true)
-
+@Transactional(readOnly = false)
 class SolicitacaoController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -20,12 +16,36 @@ class SolicitacaoController {
         params.max = Math.min(max ?: 10, 100)
         respond Solicitacao.list(params), model:[solicitacaoInstanceCount: Solicitacao.count()]
     }
+	
+	
+
 	@Secured('ROLE_SUPERUSER')
 	def indexAutorizador(Integer max) {
-		params.max = Math.min(max ?: 10, 100)
-		respond Solicitacao.list(params), model:[solicitacaoInstanceCount: Solicitacao.count()]
-		//AutorizadorProf currentLoggedInUser = springSecurityService.getCurrentUser();
-		//[currentLoggedInUser:currentLoggedInUser]
+		//[Claudio - 10/09/15] Listando apenas as solicitacoes do username que está logado atualmente	
+		User operadorLogado = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal()		
+		AutorizadorProf autorizador = AutorizadorProf.findByUsername(operadorLogado.username)		
+		def solicitacoesPorAutorizador = Solicitacao.findAllByAutorizador(autorizador)
+		[solicitacoesPorAutorizador:solicitacoesPorAutorizador]
+	}
+	
+	@Secured('ROLE_SUPERUSER')
+	def mudaStatus(Solicitacao solicitacaoInstance) {
+		if (solicitacaoInstance == null) {
+			notFound()
+			return
+		}
+
+		if (solicitacaoInstance.hasErrors()) {
+			respond solicitacaoInstance.errors, view:'indexAutorizador'
+			return
+		}	
+		//def Solicitacao s = Solicitacao.get(solicitacaoInstance.id)
+		//s.save(flush:true)
+		solicitacaoInstance.status = "Aguardando Aprovaca"
+		solicitacaoInstance.save(flush:true)
+		render "Solicitação aprovada!"
+		
+				
 	}
 	
 	@Secured('ROLE_ADMIN')
