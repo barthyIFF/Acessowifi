@@ -6,19 +6,20 @@ import grails.plugin.springsecurity.annotation.Secured
 @Transactional(readOnly = true)
 @Secured('ROLE_ADMIN')
 class AutorizadorProfController {
+    
+	static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
-    def index(Integer max) {
+	def indexAntigo(Integer max) {
+		params.max = Math.min(max ?: 10, 100)
+		respond AutorizadorProf.list(params), model:[autorizadorProfInstanceCount: AutorizadorProf.count()]
+	}	
+	@Secured('ROLE_SUPERUSER')
+	def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond AutorizadorProf.list(params), model:[autorizadorProfInstanceCount: AutorizadorProf.count()]
     }
 	
-	
-
-	
-
-    def show(AutorizadorProf autorizadorProfInstance) {
+	    def show(AutorizadorProf autorizadorProfInstance) {
         respond autorizadorProfInstance
     }
 
