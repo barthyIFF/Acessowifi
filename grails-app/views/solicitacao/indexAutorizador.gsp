@@ -32,14 +32,19 @@
 	<%--Somente aguardando aprovacao --%>
 	<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">
 		<g:if test="${sol.status == 'Aguardando Aprovacao'}">
-    		${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}; ${sol.status} <br/>
+    		<p>${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}; ${sol.status} 
+    		<g:remoteLink class="mudaStatus" action="mudaStatus" update="page-body" id="${sol.id}">APROVAR</g:remoteLink> 
+    		<g:remoteLink class="show" action="show" update="page-body" id="${sol.id}">REPROVAR</g:remoteLink></p>
 		</g:if>
 	</g:each><br>
 
 	<hr>
 	<%--Nao somente aguardando aprovacao, todas em seu nome --%>
 	<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">		
-    		${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}; ${sol.status} <br/>		
+    		<p>${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}; ${sol.status};
+    		<g:remoteLink class="mudaStatus" action="mudaStatus" update="page-body" id="${sol.id}">APROVAR</g:remoteLink></p> 
+    		<g:javascript library="jquery" /> 
+    		  				
 	</g:each><br>
 
 	<p>

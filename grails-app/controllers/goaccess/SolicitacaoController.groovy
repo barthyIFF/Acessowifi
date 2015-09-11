@@ -6,7 +6,7 @@ import org.springframework.security.core.context.SecurityContextHolder
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
-@Transactional(readOnly = true)
+@Transactional(readOnly = false)
 class SolicitacaoController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -26,6 +26,26 @@ class SolicitacaoController {
 		AutorizadorProf autorizador = AutorizadorProf.findByUsername(operadorLogado.username)		
 		def solicitacoesPorAutorizador = Solicitacao.findAllByAutorizador(autorizador)
 		[solicitacoesPorAutorizador:solicitacoesPorAutorizador]
+	}
+	
+	@Secured('ROLE_SUPERUSER')
+	def mudaStatus(Solicitacao solicitacaoInstance) {
+		if (solicitacaoInstance == null) {
+			notFound()
+			return
+		}
+
+		if (solicitacaoInstance.hasErrors()) {
+			respond solicitacaoInstance.errors, view:'indexAutorizador'
+			return
+		}	
+		//def Solicitacao s = Solicitacao.get(solicitacaoInstance.id)
+		//s.save(flush:true)
+		solicitacaoInstance.status = "Aguardando Aprovaca"
+		solicitacaoInstance.save(flush:true)
+		//render view:'indexAutorizador'
+		
+				
 	}
 	
 	@Secured('ROLE_ADMIN')
