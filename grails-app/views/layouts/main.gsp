@@ -93,11 +93,14 @@
 	<div id="grailsLogo" role="banner"><a class="home" href="${createLink(uri: '/')}"><asset:image src="awifi_logo.png" alt="Awifi"/></a>	
 		
 		</div>
+		<%-- Retirando menu superior --%>
+
 		<div id="menusuperior" role="complementary">
 					<ul>
-					<li><a href="j_spring_security_logout">Logout</a></li>
+					<%--<li><a href="j_spring_security_logout">Logout</a></li> --%>
 			</ul>
 		</div>
+	
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
