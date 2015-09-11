@@ -41,7 +41,7 @@
 				<g:each in="${usuarioTemporarioInstanceList}" status="i" var="usuarioTemporarioInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${usuarioTemporarioInstance.id}">${fieldValue(bean: usuarioTemporarioInstance, field: "nome")}</g:link></td>
+						<td><g:remoteLink class="show" action="show" update="page-body" id="${usuarioTemporarioInstance.id}">${fieldValue(bean: usuarioTemporarioInstance, field: "nome")}</g:remoteLink></td>
 					
 						<td>${fieldValue(bean: usuarioTemporarioInstance, field: "cpf")}</td>
 					
