@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
 		<link href="css/styles.css" rel="stylesheet">
+		
 			<style type="text/css" media="screen">
 			#grailsLogo {
 				background-color: #abbf78;
@@ -96,7 +97,9 @@
 		<g:layoutHead/>
 	</head>
 	<body>	
-	<div id="grailsLogo" role="banner"><a class="home" href="${createLink(uri: '/')}"><asset:image src="awifi_logo.png" alt="Awifi"/></a>	
+	<div id="grailsLogo" role="banner">
+		<a class="home" href="${createLink(uri: '/')}">
+		<img src="images/awifi_logo.png" alt="Awifi"/>	
 		
 		</div>
 		<%-- Retirando menu superior --%>
