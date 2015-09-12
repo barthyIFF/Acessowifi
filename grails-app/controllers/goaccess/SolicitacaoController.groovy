@@ -43,10 +43,19 @@ class SolicitacaoController {
 		//s.save(flush:true)
 		solicitacaoInstance.status = "Aguardando Aprovacao"
 		solicitacaoInstance.save(flush:true)
-	    render "Solicitacao APROVADA com sucesso!"
-		
+	    render "Solicitacao APROVADA com sucesso!"	
 				
 	}
+	
+	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	def consultaStatus() {
+		Solicitacao s = Solicitacao.findByNumProtocolo(params.protocolo)
+		if (s == null)
+			render "Resposta do teste: Nao encontrada"
+		else
+			render "Resposta do teste: "+s.status			
+	}
+
 	
 	@Secured('ROLE_ADMIN')
     def show(Solicitacao solicitacaoInstance) {
