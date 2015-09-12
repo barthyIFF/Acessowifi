@@ -29,6 +29,7 @@ class SolicitacaoController {
 	}
 	
 	@Secured('ROLE_SUPERUSER')
+	//PENDENCIA: Aqui vai se chamar aprovaSolic e havera outra action de nome reprovaSolic
 	def mudaStatus(Solicitacao solicitacaoInstance) {
 		if (solicitacaoInstance == null) {
 			notFound()
@@ -41,7 +42,7 @@ class SolicitacaoController {
 		}	
 		//def Solicitacao s = Solicitacao.get(solicitacaoInstance.id)
 		//s.save(flush:true)
-		solicitacaoInstance.status = "Aguardando Aprovacao"
+		solicitacaoInstance.status = "Aguardando Aprovaca"
 		solicitacaoInstance.save(flush:true)
 	    render "Solicitacao APROVADA com sucesso!"	
 				
