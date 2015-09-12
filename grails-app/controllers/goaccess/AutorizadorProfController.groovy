@@ -4,11 +4,11 @@ import grails.transaction.Transactional
 import grails.plugin.springsecurity.annotation.Secured
 
 @Transactional(readOnly = true)
-@Secured('ROLE_ADMIN')
 class AutorizadorProfController {
     
 	static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
-
+	
+	@Secured('ROLE_ADMIN')
 	def indexAntigo(Integer max) {
 		params.max = Math.min(max ?: 10, 100)
 		respond AutorizadorProf.list(params), model:[autorizadorProfInstanceCount: AutorizadorProf.count()]
@@ -18,16 +18,17 @@ class AutorizadorProfController {
         params.max = Math.min(max ?: 10, 100)
         respond AutorizadorProf.list(params), model:[autorizadorProfInstanceCount: AutorizadorProf.count()]
     }
-	
-	    def show(AutorizadorProf autorizadorProfInstance) {
-        respond autorizadorProfInstance
+	@Secured('ROLE_ADMIN')
+	def show(AutorizadorProf autorizadorProfInstance) {
+    respond autorizadorProfInstance
     }
-
+	@Secured('ROLE_ADMIN')
     def create() {
         respond new AutorizadorProf(params)
     }
 
     @Transactional
+	@Secured('ROLE_ADMIN')
     def save(AutorizadorProf autorizadorProfInstance) {
         if (autorizadorProfInstance == null) {
             notFound()
@@ -52,12 +53,13 @@ class AutorizadorProfController {
             '*' { respond autorizadorProfInstance, [status: CREATED] }
         }
     }
-
+	@Secured('ROLE_ADMIN')
     def edit(AutorizadorProf autorizadorProfInstance) {
         respond autorizadorProfInstance
     }
-
+	
     @Transactional
+	@Secured('ROLE_ADMIN')
     def update(AutorizadorProf autorizadorProfInstance) {
         if (autorizadorProfInstance == null) {
             notFound()
@@ -81,6 +83,7 @@ class AutorizadorProfController {
     }
 
     @Transactional
+	@Secured('ROLE_ADMIN')
     def delete(AutorizadorProf autorizadorProfInstance) {
 
         if (autorizadorProfInstance == null) {
