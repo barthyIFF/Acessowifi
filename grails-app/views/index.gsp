@@ -9,7 +9,7 @@
 			<h1>Clique no seu perfil</h1>
 			<ul>
 				<li><a href="operadorCTI">Operador</a> </li>
-				<li><a href="autorizadorProf">Autorizador de solicitações</a> </li>
+				<li><a href="autorizadorProf/index">Autorizador de solicitações</a> </li>
 				<li>Usuário</li>
 				<li><a href="j_spring_security_logout">Logout</a></li>
 			</ul>
@@ -37,7 +37,7 @@
 		------------------------------------------{Área de desenvolvimento. Será apagada antes da}------------------------------------------
 <p>
 
-	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 11/09/15 - 21:38<br>
+	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 12/09/15 - 16:49<br>
 	Username logado = ${sec.loggedInUserInfo(field:'username')}
 		
 </p>
