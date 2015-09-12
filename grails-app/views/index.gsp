@@ -37,7 +37,7 @@
 		------------------------------------------{Área de desenvolvimento. Será apagada antes da}------------------------------------------
 <p>
 
-	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 12/09/15 - 16:49<br>
+	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio (P.S.) = 12/09/15 - 17:36<br>
 	Username logado = ${sec.loggedInUserInfo(field:'username')}
 		
 </p>
