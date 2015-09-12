@@ -9,8 +9,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><g:layoutTitle default="Grails"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
 		
 			<style type="text/css" media="screen">
+			#grailsLogo {
+				background-color: #abbf78;
+			}
 			
 			#menusuperior {
 				background-color: #eee;
@@ -85,8 +89,10 @@
 			}
 						
 		</style>
-		<asset:stylesheet src="application.css"/>
-		<asset:javascript src="application.js"/>
+		
+		<!-- <asset:stylesheet src="application.css"/>
+		<asset:javascript src="application.js"/> -->
+		
 		<g:layoutHead/>
 	</head>
 	<body>	
