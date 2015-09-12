@@ -17,7 +17,18 @@
 		<div id="page-body" role="main">
 			<br><br><br>
 			<h1>Bem vindo ao Sistema Acesso Wifi</h1>
-			<p>Esse sistema bla bla bla</p>
+			
+			
+			<p>Esse sistema bla bla bla			
+			<g:form controller="Solicitacao" action="consultaStatus">
+				<label>Teste00: </label>
+				<g:textField name="protocolo"/><br/>
+				<g:actionSubmit value="Teste01" action="consultaStatus"/>
+				<input type="submit" value="Test02"/>
+			</g:form>
+			</p>
+			
+			
 			<div id="controller-list" role="navigation">
 				
 			</div>
