@@ -22,11 +22,10 @@ class WsController {
 		def solicita = Solicitacao.findByNumProtocolo(protocolo)
 
 			if (solicita){
-				response.Nome = usuario.nome
-				response.Login = usuario.login
-				response.HashSenha = usuario.hashSenha
+				response.Nome = solicita.usuario.nome
+				response.Status = solicita.status 
 			}else {
-				response.msg = "AGUARDANDO AUTORIZAÇAO"
+				response.msg = "Informe número do Protocolo"
 			}
 						
 		withFormat{

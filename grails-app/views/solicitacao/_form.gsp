@@ -11,17 +11,22 @@
 
 </div>
 
+
 <%--Setando o status automaticamente. No momento da criacao da solicitacao tem que ter status = "Aguardando aprovacao" --%>
+
 <div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'status', 'error')} required">
-	<%--<label for="status"> 
-		<g:message code="solicitacao.status.label" default="Status" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="status" required="" value="${solicitacaoInstance?.status}"/> --%>
 	<g:hiddenField name="status" value="Aguardando Aprovacao"/>
 </div>
 
-
+ <%--
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'status', 'error')} required">
+	<label for="status"> 
+		<g:message code="solicitacao.status.label" default="Status" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="status" required="" value="${solicitacaoInstance?.status}"/>	
+</div>
+ --%>
 	
 
 	
