@@ -7,31 +7,13 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="Grails"/></title>
+		<title><g:layoutTitle default="Acessowifi"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="css/styles.css" rel="stylesheet">
 		
 			<style type="text/css" media="screen">
-			#grailsLogo {
-				background-color: #000000;
-			}
-			
-			#menu {
-				background-color: #eee;
-				border: .2em solid #fff;
-				margin: 2em 2em 1em;
-				padding: 1em;
-				width: 12em;
-				float: left;
-				-moz-box-shadow: 0px 0px 1.25em #ccc;
-				-webkit-box-shadow: 0px 0px 1.25em #ccc;
-				box-shadow: 0px 0px 1.25em #ccc;
-				-moz-border-radius: 0.6em;
-				-webkit-border-radius: 0.6em;
-				border-radius: 0.6em;
-			}
-			
+
 			#menusuperior {
 				background-color: #eee;
 				float: right;
@@ -81,34 +63,66 @@
 				margin: 0.25em 0;
 			}
 			}
-						
+	.spinner {
+	background: url(../images/spinner.gif) 50% 50% no-repeat transparent;
+	height: 16px;
+	width: 16px;
+    padding: 0.5em;
+    position: absolute;
+    right: 0;
+	top: 0;
+	text-indent: -9999px;
+}
+#menu {
+	background-color: #eee;
+	border: .2em solid #fff;
+	margin: 2em 2em 1em;
+	padding: 1em;
+	width: 12em;
+	float: left;
+	-moz-box-shadow: 0px 0px 1.25em #ccc;
+	-webkit-box-shadow: 0px 0px 1.25em #ccc;
+	box-shadow: 0px 0px 1.25em #ccc;
+	-moz-border-radius: 0.6em;
+	-webkit-border-radius: 0.6em;
+	border-radius: 0.6em;
+}
+#grailsLogo {
+	background-color: #000000;
+}
+.footer {
+	background: #000;
+	color: #000;
+	clear: both;
+	font-size: 0.8em;
+	margin-top: 1.5em;
+	padding: 1em;
+	min-height: 1em;
+}				
 		</style>
 		
-		<!-- <asset:stylesheet src="application.css"/>
-		<asset:javascript src="application.js"/> -->
+		<!-- <asset:stylesheet src="application.css"/> 
+		<asset:javascript src="application.js"/>  -->
 		
 		<g:layoutHead/>
-	</head>
-	<body class="page">	
+</head>
+<body class="page">	
 	<div id="grailsLogo" role="banner">
 		<a class="home" href="${createLink(uri: '/')}">
 		<img src="images/awifi_logo.png" alt="Awifi"/>	
 	</div>
-		<%-- Retirando menu superior --%>
- <!-- 
-		<div id="menusuperior" role="main" class="article">
-		
+	<div id="menusuperior0">
+		<table class="table table-bordered table-striped">
+			<tr>
+				<th>    </th>
+			</tr>
+		</table>
+	</div>
+	<g:layoutBody/>
+		<div class="footer" role="contentinfo">
 		</div>
-	-->
-<div id="menusuperior0">
-<table class="table table-bordered table-striped">
-<tr>
-<th></th>
-</tr>
-</table>
-</div>
-		<g:layoutBody/>
-		<div class="footer" role="contentinfo"></div>
-		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
+		<div id="spinner" class="spinner" style="display:none;">
+			<g:message code="spinner.alt" default="Loading&hellip;"/>
+		</div>
 	</body>
 </html>
