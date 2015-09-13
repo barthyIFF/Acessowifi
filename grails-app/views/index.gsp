@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title> Base Css with LESS </title>
-<meta name="viewport" content="width=device-width, initialscale=
-1.0">
-<link href="css/bootstrap.css" rel="stylesheet" media="screen">
-<style>
-#packt {
-padding-top: 25px;
-padding-bottom: 25px;
-padding-right: 50px;
-padding-left: 50px;
-}
-hr { background-color: red; height: 1px; border: 0; }
-</style>
-<link href="css/styles.css" rel="stylesheet" media="screen">
-</head>
-<body id="packt">
-<h1> Manipulating Bootstrap Base Css with LESS </h1>
-<hr>
-<h6> Packt Publishing </h2>
-<p>Packt's mission is to help the world put software to work
-in new ways.</p>
-<hr>
-<form role="form">
-<div class="form-group">
-<label for="enterusername"> Enter Email Address as the
-Username</label>
-<input type="email" class="form-control"
-id="enterusername" placeholder="Enter email">
-</div>
-<div class="form-group">
-<label for="enterpassword">Password</label>
-<input type="password" class="form-control"
-id="enterpassword" placeholder="Password">
-</div>
+	<head>
+		<meta name="layout" content="main"/>
+		<title>Sistema de Solicitação de Acesso Wifi</title>
+	</head>
+	<body>
+			<div id="menu" role="complementary">
+			<h1>Clique no seu perfil</h1>
+			<ul>
+				<li><a href="operadorCTI">Operador</a> </li>
+				<li><a href="autorizadorProf/index">Autorizador de solicitações</a> </li>
+				<li>Usuário</li>
+				<li><a href="j_spring_security_logout">Logout</a></li>
+			</ul>
+		</div>
+		<div id="page-body" role="main">
+			<br><br><br>
+			<h1>Bem vindo ao Sistema Acesso Wifi</h1>
+			
+			
+			<p>Esse sistema bla bla bla			
+			<g:form controller="Solicitacao" action="consultaStatus">
+				<label>Teste00: </label>
+				<g:textField name="protocolo"/><br/>
+				<g:actionSubmit value="Teste01" action="consultaStatus"/>
+				<input type="submit" value="Test02"/>
+			</g:form>
+			</p>
+			
+			<g:link controller="teste-01"> teste </g:link><br>
+			
+			<g:link controller="teste-aux"> teste auxiliar </g:link>
+			
+			<div id="controller-list" role="navigation">
+				
+			</div>
+		</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+		------------------------------------------{Área de desenvolvimento. Será apagada antes da}------------------------------------------
+<p>
+
+	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 12/09/15 - 16:49<br>
+	Username logado = ${sec.loggedInUserInfo(field:'username')}
+		
+</p>
+
+<p>
 <br>
-<div class="form-group">
-<label for="filebrowse">Browse to find file</label>
-<input type="file" id="filebrowse">
-</div>
-<br><br>
-<button type="submit" class="btn btnprimary">
-Login</button>
-</form>
-</body>
+	Click <a href="status/status">aqui</a> para acessar a página de teste do ajax! - Ultima atualizacao de Denis = 19/08/15 - 20:08
+</p>
+	</body>
 </html>
