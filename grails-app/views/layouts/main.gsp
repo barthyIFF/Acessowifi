@@ -19,38 +19,16 @@
 			
 			#menusuperior {
 				background-color: #eee;
-				border-style: solid;
-    			border-width: 1px;
-				padding: 0.5em;
-				width: 58.9em;
-				height:2.3em;
-				float: left;
+				float: right;
 				text-align:right;
+	
 				
 				}
 			
 			.ie6 #status {
 				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
 			}
-
-			#menusuperior ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
-
-			#menusuperior li {
-				line-height: 2;
-				font-size: 1.3em;
-			}
-
-			#menusuperior h1 {
-				text-transform: uppercase;
-				font-size: 0.7em;
-				margin: 0 0 0.3em;
-			}
-
+			
 			#page-body {
 				margin: 2em 1em 1.25em 18em;
 			}
@@ -102,12 +80,18 @@
 		<img src="images/awifi_logo.png" alt="Awifi"/>	
 	</div>
 		<%-- Retirando menu superior --%>
-
-		<div id="menusuperior">
-		<p class="bg-success">  </p>
-		<p class="bg-success">  </p>				
+ <!-- 
+		<div id="menusuperior" role="main" class="article">
+		
 		</div>
-	
+	-->
+<div id="menusuperior0">
+<table class="table table-bordered table-striped">
+<tr>
+<th></th>
+</tr>
+</table>
+</div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>

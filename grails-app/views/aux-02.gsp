@@ -1,71 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title> Bootstrap 3 Glyphicons</title>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/
-bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/
-bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/
-jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/
-bootstrap.min.js"></script>
-<style type="text/css">
-#pub {
-padding: 50px 100px 50px 50px;;
-}
-#packt{
-float:right;
-display:block;
-margin-right:0px;
-clear:left;
-}
-#packtpub{
-float:right;
-display:block;
-margin-right:0px;
-clear:left;
-}
-</style>
-</head>
-<body>
-<div id="pub">
-<form>
-<div class="row">
-<div class="col-xs-7">
-<div class="input-group">
-<span class="input-group-addon"><span
-class="glyphicon glyphicon-search"></span></span>
-<input type="text" class="form-control"
-placeholder="Search ">
-</div>
-</div>
-<br><br>
-<button type="submit" class="btn btn-success"
-id="packt"><span class="glyphicon glyphicon-log-in"></span> Login </
-button>
+	<head>
+		<meta name="layout" content="main"/>
+		<title>Sistema de Solicitação de Acesso Wifi</title>
+	</head>
+	<body>
+			<div id="menu" role="complementary">
+			<h1>Clique no seu perfil</h1>
+			<ul>
+				<li><a href="operadorCTI">Operador</a> </li>
+				<li><a href="autorizadorProf/index">Autorizador de solicitações</a> </li>
+				<li>Usuário</li>
+				<li><a href="j_spring_security_logout">Logout</a></li>
+			</ul>
+		</div>
+		<div id="page-body" role="main">
+			<br><br><br>
+			<h1>Bem vindo ao Sistema Acesso Wifi</h1>
+			
+			
+			<p>Esse sistema bla bla bla			
+			<g:form controller="Solicitacao" action="consultaStatus">
+				<label>Teste00: </label>
+				<g:textField name="protocolo"/><br/>
+				<g:actionSubmit value="Teste01" action="consultaStatus"/>
+				<input type="submit" value="Test02"/>
+			</g:form>
+			</p>
+			
+			<g:link controller="teste-01"> teste </g:link><br>
+			
+			<g:link controller="teste-aux"> teste auxiliar </g:link>
+			
+			<div id="controller-list" role="navigation">
+				
+			</div>
+		</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+		------------------------------------------{Área de desenvolvimento. Será apagada antes da}------------------------------------------
+<p>
+
+	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 12/09/15 - 16:49<br>
+	Username logado = ${sec.loggedInUserInfo(field:'username')}
+		
+</p>
+
+<p>
 <br>
-<br>
-<button type="submit" class="btn btn-default"><span
-class="glyphicon glyphicon-envelope"></span> Mail</button>
-<br>
-<br>
-<button type="submit" class="btn btn-default"><span
-class="glyphicon glyphicon-user"></span> Find Friends </button>
-<br>
-<br>
-<button type="submit" class="btn btn-warning"><span
-class="glyphicon glyphicon-trash"></span> Empty Trash </button>
-<br><br><br>
-<p> To get rid of malware, Click on the following button </p>
-<button type="submit" class="btn btn-danger"><span
-class="glyphicon glyphicon-log-out"></span> Clean System</button>
-<br><br>
-<button type="submit" class="btn btn-success"
-id="packtpub"><span class="glyphicon glyphicon-log-out"></span> Log
-out</button>
-</div>
-</form>
-</div>
-</body>
+	Click <a href="status/status">aqui</a> para acessar a página de teste do ajax! - Ultima atualizacao de Denis = 19/08/15 - 20:08
+</p>
+	</body>
 </html>
