@@ -5,38 +5,41 @@
 		<title>Sistema de Solicitação de Acesso Wifi</title>
 	</head>
 	<body>
-			<div id="menu" role="complementary">
-			<h1>Clique no seu perfil</h1>
-			<ul>
-				<li><a href="operadorCTI">Operador</a> </li>
-				<li><a href="autorizadorProf/index">Autorizador de solicitações</a> </li>
-				<li>Usuário</li>
-				<li><a href="j_spring_security_logout">Logout</a></li>
-			</ul>
-		</div>
-		<div id="page-body" role="main">
-			<br><br><br>
-			<h1>Bem vindo ao Sistema Acesso Wifi</h1>
-			
-			
-			<p>Esse sistema bla bla bla			
-			<g:form controller="Solicitacao" action="consultaStatus">
-				<label>Teste00: </label>
-				<g:textField name="protocolo"/><br/>
-				<g:actionSubmit value="Teste01" action="consultaStatus"/>
-				<input type="submit" value="Test02"/>
-			</g:form>
-			</p>
-			
-			<g:link controller="teste-01"> teste </g:link><br>
-			
-			<g:link controller="teste-aux"> teste auxiliar </g:link>
-			
-			<div id="controller-list" role="navigation">
-				
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div id="menu" role="complementary">
+					<h4>Clique no seu perfil</h4>
+						<a href="operadorCTI">
+						<button type="button" class="btn btn-success btn-lg">
+						<span class="glyphicon glyphicon-user"></span>
+						Operador
+						</button></a> 
+						<a href="autorizadorProf/index">
+						<button type="button" class="btn btn-primary btn-lg">
+						<span class="glyphicon glyphicon-envelope"></span>
+						Autorizador</button>
+						<button type="button" class="btn btn-danger btn-lg">
+						Usuário</button>
+					</div>
+				</div>
+				<div class="col-md-9">
+				<!-- <div id="page-body" role="main"> -->
+					
+					<h1>Bem vindo ao Sistema Acesso Wifi</h1>
+					<p>Esse sistema bla bla bla			
+					<g:form controller="Solicitacao" action="consultaStatus">
+						<label>Teste00: </label>
+						<g:textField name="protocolo"/><br/>
+						<g:actionSubmit value="Teste01" action="consultaStatus"/>
+						<input type="submit" value="Test02"/>
+					</g:form>
+					</p>
+					<div id="controller-list" role="navigation">
+				</div>
 			</div>
-		</div>
-<br><br><br><br><br><br><br><br><br><br><br>
+		</div>	
+<br><br><br><br><br>
 		------------------------------------------{Área de desenvolvimento. Será apagada antes da}------------------------------------------
 <p>
 
