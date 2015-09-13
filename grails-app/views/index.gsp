@@ -14,7 +14,7 @@ padding-left: 50px;
 }
 hr { background-color: red; height: 1px; border: 0; }
 </style>
-<link href="css/style.css" rel="stylesheet" media="screen">
+<link href="css/styles.css" rel="stylesheet" media="screen">
 </head>
 <body id="packt">
 <h1> Manipulating Bootstrap Base Css with LESS </h1>
