@@ -17,6 +17,21 @@
 				background-color: #000000;
 			}
 			
+			#menu {
+				background-color: #eee;
+				border: .2em solid #fff;
+				margin: 2em 2em 1em;
+				padding: 1em;
+				width: 12em;
+				float: left;
+				-moz-box-shadow: 0px 0px 1.25em #ccc;
+				-webkit-box-shadow: 0px 0px 1.25em #ccc;
+				box-shadow: 0px 0px 1.25em #ccc;
+				-moz-border-radius: 0.6em;
+				-webkit-border-radius: 0.6em;
+				border-radius: 0.6em;
+			}
+			
 			#menusuperior {
 				background-color: #eee;
 				float: right;
