@@ -9,17 +9,17 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><g:layoutTitle default="Grails"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="css/styles.css" rel="stylesheet">
 		
 			<style type="text/css" media="screen">
 			#grailsLogo {
-				background-color: #abbf78;
+				background-color: #000000;
 			}
 			
 			#menusuperior {
 				background-color: #eee;
-				 border-style: solid;
+				border-style: solid;
     			border-width: 1px;
 				padding: 0.5em;
 				width: 58.9em;
@@ -96,18 +96,16 @@
 		
 		<g:layoutHead/>
 	</head>
-	<body>	
+	<body class="page">	
 	<div id="grailsLogo" role="banner">
 		<a class="home" href="${createLink(uri: '/')}">
 		<img src="images/awifi_logo.png" alt="Awifi"/>	
-		
-		</div>
+	</div>
 		<%-- Retirando menu superior --%>
 
-		<div id="menusuperior" role="complementary">
-					<ul>
-					<%--<li><a href="j_spring_security_logout">Logout</a></li> --%>
-			</ul>
+		<div id="menusuperior">
+		<p class="bg-success">  </p>
+		<p class="bg-success">  </p>				
 		</div>
 	
 		<g:layoutBody/>
