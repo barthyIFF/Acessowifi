@@ -56,12 +56,14 @@ class SolicitacaoController {
 		else
 			render "Resposta do teste: "+s.status*/
 		def data = new Date()
+		//Fomata a data
 		def dataFormatada = g.formatDate(date:data, format: 'ddMMyyyy')
-		Solicitacao s = new Solicitacao()
-		def ultimoProtocolo = s.listOrderByNumProtocolo(max:1, order: "desc")[0]
-		
-		render ultimoProtocolo 
-		//def lastProt = Book.list([sort: 'ponum', order:'desc', max: 1])
+		//Pega a solicitacao com o maior ID		
+		def s = Solicitacao.listOrderById(max:2, order: "desc")[0]
+		//Pega somente o maior ID		 
+		def ultimoId = s.id
+		//Define o numProtocolo
+		render dataFormatada+ultimoId
 	}
 
 	
