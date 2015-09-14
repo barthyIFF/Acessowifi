@@ -50,20 +50,11 @@ class SolicitacaoController {
 	
 	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
 	def consultaStatus() {
-		/*Solicitacao s = Solicitacao.findByNumProtocolo(params.protocolo)
+		Solicitacao s = Solicitacao.findByNumProtocolo(params.protocolo)
 		if (s == null)
 			render "Resposta do teste: Nao encontrada"
 		else
-			render "Resposta do teste: "+s.status*/
-		def data = new Date()
-		//Fomata a data
-		def dataFormatada = g.formatDate(date:data, format: 'ddMMyyyy')
-		//Pega a solicitacao com o maior ID		
-		def s = Solicitacao.listOrderById(max:2, order: "desc")[0]
-		//Pega somente o maior ID		 
-		def ultimoId = s.id
-		//Define o numProtocolo
-		render dataFormatada+ultimoId
+			render "Resposta do teste: "+s.status
 	}
 
 	
@@ -88,6 +79,20 @@ class SolicitacaoController {
             respond solicitacaoInstance.errors, view:'create'
             return
         }
+		
+		//Definindo o numero do protocolo automaticamente
+		def data = new Date()
+		//Fomata a data
+		def dataFormatada = g.formatDate(date:data, format: 'ddMMyyyy')
+		//Pega a solicitacao com o maior ID no banco
+		def s = Solicitacao.listOrderById(max:2, order: "desc")[0]
+		//Pega somente o maior ID e o incrementa
+		int ultimoId = s.id
+		ultimoId = ultimoId+1
+		//Colocando zeros a esquerrda para que fique compativel com a consulta Rest
+		String ultimoIdCom0s = String.format("%05d", ultimoId);
+		//Define o numProtocolo
+		solicitacaoInstance.numProtocolo =  dataFormatada+ultimoIdCom0s
 
         solicitacaoInstance.save flush:true
 
