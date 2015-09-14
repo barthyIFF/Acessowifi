@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> 
 <title>Sistema de Solicitação de Acesso Wifi</title>
-
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <style type="text/css" media="screen">
 #menu {
 	background-color: #eee;
@@ -24,10 +26,11 @@
 </head>
 <body>
 <div class="container">
-				<div class="col-md-3" id="menu"> 
+			<div class="row">
+				<div class="col-md-2"> 
 					<h1>Menu</h1>
 					<div class="btn-group">
-					<g:remoteLink controller="Solicitacao" action="index" update="dd"><button type="button" class="btn success">Solicitações</button></g:remoteLink>
+					<g:remoteLink controller="Solicitacao" action="index" update="page-body"><button type="button" class="btn success">Solicitações</button></g:remoteLink>
 					<g:remoteLink controller="OperadorCTI" action="indexAntigo" update="page-body">Operadores</g:remoteLink>
 					<g:remoteLink controller="UsuarioSolicitante" action="index" update="page-body">Usuários</g:remoteLink>
 					<g:remoteLink controller="UsuarioTemporario" action="index" update="page-body">Usuários temporários</g:remoteLink>
@@ -38,7 +41,7 @@
 					</div>
 				</div>
 			
-				<div class="col-md-9" id="page-body">
+				<div class="col-md-10" id="page-body">
 					<h1>Sem bem Vindo, Operador</h1>
 					<p>
 					Texto para o operador...Texto para o operador...Texto para o operador...<br>
@@ -52,7 +55,7 @@
 					</p>
 					</div>
 				</div>
-
+			</div>
 </div>	
 </body>
 </html>
