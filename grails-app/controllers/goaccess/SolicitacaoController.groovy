@@ -33,7 +33,7 @@ class SolicitacaoController {
 	def mudaStatus(Solicitacao solicitacaoInstance) {
 		if (solicitacaoInstance == null) {
 			notFound()
-			return
+			return 
 		}
 
 		if (solicitacaoInstance.hasErrors()) {
@@ -50,11 +50,18 @@ class SolicitacaoController {
 	
 	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
 	def consultaStatus() {
-		Solicitacao s = Solicitacao.findByNumProtocolo(params.protocolo)
+		/*Solicitacao s = Solicitacao.findByNumProtocolo(params.protocolo)
 		if (s == null)
 			render "Resposta do teste: Nao encontrada"
 		else
-			render "Resposta do teste: "+s.status			
+			render "Resposta do teste: "+s.status*/
+		def data = new Date()
+		def dataFormatada = g.formatDate(date:data, format: 'ddMMyyyy')
+		Solicitacao s = new Solicitacao()
+		def ultimoProtocolo = s.listOrderByNumProtocolo(max:1, order: "desc")[0]
+		
+		render ultimoProtocolo 
+		//def lastProt = Book.list([sort: 'ponum', order:'desc', max: 1])
 	}
 
 	
