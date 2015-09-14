@@ -10,7 +10,7 @@
 		<title><g:layoutTitle default="Grails"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-			<style type="text/css" media="screen">
+		<style type="text/css" media="screen">
 			
 			#menusuperior {
 				background-color: #eee;

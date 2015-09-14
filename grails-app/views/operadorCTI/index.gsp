@@ -2,10 +2,13 @@
 <html>
 <head>
 <title>Sistema de Solicitação de Acesso Wifi</title>
+<meta name="layout" content="mai">
+
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 <style type="text/css" media="screen">
 #menu {
 	background-color: #eee;
@@ -27,21 +30,26 @@
 <body>
 <div class="container">
 			<div class="row">
-				<div class="col-md-2"> 
-					<h1>Menu</h1>
+				<div class="col-md-3"> 
+					
 					<div class="btn-group">
-					<g:remoteLink controller="Solicitacao" action="index" update="page-body"><button type="button" class="btn success">Solicitações</button></g:remoteLink>
-					<g:remoteLink controller="OperadorCTI" action="indexAntigo" update="page-body">Operadores</g:remoteLink>
-					<g:remoteLink controller="UsuarioSolicitante" action="index" update="page-body">Usuários</g:remoteLink>
-					<g:remoteLink controller="UsuarioTemporario" action="index" update="page-body">Usuários temporários</g:remoteLink>
-					<g:remoteLink controller="Equipamento" action="index" update="page-body">Equipamentos</g:remoteLink>
-					<g:remoteLink controller="autorizadorProf" action="indexAntigo" update="page-body">Autorizadores</g:remoteLink>
-					<g:remoteLink controller="OutrasTarefas" action="autorizador" update="page-body">Encerrar Solicitacoes (P)</g:remoteLink>
-					<a href="j_spring_security_logout">Fazer logout</a></li>		
+					<button class="btn btn-primary">Menu</button>
+					<button data-toggle="dropdown" class="btn btn-primary
+					dropdown-toggle"><span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><g:remoteLink controller="Solicitacao" action="index" update="page-body">Solicitações</g:remoteLink></li>
+						<li><g:remoteLink controller="OperadorCTI" action="indexAntigo" update="page-body">Operadores</g:remoteLink></li>
+						<li><g:remoteLink controller="UsuarioSolicitante" action="index" update="page-body">Usuários</g:remoteLink></li>
+						<li><g:remoteLink controller="UsuarioTemporario" action="index" update="page-body">Usuários temporários</g:remoteLink></li>
+						<li><g:remoteLink controller="Equipamento" action="index" update="page-body">Equipamentos</g:remoteLink></li>
+						<li><g:remoteLink controller="autorizadorProf" action="indexAntigo" update="page-body">Autorizadores</g:remoteLink></li>
+						<li><g:remoteLink controller="OutrasTarefas" action="autorizador" update="page-body">Encerrar Solicitacoes (P)</g:remoteLink></li>
+						<li><a href="j_spring_security_logout">Fazer logout</a></li>
+					</ul>	
 					</div>
 				</div>
 			
-				<div class="col-md-10" id="page-body">
+				<div class="col-md-9" id="page-body">
 					<h1>Sem bem Vindo, Operador</h1>
 					<p>
 					Texto para o operador...Texto para o operador...Texto para o operador...<br>
