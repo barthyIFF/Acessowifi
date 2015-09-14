@@ -9,7 +9,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><g:layoutTitle default="Acessowifi"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="css/styles.css" rel="stylesheet">	
+		
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/styles.css">	
 				
 	<style type="text/css" media="screen">
 	#menusuperior {
@@ -45,14 +50,14 @@
 }				
 		</style>
 		
-		<!-- <asset:stylesheet src="application.css"/>  -->
-		<asset:javascript src="application.js"/> 
+		<!-- <asset:stylesheet src="application.css"/> 
+		<asset:javascript src="application.js"/> -->
 		
 <g:layoutHead/>
 </head>
 <body class="page">	
 	<div id="grailsLogo" role="banner">
-		<a class="home" href="${createLink(uri: '/')}">
+		<a class="home"	>
 		<img src="images/awifi_logo.png" alt="Awifi"/>	
 	</div>
 	<div id="menusuperior0">

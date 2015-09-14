@@ -24,7 +24,7 @@
 					<tr>
 					
 						<g:sortableColumn property="numProtocolo" title="${message(code: 'solicitacao.numProtocolo.label', default: 'Num Protocolo')}" />
-					
+						
 						<g:sortableColumn property="status" title="${message(code: 'solicitacao.status.label', default: 'Status')}" />
 					
 						<g:sortableColumn property="tipo" title="${message(code: 'solicitacao.tipo.label', default: 'Tipo')}" />
