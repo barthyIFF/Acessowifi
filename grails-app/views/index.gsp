@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main"/>
+		<meta name="layout" content="main3"/>
 		<title>Sistema de Solicitação de Acesso Wifi</title>
 	</head>
-	<body>
+	<body class="page">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
 					<!-- <div id="menu" role="complementary"> -->
 					<h4>Clique no seu perfil</h4>
-					<ul class="nav nav-tabs">
+					<ul class="nav">
 						<li class="active"><a href="operadorCTI">
 						<span class="glyphicon glyphicon-sd-video"> </span>
 						Operador </a> </li>
@@ -51,5 +51,5 @@
 <br>
 	Click <a href="status/status">aqui</a> para acessar a página de teste do ajax! - Ultima atualizacao de Denis = 19/08/15 - 20:08
 </p>
-	</body>
+</body>
 </html>

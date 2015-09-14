@@ -7,7 +7,7 @@
 		<g:layoutHead/>
 		
 	</head>
-	<body>
+	<body class="page">
 	
 	<div id="grailsLogo"><a href="http://www.cin.ufpe.br/"></a>
 		</div>

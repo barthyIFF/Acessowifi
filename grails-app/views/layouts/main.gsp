@@ -7,28 +7,45 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="Acessowifi"/></title>
+		<title><g:layoutTitle default="Grails"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link href="css/styles.css" rel="stylesheet">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-		<style type="text/css" media="screen">
-
+		
+			<style type="text/css" media="screen">
+			
 			#menusuperior {
 				background-color: #eee;
-				float: right;
+				 border-style: solid;
+    			border-width: 1px;
+				padding: 0.5em;
+				width: 58.9em;
+				height:2.3em;
+				float: left;
 				text-align:right;
-	
 				
 				}
 			
 			.ie6 #status {
 				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
 			}
-			
+
+			#menusuperior ul {
+				font-size: 0.9em;
+				list-style-type: none;
+				margin-bottom: 0.6em;
+				padding: 0;
+			}
+
+			#menusuperior li {
+				line-height: 2;
+				font-size: 1.3em;
+			}
+
+			#menusuperior h1 {
+				text-transform: uppercase;
+				font-size: 0.7em;
+				margin: 0 0 0.3em;
+			}
+
 			#page-body {
 				margin: 2em 1em 1.25em 18em;
 			}
@@ -66,66 +83,26 @@
 				margin: 0.25em 0;
 			}
 			}
-	.spinner {
-	background: url(../images/spinner.gif) 50% 50% no-repeat transparent;
-	height: 16px;
-	width: 16px;
-    padding: 0.5em;
-    position: absolute;
-    right: 0;
-	top: 0;
-	text-indent: -9999px;
-}
-#menu {
-	background-color: #eee;
-	border: .2em solid #fff;
-	margin: 2em 2em 1em;
-	padding: 1em;
-	width: 12em;
-	float: left;
-	-moz-box-shadow: 0px 0px 1.25em #ccc;
-	-webkit-box-shadow: 0px 0px 1.25em #ccc;
-	box-shadow: 0px 0px 1.25em #ccc;
-	-moz-border-radius: 0.6em;
-	-webkit-border-radius: 0.6em;
-	border-radius: 0.6em;
-}
-#grailsLogo {
-	background-color: #000000;
-}
-.footer {
-	background: #000;
-	color: #000;
-	clear: both;
-	font-size: 0.8em;
-	margin-top: 1.5em;
-	padding: 1em;
-	min-height: 1em;
-}				
+						
 		</style>
-		
-		<!-- <asset:stylesheet src="application.css"/> 
-		<asset:javascript src="application.js"/>  -->
-		
+		<asset:stylesheet src="application.css"/>
+		<asset:javascript src="application.js"/>
 		<g:layoutHead/>
-</head>
-<body class="page">	
-	<div id="grailsLogo" role="banner">
-		<a class="home" href="${createLink(uri: '/')}">
-		<img src="images/awifi_logo.png" alt="Awifi"/>	
-	</div>
-	<div id="menusuperior0">
-		<table class="table table-bordered table-striped">
-			<tr>
-				<th>    </th>
-			</tr>
-		</table>
-	</div>
-	<g:layoutBody/>
-		<div class="footer" role="contentinfo">
+	</head>
+	<body class="page">	
+	<div id="grailsLogo" role="banner"><a class="home" href="${createLink(uri: '/')}"><asset:image src="awifi_logo.png" alt="Awifi"/></a>	
+		
 		</div>
-		<div id="spinner" class="spinner" style="display:none;">
-			<g:message code="spinner.alt" default="Loading&hellip;"/>
+		<%-- Retirando menu superior --%>
+
+		<div id="menusuperior" role="complementary">
+					<ul>
+					<%--<li><a href="j_spring_security_logout">Logout</a></li> --%>
+			</ul>
 		</div>
+	
+		<g:layoutBody/>
+		<div class="footer" role="contentinfo"></div>
+		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 	</body>
 </html>
