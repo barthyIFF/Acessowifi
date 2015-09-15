@@ -9,13 +9,14 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><g:layoutTitle default="Acessowifi"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="css/styles.css">	
-				
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="css/bootstrap.css" media="screen">
+		<link rel="stylesheet" href="css/styles.css" media="screen">	
+<script src="js/bootstrap.min.js"></script>				
 	<style type="text/css" media="screen">
 	#menusuperior {
 		background-color: #eee;
@@ -47,17 +48,20 @@
 	margin-top: 1.5em;
 	padding: 1em;
 	min-height: 1em;
-}				
+}	
+#page-body {
+	
+}			
 		</style>
 		
-		<!-- <asset:stylesheet src="application.css"/> 
-		<asset:javascript src="application.js"/> -->
+		<!-- <asset:stylesheet src="application.css"/> -->
+		<asset:javascript src="application.js"/> 
 		
 <g:layoutHead/>
 </head>
 <body class="page">	
 	<div id="grailsLogo" role="banner">
-		<a class="home"	>
+		<a class="home" href="${createLink(uri: '/')}">
 		<img src="images/awifi_logo.png" alt="Awifi"/>	
 	</div>
 	<div id="menusuperior0">

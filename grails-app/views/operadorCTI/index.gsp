@@ -3,30 +3,32 @@
 <head>
 <title>Sistema de Solicitação de Acesso Wifi</title>
 <meta name="layout" content="main4">
-
-
-<style type="text/css" media="screen">
-#menu {
-	background-color: #eee;
-	border: .2em solid #fff;
-	margin: 2em 2em 1em;
-	padding: 1em;
-	width: 12em;
-	float: left;
-	-moz-box-shadow: 0px 0px 1.25em #ccc;
-	-webkit-box-shadow: 0px 0px 1.25em #ccc;
-	box-shadow: 0px 0px 1.25em #ccc;
-	-moz-border-radius: 0.6em;
-	-webkit-border-radius: 0.6em;
-	border-radius: 0.6em;
+<style>
+#packt {
+border-style: solid;
+border-color: black;
+color: #FF00FF;
 }
-
+#pub {
+border-style: solid;
+border-color: red;
+color: green;
+}
+#packtlib {
+border-style: dotted;
+border-color: lime;
+}
+#page-body {
+border-style: dotted;
+border-color: blue;	
+}
 </style>
+
 </head>
-<body>
-<div class="container">
-			<div class="row">
-				<div class="col-md-3"> 
+<body class="page">
+	<div class="content" id="packt">
+			<div class="row" id ="packtlib">
+				<div class="col-md-3" id="pub"> 
 					
 					<!-- <div class="btn-group">
 					<button class="btn btn-primary">Menu</button>
@@ -43,9 +45,7 @@
 						<li><g:remoteLink controller="OutrasTarefas" action="autorizador" update="page-body">Encerrar Solicitacoes (P)</g:remoteLink></li>
 						<li><a href="j_spring_security_logout">Fazer logout</a></li>
 					</ul>	
-					
 				</div>
-			
 				<div class="col-md-9" id="page-body">
 					<h1>Sem bem Vindo, Operador</h1>
 					<p>
@@ -58,9 +58,8 @@
 					PENDENCIA EM CADASTRO DE OPERADORES E AUTORIZADORES: Tem que pegar o usuario e a senha<br>
 					informados e, automaticamente, tb fazer o cadastro em clientes, papelcliente e papel (autenticacao).
 					</p>
-					</div>
 				</div>
 			</div>
-</div>	
+	</div>	
 </body>
 </html>

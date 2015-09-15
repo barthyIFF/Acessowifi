@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main3"/>
+		<meta name="layout" content="main4"/>
 		<title>Sistema de Solicitação de Acesso Wifi</title>
 	</head>
 	<body class="page">
@@ -11,14 +11,9 @@
 					<!-- <div id="menu" role="complementary"> -->
 					<h4>Clique no seu perfil</h4>
 					<ul class="nav">
-						<li class="active"><a href="operadorCTI">
-						<span class="glyphicon glyphicon-sd-video"> </span>
-						Operador </a> </li>
-						<li><a href="autorizadorProf/index">
-						<span class="glyphicon glyphicon-book"> </span>
-						Autorizador</a></li>
-						<li><a href="#"> <span class="glyphicon glyphicon-inbox"> </span>
-						Usuário</a></li>
+						<li class="active"><a href="operadorCTI"><span class="glyphicon glyphicon-sd-video"></span>Operador </a></li>
+						<li><a href="autorizadorProf/index"><span class="glyphicon glyphicon-book"></span>Autorizador</a></li>
+						<li><a href="#"> <span class="glyphicon glyphicon-inbox"> </span>Usuário</a></li>
 					</ul>
 				
 				</div>
@@ -38,7 +33,7 @@
 				</div>
 			</div>
 		</div>	
-<br><br><br><br><br>
+		<div class="row">
 		------------------------------------------{Área de desenvolvimento. Será apagada antes da}------------------------------------------
 <p>
 
@@ -51,5 +46,6 @@
 <br>
 	Click <a href="status/status">aqui</a> para acessar a página de teste do ajax! - Ultima atualizacao de Denis = 19/08/15 - 20:08
 </p>
+</div>
 </body>
 </html>

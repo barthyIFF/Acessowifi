@@ -83,6 +83,15 @@
 				margin: 0.25em 0;
 			}
 			}
+.footer {
+	background: #000;
+	color: #000;
+	clear: both;
+	font-size: 0.8em;
+	margin-top: 1.5em;
+	padding: 1em;
+	min-height: 1em;
+}
 						
 		</style>
 		<asset:stylesheet src="application.css"/>
