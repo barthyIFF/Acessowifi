@@ -93,6 +93,7 @@ class SolicitacaoController {
 		String ultimoIdCom0s = String.format("%05d", ultimoId);
 		//Define o numProtocolo
 		solicitacaoInstance.numProtocolo =  dataFormatada+ultimoIdCom0s
+		//println(solicitacaoInstance.numProtocolo)
 
         solicitacaoInstance.save flush:true
 
