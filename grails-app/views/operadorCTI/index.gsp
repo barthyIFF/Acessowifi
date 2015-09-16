@@ -4,39 +4,34 @@
 <title>Sistema de Solicitação de Acesso Wifi</title>
 <meta name="layout" content="main4">
 <style>
-#packt {
-border-style: solid;
-border-color: black;
-color: #FF00FF;
+#page-body {
+
 }
 #pub {
-border-style: solid;
-border-color: red;
-color: green;
+padding-top: 25px;
+padding-bottom: 25px;
+padding-right: 30px;
+padding-left: 30px;
 }
-#packtlib {
-border-style: dotted;
-border-color: lime;
-}
-#page-body {
-border-style: dotted;
-border-color: blue;	
+.link-normal {
+	background: #43CD80;
+	color: black;
+	margin: 10px;
+	padding: 20px;
+	font-size:16px;
+
 }
 </style>
 
 </head>
 <body class="page">
-	<div class="content" id="packt">
-			<div class="row" id ="packtlib">
-				<div class="col-md-3" id="pub"> 
-					
-					<!-- <div class="btn-group">
-					<button class="btn btn-primary">Menu</button>
-					<button data-toggle="dropdown" class="btn btn-primary
-					dropdown-toggle"><span class="caret"></span></button>
-					<ul class="dropdown-menu"> -->
-					<ul>
-						<li><g:remoteLink controller="Solicitacao" action="index" update="page-body">Solicitações</g:remoteLink></li>
+	<div class="content">
+			<div class="row" id="pub">
+				<div class="col-md-3"> 
+					<ul class="nav">
+						<li><g:remoteLink class="link-normal" controller="Solicitacao" action="index" update="page-body">
+						<span class="glyphicon glyphicon-search">
+						Solicitações</span></g:remoteLink></li>
 						<li><g:remoteLink controller="OperadorCTI" action="indexAntigo" update="page-body">Operadores</g:remoteLink></li>
 						<li><g:remoteLink controller="UsuarioSolicitante" action="index" update="page-body">Usuários</g:remoteLink></li>
 						<li><g:remoteLink controller="UsuarioTemporario" action="index" update="page-body">Usuários temporários</g:remoteLink></li>
@@ -60,6 +55,9 @@ border-color: blue;
 					</p>
 				</div>
 			</div>
-	</div>	
+	</div>
+		<footer class="site-footer">
+		Copyright &copy; 2014
+	</footer>	
 </body>
 </html>

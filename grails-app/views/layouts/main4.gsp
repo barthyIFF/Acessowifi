@@ -16,8 +16,9 @@
 
 		<link rel="stylesheet" href="css/bootstrap.css" media="screen">
 		<link rel="stylesheet" href="css/styles.css" media="screen">	
-<script src="js/bootstrap.min.js"></script>				
-	<style type="text/css" media="screen">
+	
+					
+<style type="text/css" media="screen">
 	#menusuperior {
 		background-color: #eee;
 		float: right;
@@ -39,6 +40,8 @@
 	}
 #grailsLogo {
 	background-color: #000000;
+	padding:10px;
+	margin:0;
 }
 .footer {
 	background: #000;
@@ -51,26 +54,42 @@
 }	
 #page-body {
 	
-}			
-		</style>
+}
+	#cabecalho{
+	}
+	#conteudo{
+	margin:10px;
+	}
+	#rodape{
+	}
+	#status-login{
+	backgroud:gray;
+	padding:20px;
+	text-align: right;
+	}			
+</style>
 		
-		<!-- <asset:stylesheet src="application.css"/> -->
-		<asset:javascript src="application.js"/> 
+<!-- <asset:stylesheet src="application.css"/> -->
+<!-- <asset:javascript src="application.js"/> -->
 		
 <g:layoutHead/>
 </head>
 <body class="page">	
-	<div id="grailsLogo" role="banner">
-		<a class="home" href="${createLink(uri: '/')}">
-		<img src="images/awifi_logo.png" alt="Awifi"/>	
-	</div>
-	<div id="menusuperior0">
-		<table class="table table-bordered table-striped">
-			<tr>
-				<th>    </th>
-			</tr>
-		</table>
-	</div>
+	<div id="cabecalho">
+		<div id="grailsLogo">
+		
+			<img src="images/awifi_logo.png" alt="Awifi"/>
+		</div>	
+		<div id="status-login">
+				<div class="btn-group">
+					<button class="btn btn-success"> ${sec.loggedInUserInfo(field:'username')}</button>
+					<button data-toggle="dropdown" class="btn btn-success dropdown-toggle"><span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="j_spring_security_logout">Logout</a></li>
+					</ul>
+				</div>
+		</div><!-- status-login -->
+	</div> <!-- cabecalho -->
 
 	<g:layoutBody/>
 	<div class=footer>
