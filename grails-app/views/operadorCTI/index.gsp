@@ -3,36 +3,16 @@
 <head>
 <title>Sistema de Solicitação de Acesso Wifi</title>
 <meta name="layout" content="main4">
-<style>
-#page-body {
-
-}
-#pub {
-padding-top: 25px;
-padding-bottom: 25px;
-padding-right: 30px;
-padding-left: 30px;
-}
-.link-normal {
-	background: #43CD80;
-	color: black;
-	margin: 10px;
-	padding: 20px;
-	font-size:16px;
-
-}
-</style>
-
 </head>
 <body class="page">
 	<div class="content">
 			<div class="row" id="pub">
-				<div class="col-md-3"> 
+				<div class="col-md-3" id="menu"> 
 					<ul class="nav">
 						<li><g:remoteLink class="link-normal" controller="Solicitacao" action="index" update="page-body">
 						<span class="glyphicon glyphicon-search">
-						Solicitações</span></g:remoteLink></li>
-						<li><g:remoteLink controller="OperadorCTI" action="indexAntigo" update="page-body">Operadores</g:remoteLink></li>
+						</span>Solicitações</g:remoteLink></li>
+						<li><g:remoteLink class="link-normal operador" controller="OperadorCTI" action="indexAntigo" update="page-body"><span class="glyphicon tio"></span>Operadores</g:remoteLink></li>
 						<li><g:remoteLink controller="UsuarioSolicitante" action="index" update="page-body">Usuários</g:remoteLink></li>
 						<li><g:remoteLink controller="UsuarioTemporario" action="index" update="page-body">Usuários temporários</g:remoteLink></li>
 						<li><g:remoteLink controller="Equipamento" action="index" update="page-body">Equipamentos</g:remoteLink></li>

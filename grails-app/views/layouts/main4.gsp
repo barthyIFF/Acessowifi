@@ -16,59 +16,8 @@
 
 		<link rel="stylesheet" href="css/bootstrap.css" media="screen">
 		<link rel="stylesheet" href="css/styles.css" media="screen">	
-	
+		<link rel="stylesheet" href="css/operador.css" media="screen">
 					
-<style type="text/css" media="screen">
-	#menusuperior {
-		background-color: #eee;
-		float: right;
-		text-align:right;
-	}
-	#menu {
-		background-color: #eee;
-		border: .2em solid #fff;
-		margin: 2em 2em 1em;
-		padding: 1em;
-		width: 12em;
-		float: left;
-		-moz-box-shadow: 0px 0px 1.25em #ccc;
-		-webkit-box-shadow: 0px 0px 1.25em #ccc;
-		box-shadow: 0px 0px 1.25em #ccc;
-		-moz-border-radius: 0.6em;
-		-webkit-border-radius: 0.6em;
-		border-radius: 0.6em;
-	}
-#grailsLogo {
-	background-color: #000000;
-	padding:10px;
-	margin:0;
-}
-.footer {
-	background: #000;
-	color: #000;
-	clear: both;
-	font-size: 0.8em;
-	margin-top: 1.5em;
-	padding: 1em;
-	min-height: 1em;
-}	
-#page-body {
-	
-}
-	#cabecalho{
-	}
-	#conteudo{
-	margin:10px;
-	}
-	#rodape{
-	}
-	#status-login{
-	backgroud:gray;
-	padding:20px;
-	text-align: right;
-	}			
-</style>
-		
 <!-- <asset:stylesheet src="application.css"/> -->
 <!-- <asset:javascript src="application.js"/> -->
 		
@@ -77,7 +26,7 @@
 <body class="page">	
 	<div id="cabecalho">
 		<div id="grailsLogo">
-		
+		<a class="home" href="${createLink(uri: '/')}">
 			<img src="images/awifi_logo.png" alt="Awifi"/>
 		</div>	
 		<div id="status-login">

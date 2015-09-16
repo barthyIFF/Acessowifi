@@ -1,0 +1,136 @@
+@CHARSET "ISO-8859-1";
+/*ESTILO DAS PAGINAS LIGAO A OPERADOR CTI */
+#pub {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.link-normal {
+	background: white; /*#43CD80; */
+	color: black;
+	margin: 0px;
+	padding: 20px;
+	font-size:16px;
+
+}
+#menu {
+	background-color: #eee;
+	border: .2em solid #fff;
+	float: left;
+	border-radius: 0.6em;
+}
+
+.footer {
+	background: #000;
+	color: #000;
+	clear: both;
+	font-size: 0.8em;
+	margin-top: 1.5em;
+	padding: 1em;
+	min-height: 1em;
+}	
+#page-body {
+
+}
+#cabecalho{
+}
+#grailsLogo {
+	background-color: #000000;
+	padding:10px;	
+	margin:0;
+	background-image: url(../images/img02.png);
+}
+.home{
+	
+}
+#conteudo{
+	margin:10px;
+}
+#rodape{
+}
+#status-login{
+	backgroud:gray;	
+	padding:20px;
+	text-align: right;
+}
+
+/* NAVIGATION MENU */
+
+.nav {
+	background-color:  white; /* #efefef; */
+	padding: 0.5em 0.75em;
+	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
+	        box-shadow: 0 0 3px 1px #aaaaaa;
+	zoom: 1;
+}
+
+.nav ul {
+	overflow: hidden;
+	padding-left: 0;
+	zoom: 1;
+}
+
+.nav li {
+	display: block;
+	float: left;
+	list-style-type: none;
+	margin-right: 0.5em;
+	padding: 0;
+}
+
+.nav a {
+	color: #666666;
+	display: block;
+	padding: 0.25em 0.7em;
+	text-decoration: none;
+    -moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+}
+
+.nav a:active, .nav a:visited {
+	color: #666666;
+}
+
+.nav a:focus, .nav a:hover {
+	background-color: lime; /*#999999; */
+	color: black; /*#ffffff;*/
+}
+
+.no-borderradius .nav a:focus, .no-borderradius .nav a:hover {
+	background-color: transparent;
+	color: #444444;
+	text-decoration: underline;
+}
+
+.nav a.home, .nav a.list, .nav a.create {
+	background-position: 0.7em center;
+	background-repeat: no-repeat;
+	text-indent: 25px;
+}
+
+.nav a.home {
+	background-image: url(../images/skin/house.png);
+}
+.nav a.solicitacao {
+	background-image: url(../images/png/glyphicons-530-list-alt.png);
+	background-position: 0.7em center;
+	background-repeat: no-repeat;
+	text-indent: 20px;
+}
+.nav a.operador {
+	background-image: url(../images/png/glyphicons-35-old-man.png);
+	background-position: 0.7em center;
+	background-repeat: no-repeat;
+	text-indent: 20px;
+}
+
+.nav a.list {
+	background-image: url(../images/skin/database_table.png);
+}
+
+.nav a.create {
+	background-image: url(../images/skin/database_add.png);
+}		
