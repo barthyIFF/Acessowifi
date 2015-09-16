@@ -5,6 +5,7 @@ import org.springframework.security.core.Authentication
 import org.springframework.security.core.context.SecurityContextHolder
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import java.text.SimpleDateFormat;
 
 @Transactional(readOnly = false)
 class SolicitacaoController {
@@ -29,10 +30,11 @@ class SolicitacaoController {
 	}
 	
 	@Secured('ROLE_SUPERUSER')
+	//PENDENCIA: Aqui vai se chamar aprovaSolic e havera outra action de nome reprovaSolic
 	def mudaStatus(Solicitacao solicitacaoInstance) {
 		if (solicitacaoInstance == null) {
 			notFound()
-			return
+			return 
 		}
 
 		if (solicitacaoInstance.hasErrors()) {
@@ -41,7 +43,7 @@ class SolicitacaoController {
 		}	
 		//def Solicitacao s = Solicitacao.get(solicitacaoInstance.id)
 		//s.save(flush:true)
-		solicitacaoInstance.status = "Aguardando Aprovacao"
+		solicitacaoInstance.status = "Aguardando Aprovaca"
 		solicitacaoInstance.save(flush:true)
 	    render "Solicitacao APROVADA com sucesso!"	
 				
@@ -53,7 +55,7 @@ class SolicitacaoController {
 		if (s == null)
 			render "Resposta do teste: Nao encontrada"
 		else
-			render "Resposta do teste: "+s.status			
+			render "Resposta do teste: "+s.status
 	}
 
 	
@@ -78,6 +80,24 @@ class SolicitacaoController {
             respond solicitacaoInstance.errors, view:'create'
             return
         }
+		
+		//Definindo o numero do protocolo automaticamente		
+		//Fomata a data
+		String dataFormatada = new SimpleDateFormat("ddMMyyyy").format(new Date())		
+		//Pega a solicitacao com o maior ID no banco
+		def s = Solicitacao.listOrderById(max:2, order: "desc")[0]
+		int ultimoId
+		//Checa se a tabela de solicitacoes esta vazia (primeira solicitacao)
+		if (s == null)
+			ultimoId = 9998
+		else
+			//Pega somente o maior ID e o incrementa
+			ultimoId = s.id
+		ultimoId = ultimoId+1
+		//Colocando zeros a esquerrda para que fique compativel com a consulta Rest
+		String ultimoIdCom0s = String.format("%05d", ultimoId);
+		//Define o numProtocolo
+		solicitacaoInstance.numProtocolo =  dataFormatada+ultimoIdCom0s
 
         solicitacaoInstance.save flush:true
 
