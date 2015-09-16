@@ -5,6 +5,7 @@ import org.springframework.security.core.Authentication
 import org.springframework.security.core.context.SecurityContextHolder
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import java.text.SimpleDateFormat;
 
 @Transactional(readOnly = false)
 class SolicitacaoController {
@@ -80,10 +81,9 @@ class SolicitacaoController {
             return
         }
 		
-		//Definindo o numero do protocolo automaticamente
-		def data = new Date()
+		//Definindo o numero do protocolo automaticamente		
 		//Fomata a data
-		def dataFormatada = g.formatDate(date:data, format: 'ddMMyyyy')
+		String dataFormatada = new SimpleDateFormat("ddMMyyyy").format(new Date())		
 		//Pega a solicitacao com o maior ID no banco
 		def s = Solicitacao.listOrderById(max:2, order: "desc")[0]
 		int ultimoId
