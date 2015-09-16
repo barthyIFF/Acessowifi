@@ -16,8 +16,28 @@
 				<li><g:remoteLink class="create" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]" /></g:remoteLink></li>				
 			</ul>
 		</div>
-		<div id="show-solicitacao" class="content scaffold-show" role="main">
-			<br><h1>Essa solicitação já foi definida com éxito. Clique aqui para <g:remoteLink controller="equipamento" action="create" params="['solicitacao.id': solicitacaoInstance?.id]" update="page-body">${message(code: 'default.add.label', args: [message(code: 'equipamento.label', default: 'Equipamento')])}</g:remoteLink> a essa solicitação.</h1>
+		<div id="show-solicitacao" class="content scaffold-show" role="main"><br>
+
+			
+			<%--Aviso sobre nenhum equipamento na solicitacao--%>		
+			<g:if test="${solicitacaoInstance?.equipamentos}">
+				<h1>Essa solicitação já foi definida com éxito. Clique 
+				<g:remoteLink controller="equipamento" action="create" params="['solicitacao.id': solicitacaoInstance?.id]" update="page-body"> aqui </g:remoteLink>
+				para adicionar mais equipamentos a essa solicitação.</h1> 
+			</g:if>
+			<g:else>			
+				<h1><font color = "ff0000">ATENÇÃO: Não existem equipamentos associados a essa solicitacao!<br>
+				Clique 
+				<g:remoteLink controller="equipamento" action="create" params="['solicitacao.id': solicitacaoInstance?.id]" update="page-body"> aqui </g:remoteLink>
+				 para adicionar pelo menos um equipamento.</font></h1>
+			</g:else>
+			
+			<g:each in="${solicitacaoInstance}" var="sol" status="i">
+				<%--<g:if test="${sol.status == 'Aguardando Aprovacao'}"> --%>
+    				<p>${i+1}. ${sol.numProtocolo};
+			</g:each><br>
+			
+			
 			
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
