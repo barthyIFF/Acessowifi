@@ -5,20 +5,26 @@
 <meta name="layout" content="main4">
 </head>
 <body class="page">
-	<div class="content">
+	<div class="conteudo">
 			<div class="row" id="pub">
-				<div class="col-md-3" id="menu"> 
-					<ul class="nav">
+				<div class="col-md-3 verborda" id="menu"> 
+					<ul class="nav verborda2">
 						<li><g:remoteLink class="link-normal" controller="Solicitacao" action="index" update="page-body">
-						<span class="glyphicon glyphicon-search">
-						</span>Solicitações</g:remoteLink></li>
-						<li><g:remoteLink class="link-normal operador" controller="OperadorCTI" action="indexAntigo" update="page-body"><span class="glyphicon tio"></span>Operadores</g:remoteLink></li>
-						<li><g:remoteLink controller="UsuarioSolicitante" action="index" update="page-body">Usuários</g:remoteLink></li>
-						<li><g:remoteLink controller="UsuarioTemporario" action="index" update="page-body">Usuários temporários</g:remoteLink></li>
-						<li><g:remoteLink controller="Equipamento" action="index" update="page-body">Equipamentos</g:remoteLink></li>
-						<li><g:remoteLink controller="autorizadorProf" action="indexAntigo" update="page-body">Autorizadores</g:remoteLink></li>
-						<li><g:remoteLink controller="OutrasTarefas" action="autorizador" update="page-body">Encerrar Solicitacoes (P)</g:remoteLink></li>
-						<li><a href="j_spring_security_logout">Fazer logout</a></li>
+						<span class="glyphicon glyphicon-list-alt"></span>&nbsp;Solicitações</g:remoteLink></li>
+						<li><g:remoteLink class="link-normal" controller="OperadorCTI" action="indexAntigo" update="page-body">
+						<span class="glyphicon glyphicon-wrench"></span>&nbsp;Operadores</g:remoteLink></li>
+						<li><g:remoteLink class="link-normal" controller="UsuarioSolicitante" action="index" update="page-body">
+						<span class="glyphicon glyphicon-user"></span>&nbsp;Usuários</g:remoteLink></li>
+						<li><g:remoteLink class="link-normal" controller="UsuarioTemporario" action="index" update="page-body">
+						<span class="glyphicon glyphicon-time"></span>Usuários temporários</g:remoteLink></li>
+						<li><g:remoteLink class="link-normal" controller="Equipamento" action="index" update="page-body">
+						<span class="glyphicon glyphicon-phone"></span>&nbsp;Equipamentos</g:remoteLink></li>
+						<li><g:remoteLink class="link-normal" controller="autorizadorProf" action="indexAntigo" update="page-body">
+						<span class="glyphicon glyphicon-send"></span>&nbsp;Autorizadores</g:remoteLink></li>
+						<li><g:remoteLink class="link-normal" controller="OutrasTarefas" action="autorizador" update="page-body">
+						<span class="glyphicon glyphicon-tasks"></span>&nbsp;Encerrar Solicitacoes (P)</g:remoteLink></li>
+						<li><a class="link-normal" href="j_spring_security_logout">
+						<span class="glyphicon glyphicon-log-out"></span>&nbsp;Fazer logout</a></li>
 					</ul>	
 				</div>
 				<div class="col-md-9" id="page-body">

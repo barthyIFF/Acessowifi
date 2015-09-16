@@ -27,7 +27,7 @@
 	<div id="cabecalho">
 		<div id="grailsLogo">
 		<a class="home" href="${createLink(uri: '/')}">
-			<img src="images/awifi_logo.png" alt="Awifi"/>
+			<img src="images/awifi_logo.png" alt="Awifi"/></a>
 		</div>	
 		<div id="status-login">
 				<div class="btn-group">
