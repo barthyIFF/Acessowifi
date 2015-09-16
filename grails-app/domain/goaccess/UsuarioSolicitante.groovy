@@ -22,8 +22,7 @@ class UsuarioSolicitante {
 		
 	static hasMany = [solicitacao:Solicitacao]	
 	
-	/*Para simplificar eu coloquei o endereco como um string simples
-	Claudio 24/08/15*/
+
 	//static belongsTo = Endereco
 	
 	String toString () {
@@ -33,7 +32,7 @@ class UsuarioSolicitante {
 	
     static constraints = {
 		nome(nullable:false,blank:false)
-		cpf(blank:false,unique:true)
+		cpf(blank:false)
 		email(email:true,blank:false)
 		setor(blank:false)
 		celular(blank:false)

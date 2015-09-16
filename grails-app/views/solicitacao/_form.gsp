@@ -5,6 +5,7 @@
 <div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'numProtocolo', 'error')} required">
 	<g:hiddenField name="numProtocolo" value="1111111"/>
 </div>
+
 <%--<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'numProtocolo', 'error')} required">
 	<label for="numProtocolo">
 		<g:message code="solicitacao.numProtocolo.label" default="Num Protocolo" />

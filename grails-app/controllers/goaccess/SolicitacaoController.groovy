@@ -86,14 +86,18 @@ class SolicitacaoController {
 		def dataFormatada = g.formatDate(date:data, format: 'ddMMyyyy')
 		//Pega a solicitacao com o maior ID no banco
 		def s = Solicitacao.listOrderById(max:2, order: "desc")[0]
-		//Pega somente o maior ID e o incrementa
-		int ultimoId = s.id
+		int ultimoId
+		//Checa se a tabela de solicitacoes esta vazia (primeira solicitacao)
+		if (s == null)
+			ultimoId = 9998
+		else
+			//Pega somente o maior ID e o incrementa
+			ultimoId = s.id
 		ultimoId = ultimoId+1
 		//Colocando zeros a esquerrda para que fique compativel com a consulta Rest
 		String ultimoIdCom0s = String.format("%05d", ultimoId);
 		//Define o numProtocolo
 		solicitacaoInstance.numProtocolo =  dataFormatada+ultimoIdCom0s
-		//println(solicitacaoInstance.numProtocolo)
 
         solicitacaoInstance.save flush:true
 
