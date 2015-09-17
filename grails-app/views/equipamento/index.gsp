@@ -23,10 +23,10 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="ip" title="${message(code: 'equipamento.ip.label', default: 'Ip')}" />
-					
-						<g:sortableColumn property="mac" title="${message(code: 'equipamento.mac.label', default: 'Mac')}" />
-					
+						<th><g:message code = "equipamento.ip.label" default= "Ip" /></th>
+						
+						<th><g:message code = "equipamento.mac.label" default= "Mac" /></th>
+										
 						<th><g:message code="equipamento.solicitacao.label" default="Solicitacao" /></th>
 					
 					</tr>

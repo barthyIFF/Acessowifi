@@ -51,6 +51,12 @@ body {
 			#page {
 				margin: 0em 0em 10em 1.4em;
 			}
+			
+			#menu h1 {
+				text-transform: uppercase;
+				font-size: 1.1em;
+				margin: 0 0 0.3em;
+			}
 
 /* FINAL MENU */
 
