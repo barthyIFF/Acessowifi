@@ -98,7 +98,7 @@
 			</ol>
 			<g:form url="[resource:solicitacaoInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
-				    <g:submitToRemote class="delete" update="page-body" url="[controller:'solicitacao', action:'delete']" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"></g:submitToRemote>
+				     <g:submitToRemote class="delete" update="page-body" url="[controller:'solicitacao', action:'delete', id:solicitacaoInstance.id]" value="Teste Del. Cláudio"></g:submitToRemote>
                 
                     <g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
