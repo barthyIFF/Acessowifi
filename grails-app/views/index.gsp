@@ -9,7 +9,7 @@
 			<h1>Clique no seu perfil</h1>
 			<ul>
 				<li><a href="operadorCTI">Operador</a> </li>
-				<li><a href="autorizadorProf/index">Autorizador de solicitações</a> </li>
+				<li><a href="autorizadorProf/index">Autorizador</a> </li>
 				<li>Usuário</li>
 				<li><a href="j_spring_security_logout">Logout</a></li>
 			</ul>

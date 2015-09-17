@@ -15,30 +15,55 @@
 			</ul>
 		</div>
 		<div id="list-solicitacao" class="content scaffold-list" role="main">
-			<br><h1>Sr. ${sec.username()}, as solicitações abaixo estão em seu nome:</h1><br>
-			Username logado = ${sec.loggedInUserInfo(field:'username')}<br>
-			${sec.username()}<br>
-			
+			<h1> Sr. ${sec.username()}, as solicitações abaixo estão em seu nome.</h1><br>
+			<%--Username logado = ${sec.loggedInUserInfo(field:'username')}<br>
+			${sec.username()}<br>--%>
+			<br>
+			<br>
 			
 			<%--Somente aguardando aprovacao --%>
+			<p><b><u>Solicitações aguardando aprovação:</u></b></p>
+			<br>			
 			<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">
-				<g:if test="${sol.status == 'Aguardando Aprovacao'}">
-    				<p>${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}; ${sol.status} 
+				<g:if test="${sol.status == 'AGUARDANDO APROVACAO de '+sol.autorizador}">
+    				<p>Protocolo: ${sol.numProtocolo}; Usuário: ${sol.usuario} -
 	    			<g:remoteLink class="mudaStatus" action="mudaStatus" update="page-body" id="${sol.id}">APROVAR</g:remoteLink> 
     				<g:remoteLink class="show" action="show" update="page-body" id="${sol.id}">REPROVAR</g:remoteLink></p>
+				</g:if>				
+			</g:each>			
+			<br>
+
+			
+			
+			<%--Aprovadas --%>
+			<p><b><u>Solicitações que foram APROVADAS:</u></b></p>
+			<br>
+			<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">
+				<g:if test="${sol.status == 'Solicitacao APROVADA por '+sol.autorizador+'. Aguardando cadastro pelo operador: '+sol.operador}">
+    				<p>Protocolo: ${sol.numProtocolo}; Usuário: ${sol.usuario}
+				</g:if>
+			</g:each>
+			<br>
+			
+			<%--Reprovadas --%>
+			<p><b><u>Solicitações que foram REPROVADAS:</u></b></p>
+			<br>
+			<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">
+				<%--Claudio - 17/09/15: O Operador tb pode reprovar, e nesse caso o nome dele fica gravado para o Autorizador.
+				Depois que o Autorizador aprovar o operador pode reprovar devido a um erro técnico como o numero incorreto do IP, por exemplo.--%>
+				<g:if test="${sol.status == 'Solicitacao REPROVADA por: '+sol.autorizador || sol.status == 'Solicitacao REPROVADA por: '+sol.operador}">
+    				<p>Protocolo: ${sol.numProtocolo}; Usuário: ${sol.usuario} - ${sol.status}
 				</g:if>
 			</g:each><br>
 
-			<hr>
-			
-			<%--Nao somente aguardando aprovacao, todas em seu nome --%>
-			<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">		
-    				<p>${i+1}. ${sol.numProtocolo}; Autorizador = ${sol.autorizador}; ${sol.status};
-    				<g:remoteLink class="mudaStatus" action="mudaStatus" update="page-body" id="${sol.id}">APROVAR</g:remoteLink></p> 
-    				<g:javascript library="jquery" /> 
-    		  						
+			<%--Finalizadas: acesso garantido. --%>
+			<p><b><u>Solicitações FINALIZADAS (acesso à rede garantido):</u></b></p>
+			<br>
+			<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">
+				<g:if test="${sol.status == 'Solicitacao FINALIZADA. Acesso a rede garantido.'}">
+    				<p>Protocolo: ${sol.numProtocolo}; Usuário: ${sol.usuario}
+				</g:if>
 			</g:each><br>
-			
 			
 			
 			<g:if test="${flash.message}">
