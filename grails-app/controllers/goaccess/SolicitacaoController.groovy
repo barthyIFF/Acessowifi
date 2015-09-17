@@ -56,6 +56,7 @@ class SolicitacaoController {
 			render "Resposta do teste: Nao encontrada"
 		else
 			render "Resposta do teste: "+s.status
+		
 	}
 
 	
@@ -98,8 +99,13 @@ class SolicitacaoController {
 		String ultimoIdCom0s = String.format("%05d", ultimoId);
 		//Define o numProtocolo
 		solicitacaoInstance.numProtocolo =  dataFormatada+ultimoIdCom0s
+		
+		
 
-        solicitacaoInstance.save flush:true
+        //AutorizadorProf at = AutorizadorProf.findById(solicitacaoInstance.autorizadorProf)
+		//pp = solicitacaoInstance.autorizadorProf
+		
+		solicitacaoInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
