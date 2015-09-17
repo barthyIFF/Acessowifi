@@ -44,7 +44,7 @@
 					
 						<td>${fieldValue(bean: solicitacaoInstance, field: "status")}</td>
 					
-						<td>${fieldValue(bean: solicitacaoInstance, field: "tipo")}</td>
+						<td>${fieldValue(bean: solicitacaoInstance, field: "usuario")}</td>
 					
 						<td><g:formatDate date="${solicitacaoInstance.data}" /></td>
 					

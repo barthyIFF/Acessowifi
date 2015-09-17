@@ -120,10 +120,11 @@
 				<g:if test="${usuarioSolicitanteInstance?.solicitacao}">
 				<li class="fieldcontain">
 					<span id="solicitacao-label" class="property-label"><g:message code="usuarioSolicitante.solicitacao.label" default="Solicitacao" /></span>
-					
+						<span class="property-value" aria-labelledby="solicitacoes-label"><g:fieldValue bean="${usuarioSolicitanteInstance}" field="solicitacao"/></span>
+						<%--Depois de criadas as solicitacoes não devem ser editadas, apenas apagadas
 						<g:each in="${usuarioSolicitanteInstance.solicitacao}" var="s">
 						<span class="property-value" aria-labelledby="solicitacao-label"><g:link controller="solicitacao" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
-						</g:each>
+						</g:each>--%>
 					
 				</li>
 				</g:if>

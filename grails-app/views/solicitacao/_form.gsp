@@ -1,21 +1,26 @@
 <%@ page import="goaccess.Solicitacao" %>
 
 
-
+<%--Claudio - 14/09/15- Setando o numProtocolo pra 0. Foi feita uma funcao no controlador para criar o protocolo no padrao correto--%>
 <div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'numProtocolo', 'error')} required">
+	<g:hiddenField name="numProtocolo" value="1111111"/>
+</div>
+
+<%--<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'numProtocolo', 'error')} required">
 	<label for="numProtocolo">
 		<g:message code="solicitacao.numProtocolo.label" default="Num Protocolo" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="numProtocolo" required="" value="${solicitacaoInstance?.numProtocolo}"/>
 
-</div>
+</div> --%>
 
 
-<%--Setando o status automaticamente. No momento da criacao da solicitacao tem que ter status = "Aguardando aprovacao" --%>
+<%--Claudio - 16/09/15 - Setando o status automaticamente. No momento da criacao da solicitacao tem que ter status = "Aguardando aprovacao".
+O controlador adicionara' o nome do operador --%>
 
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'status', 'error')} required">
-	<g:hiddenField name="status" value="Aguardando Aprovacao"/>
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'status', 'error')} required">	
+	<g:hiddenField name="status" value="AGUARDANDO APROVACAO de "/>
 </div>
 
  <%--

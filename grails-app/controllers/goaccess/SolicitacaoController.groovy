@@ -5,6 +5,7 @@ import org.springframework.security.core.Authentication
 import org.springframework.security.core.context.SecurityContextHolder
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import java.text.SimpleDateFormat;
 
 @Transactional(readOnly = false)
 class SolicitacaoController {
@@ -33,7 +34,7 @@ class SolicitacaoController {
 	def mudaStatus(Solicitacao solicitacaoInstance) {
 		if (solicitacaoInstance == null) {
 			notFound()
-			return
+			return 
 		}
 
 		if (solicitacaoInstance.hasErrors()) {
@@ -54,7 +55,8 @@ class SolicitacaoController {
 		if (s == null)
 			render "Resposta do teste: Nao encontrada"
 		else
-			render "Resposta do teste: "+s.status			
+			render "Resposta do teste: "+s.status
+		
 	}
 
 	
@@ -79,8 +81,31 @@ class SolicitacaoController {
             respond solicitacaoInstance.errors, view:'create'
             return
         }
+		
+		//Definindo o numero do protocolo automaticamente		
+		//Fomata a data
+		String dataFormatada = new SimpleDateFormat("ddMMyyyy").format(new Date())		
+		//Pega a solicitacao com o maior ID no banco
+		def s = Solicitacao.listOrderById(max:2, order: "desc")[0]
+		int ultimoId
+		//Checa se a tabela de solicitacoes esta vazia (primeira solicitacao)
+		if (s == null)
+			ultimoId = 9998
+		else
+			//Pega somente o maior ID e o incrementa
+			ultimoId = s.id
+		ultimoId = ultimoId+1
+		//Colocando zeros a esquerrda para que fique compativel com a consulta Rest
+		String ultimoIdCom0s = String.format("%05d", ultimoId);
+		//Define o numProtocolo
+		solicitacaoInstance.numProtocolo =  dataFormatada+ultimoIdCom0s
+		
+		
 
-        solicitacaoInstance.save flush:true
+        //AutorizadorProf at = AutorizadorProf.findById(solicitacaoInstance.autorizadorProf)
+		//pp = solicitacaoInstance.autorizadorProf
+		
+		solicitacaoInstance.save flush:true
 
         request.withFormat {
             form multipartForm {

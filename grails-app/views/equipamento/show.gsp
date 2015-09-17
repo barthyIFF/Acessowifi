@@ -44,9 +44,10 @@
 				<g:if test="${equipamentoInstance?.solicitacao}">
 				<li class="fieldcontain">
 					<span id="solicitacao-label" class="property-label"><g:message code="equipamento.solicitacao.label" default="Solicitacao" /></span>
-					
+					<span class="property-value" aria-labelledby="solicitacoes-label"><g:fieldValue bean="${equipamentoInstance}" field="solicitacao"/></span>
+					<%--Depois de criadas as solicitacoes não devem ser editadas, apenas apagadas
 						<span class="property-value" aria-labelledby="solicitacao-label"><g:link controller="solicitacao" action="show" id="${equipamentoInstance?.solicitacao?.id}">${equipamentoInstance?.solicitacao?.encodeAsHTML()}</g:link></span>
-					
+						--%>
 				</li>
 				</g:if>
 			
