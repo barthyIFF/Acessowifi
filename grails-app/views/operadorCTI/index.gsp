@@ -6,7 +6,7 @@
 </head>
 <body class="page">
 	<div class="conteudo">
-			<div class="row" id="pub">
+			<div class="row">
 				<div class="col-md-3"> 
 					<ul class="nav nav-pills nav-stacked">
 						<li><g:remoteLink class="link-normal" controller="Solicitacao" action="create" update="page-body">
