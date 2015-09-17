@@ -31,7 +31,7 @@
 					
 				</li>
 				</g:if>
-			
+				<%--
 				<g:if test="${autorizadorProfInstance?.password}">
 				<li class="fieldcontain">
 					<span id="password-label" class="property-label"><g:message code="autorizadorProf.password.label" default="Password" /></span>
@@ -39,7 +39,7 @@
 						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${autorizadorProfInstance}" field="password"/></span>
 					
 				</li>
-				</g:if>
+				</g:if> --%>
 			
 				<g:if test="${autorizadorProfInstance?.nome}">
 				<li class="fieldcontain">
@@ -121,7 +121,7 @@
 					
 				</li>
 				</g:if>
-			
+				<%--
 				<g:if test="${autorizadorProfInstance?.papel}">
 				<li class="fieldcontain">
 					<span id="papel-label" class="property-label"><g:message code="autorizadorProf.papel.label" default="Papel" /></span>
@@ -129,7 +129,7 @@
 						<span class="property-value" aria-labelledby="papel-label"><g:link controller="papel" action="show" id="${autorizadorProfInstance?.papel?.id}">${autorizadorProfInstance?.papel?.encodeAsHTML()}</g:link></span>
 					
 				</li>
-				</g:if>
+				</g:if> --%>
 			
 				<g:if test="${autorizadorProfInstance?.passwordExpired}">
 				<li class="fieldcontain">
@@ -143,10 +143,11 @@
 				<g:if test="${autorizadorProfInstance?.solicitacoes}">
 				<li class="fieldcontain">
 					<span id="solicitacoes-label" class="property-label"><g:message code="autorizadorProf.solicitacoes.label" default="Solicitacoes" /></span>
-					
+						<span class="property-value" aria-labelledby="solicitacoes-label"><g:fieldValue bean="${autorizadorProfInstance}" field="solicitacoes"/></span>
+						<%--Depois de criadas as solicitacoes não devem ser editadas, apenas apagadas
 						<g:each in="${autorizadorProfInstance.solicitacoes}" var="s">
 						<span class="property-value" aria-labelledby="solicitacoes-label"><g:link controller="solicitacao" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
-						</g:each>
+						</g:each>--%>
 					
 				</li>
 				</g:if>

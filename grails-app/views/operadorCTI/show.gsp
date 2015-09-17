@@ -31,7 +31,7 @@
 					
 				</li>
 				</g:if>
-			
+				<%--
 				<g:if test="${operadorCTIInstance?.password}">
 				<li class="fieldcontain">
 					<span id="password-label" class="property-label"><g:message code="operadorCTI.password.label" default="Password" /></span>
@@ -39,7 +39,7 @@
 						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${operadorCTIInstance}" field="password"/></span>
 					
 				</li>
-				</g:if>
+				</g:if>--%>
 			
 				<g:if test="${operadorCTIInstance?.nome}">
 				<li class="fieldcontain">
@@ -105,6 +105,7 @@
 				</li>
 				</g:if>
 			
+				<%--
 				<g:if test="${operadorCTIInstance?.papel}">
 				<li class="fieldcontain">
 					<span id="papel-label" class="property-label"><g:message code="operadorCTI.papel.label" default="Papel" /></span>
@@ -112,7 +113,7 @@
 						<span class="property-value" aria-labelledby="papel-label"><g:link controller="papel" action="show" id="${operadorCTIInstance?.papel?.id}">${operadorCTIInstance?.papel?.encodeAsHTML()}</g:link></span>
 					
 				</li>
-				</g:if>
+				</g:if>--%>
 			
 				<g:if test="${operadorCTIInstance?.passwordExpired}">
 				<li class="fieldcontain">
@@ -126,11 +127,11 @@
 				<g:if test="${operadorCTIInstance?.solicitacoes}">
 				<li class="fieldcontain">
 					<span id="solicitacoes-label" class="property-label"><g:message code="operadorCTI.solicitacoes.label" default="Solicitacoes" /></span>
-					
+						<span class="property-value" aria-labelledby="solicitacoes-label"><g:fieldValue bean="${operadorCTIInstance}" field="solicitacoes"/></span>					
+						<%--Depois de criadas as solicitacoes não devem ser editadas, apenas apagadas
 						<g:each in="${operadorCTIInstance.solicitacoes}" var="s">
-						<span class="property-value" aria-labelledby="solicitacoes-label"><g:link controller="solicitacao" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
+							<span class="property-value" aria-labelledby="solicitacoes-label"><g:link controller="solicitacao" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each> --%>
 				</li>
 				</g:if>
 			

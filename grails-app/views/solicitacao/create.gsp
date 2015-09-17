@@ -7,11 +7,7 @@
 	</head>
 	<body>
 		<a href="#create-solicitacao" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>				
-				<li><g:remoteLink class="list" action="index" update="page-body"><g:message code="default.list.label" args="[entityName]" /></g:remoteLink></li>				
-			</ul>
-		</div>
+
 		<div id="create-solicitacao" class="content scaffold-create" role="main">
 			<br><h1>ATENÇÃO: Antes de criar uma solicitação, certifique-se de que já foram cadastrados o Autorizador, o Operador e o usuário da solicitação.</h1>
 			<g:if test="${flash.message}">

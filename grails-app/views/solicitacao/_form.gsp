@@ -16,10 +16,11 @@
 </div> --%>
 
 
-<%--Setando o status automaticamente. No momento da criacao da solicitacao tem que ter status = "Aguardando aprovacao" --%>
+<%--Claudio - 16/09/15 - Setando o status automaticamente. No momento da criacao da solicitacao tem que ter status = "Aguardando aprovacao".
+O controlador adicionara' o nome do operador --%>
 
-<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'status', 'error')} required">
-	<g:hiddenField name="status" value="Aguardando Aprovacao"/>
+<div class="fieldcontain ${hasErrors(bean: solicitacaoInstance, field: 'status', 'error')} required">	
+	<g:hiddenField name="status" value="AGUARDANDO APROVACAO de "/>
 </div>
 
  <%--

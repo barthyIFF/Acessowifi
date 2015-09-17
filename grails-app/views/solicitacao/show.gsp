@@ -9,16 +9,22 @@
 	</head>
 	<body>
 		<a href="#show-solicitacao" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:remoteLink class="list" action="index" update="page-body"><g:message code="default.list.label" args="[entityName]" /></g:remoteLink></li>				
-				<li><g:remoteLink class="create" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]" /></g:remoteLink></li>				
-			</ul>
-		</div>
-		<div id="show-solicitacao" class="content scaffold-show" role="main">
-			<br><h1>Essa solicitação já foi definida com éxito. Clique aqui para <g:remoteLink controller="equipamento" action="create" params="['solicitacao.id': solicitacaoInstance?.id]" update="page-body">${message(code: 'default.add.label', args: [message(code: 'equipamento.label', default: 'Equipamento')])}</g:remoteLink> a essa solicitação.</h1>
+		<div id="show-solicitacao" class="content scaffold-show" role="main"><br>
+
 			
+			<%--Aviso sobre nenhum equipamento na solicitacao--%>		
+			<g:if test="${solicitacaoInstance?.equipamentos}">
+				<h1>Essa solicitação já foi definida com éxito. Clique 
+				<g:remoteLink controller="equipamento" action="create" params="['solicitacao.id': solicitacaoInstance?.id]" update="page-body"> aqui </g:remoteLink>
+				para adicionar mais equipamentos a essa solicitação.</h1> 
+			</g:if>
+			<g:else>			
+				<h1><font color = "ff0000">ATENÇÃO: Não existem equipamentos associados a essa solicitacao!<br>
+				Clique 
+				<g:remoteLink controller="equipamento" action="create" params="['solicitacao.id': solicitacaoInstance?.id]" update="page-body"> aqui </g:remoteLink>
+				 para adicionar pelo menos um equipamento.</font></h1>
+			</g:else>
+
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -42,15 +48,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${solicitacaoInstance?.tipo}">
-				<li class="fieldcontain">
-					<span id="tipo-label" class="property-label"><g:message code="solicitacao.tipo.label" default="Tipo" /></span>
-					
-						<span class="property-value" aria-labelledby="tipo-label"><g:fieldValue bean="${solicitacaoInstance}" field="tipo"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${solicitacaoInstance?.data}">
 				<li class="fieldcontain">
 					<span id="data-label" class="property-label"><g:message code="solicitacao.data.label" default="Data" /></span>
@@ -68,18 +65,7 @@
 					
 				</li>
 				</g:if>
-			
-				<g:if test="${solicitacaoInstance?.equipamentos}">
-				<li class="fieldcontain">
-					<span id="equipamentos-label" class="property-label"><g:message code="solicitacao.equipamentos.label" default="Equipamentos" /></span>
-					
-						<g:each in="${solicitacaoInstance.equipamentos}" var="e">
-						<span class="property-value" aria-labelledby="equipamentos-label"><g:link controller="equipamento" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
+
 				<g:if test="${solicitacaoInstance?.operador}">
 				<li class="fieldcontain">
 					<span id="operador-label" class="property-label"><g:message code="solicitacao.operador.label" default="Operador" /></span>
@@ -97,11 +83,23 @@
 					
 				</li>
 				</g:if>
+				
+				<g:if test="${solicitacaoInstance?.equipamentos}">
+				<li class="fieldcontain">
+					<span id="equipamentos-label" class="property-label"><g:message code="solicitacao.equipamentos.label" default="Equipamentos" /></span>
+					
+						<g:each in="${solicitacaoInstance.equipamentos}" var="e">
+						<span class="property-value" aria-labelledby="equipamentos-label"><g:link controller="equipamento" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>				
 			
 			</ol>
 			<g:form url="[resource:solicitacaoInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
-				    <g:remoteLink class="edit" action="edit" resource="${solicitacaoInstance}" update="page-body"><g:message code="default.button.edit.label" default="Edit" /></g:remoteLink>
+					<%--Depois de abertas as solicitacoes nao devem mais ser editadas, apenas apagadas --%>
+				   <%--<g:remoteLink class="edit" action="edit" resource="${solicitacaoInstance}" update="page-body"><g:message code="default.button.edit.label" default="Edit" /></g:remoteLink> --%> 
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
