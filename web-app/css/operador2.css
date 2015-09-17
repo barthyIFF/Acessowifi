@@ -22,9 +22,13 @@
 .link-normal a:houver{
  background-color: 	#9AFF9A;
 }
-.menu1 ul{
-	padding: 30px;
+#menu {
+	background-color: #eee;
+	border: .2em solid #fff;
+	float: left;
+	border-radius: 0.6em;
 }
+
 .footer {
 	background: #000;
 	color: #000;
@@ -77,19 +81,13 @@
 }
 
 .nav li {
- 	/*display: block; 
+ 	display: block;
 	float: left;
 	list-style-type: none;
 	margin-right: 0.5em;
-	padding: 0; */
+	padding: 0; 
 }
-.btn-group-vertical li{
-	display: block; 
-	float: left;
-	list-style-type: none;
-	margin-right: 10px;
-	padding: 0;	
-}
+
 .nav a {
 	color: #666666;
 	display: block;
@@ -166,10 +164,9 @@ h1 {
 }
 
 ul {
+	padding: 0;
 }
-li{
-	
-}
+
 img {
 	border: 0;
 }

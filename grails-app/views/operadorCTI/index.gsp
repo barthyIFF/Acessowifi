@@ -7,8 +7,8 @@
 <body class="page">
 	<div class="conteudo">
 			<div class="row" id="pub">
-				<div class="col-md-3 verborda" id="menu"> 
-					<ul class="nav verborda2">
+				<div class="col-md-3"> 
+					<ul class="nav nav-pills nav-stacked">	
 						<li><g:remoteLink class="link-normal" controller="Solicitacao" action="index" update="page-body">
 						<span class="glyphicon glyphicon-list-alt"></span>&nbsp;Solicitações</g:remoteLink></li>
 						<li><g:remoteLink class="link-normal" controller="OperadorCTI" action="indexAntigo" update="page-body">
