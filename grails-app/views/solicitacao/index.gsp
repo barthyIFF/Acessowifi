@@ -8,6 +8,11 @@
 	</head>
 	<body>
 		<a href="#list-solicitacao" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<div class="nav" role="navigation">
+			<ul>				
+				<li><g:remoteLink class="create" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]" /></g:remoteLink></li>				
+			</ul>
+		</div>
 		<div id="list-solicitacao" class="content scaffold-list" role="main">
 			<br><h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
@@ -17,14 +22,14 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="numProtocolo" title="${message(code: 'solicitacao.numProtocolo.label', default: 'Num Protocolo')}" />
-					
-						<g:sortableColumn property="status" title="${message(code: 'solicitacao.status.label', default: 'Status')}" />
-					
-						<g:sortableColumn property="tipo" title="${message(code: 'solicitacao.tipo.label', default: 'Usuario')}" />
-					
-						<g:sortableColumn property="data" title="${message(code: 'solicitacao.data.label', default: 'Data')}" />
-					
+						<th><g:message code = "solicitacao.numProtocolo.label" default= "Num Protocolo" /></th>
+						
+						<th><g:message code = "solicitacao.status.label" default= "Status" /></th>
+						
+						<th><g:message code = "solicitacao.tipo.label" default= "Tipo" /></th>
+						
+						<th><g:message code = "solicitacao.data.label" default= "Data" /></th>
+																				
 						<th><g:message code="solicitacao.autorizador.label" default="Autorizador" /></th>
 					
 						<th><g:message code="solicitacao.operador.label" default="Operador" /></th>
