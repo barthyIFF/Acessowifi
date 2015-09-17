@@ -23,18 +23,18 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="nome" title="${message(code: 'usuarioTemporario.nome.label', default: 'Nome')}" />
-					
-						<g:sortableColumn property="cpf" title="${message(code: 'usuarioTemporario.cpf.label', default: 'Cpf')}" />
-					
-						<g:sortableColumn property="email" title="${message(code: 'usuarioTemporario.email.label', default: 'Email')}" />
-					
-						<g:sortableColumn property="setor" title="${message(code: 'usuarioTemporario.setor.label', default: 'Setor')}" />
-					
-						<g:sortableColumn property="celular" title="${message(code: 'usuarioTemporario.celular.label', default: 'Celular')}" />
-					
-						<g:sortableColumn property="tempoAcesso" title="${message(code: 'usuarioTemporario.tempoAcesso.label', default: 'Tempo Acesso')}" />
-					
+						<th><g:message code = "usuarioTemporario.nome.label" default= "Nome" /></th>
+						
+						<th><g:message code = "usuarioTemporario.cpf.label" default= "Cpf" /></th>
+						
+						<th><g:message code = "usuarioTemporario.email.label" default= "Email" /></th>
+						
+						<th><g:message code = "usuarioTemporario.setor.label" default= "Setor" /></th>
+						
+						<th><g:message code = "usuarioTemporario.celular.label" default= "Celular" /></th>
+						
+						<th><g:message code = "usuarioTemporario.tempoAcesso.label" default= "Tempo Acesso" /></th>
+																														
 					</tr>
 				</thead>
 				<tbody>
