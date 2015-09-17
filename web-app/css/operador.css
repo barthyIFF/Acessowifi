@@ -16,8 +16,8 @@
 	background: white; /*#43CD80; */
 	color: black;
 	margin: 0px;
-	padding: 5px;
-	font-size:16px;
+	padding: 0px;
+	font-size:14px;
 }
 .link-normal a:houver{
  background-color: 	#9AFF9A;
@@ -44,6 +44,13 @@
 	padding:10px;	
 	margin:0;
 	/*background-image: url(../images/img02.png);*/
+}
+#status-login{
+	padding:20px;
+	text-align: right;
+	background-image: url(../images/banner-gray.png);
+	border: 1px;
+	background-repeat: no-repeat;
 }
 .home{
 	

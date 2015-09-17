@@ -45,7 +45,6 @@
 			</div>
 	</div>
 		<footer class="site-footer">
-		Copyright &copy; 2014
-	</footer>	
+		</footer>	
 </body>
 </html>
