@@ -23,16 +23,16 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="username" title="${message(code: 'operadorCTI.username.label', default: 'Login')}" />		
-					
-						<g:sortableColumn property="nome" title="${message(code: 'operadorCTI.nome.label', default: 'Nome')}" />
-					
-						<g:sortableColumn property="cpf" title="${message(code: 'operadorCTI.cpf.label', default: 'Cpf')}" />
-					
-						<g:sortableColumn property="email" title="${message(code: 'operadorCTI.email.label', default: 'Email')}" />
-					
-						<g:sortableColumn property="celular" title="${message(code: 'operadorCTI.celular.label', default: 'Celular')}" />
-					
+						<th><g:message code = "operadorCTI.username.label" default= "Login" /></th>
+						
+						<th><g:message code = "operadorCTI.nome.label" default= "Nome" /></th>
+						
+						<th><g:message code = "operadorCTI.cpf.label" default= "Cpf" /></th>
+						
+						<th><g:message code = "operadorCTI.email.label" default= "Email" /></th>
+						
+						<th><g:message code = "operadorCTI.celular.label" default= "Celular" /></th>
+																										
 					</tr>
 				</thead>
 				<tbody>

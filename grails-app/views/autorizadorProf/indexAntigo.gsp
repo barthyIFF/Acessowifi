@@ -23,16 +23,16 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="username" title="${message(code: 'autorizadorProf.username.label', default: 'Username')}" />
+						<th><g:message code = "autorizadorProf.username.label" default= "Username" /></th>
 						
-						<g:sortableColumn property="nome" title="${message(code: 'autorizadorProf.nome.label', default: 'Nome')}" />
-					
-						<g:sortableColumn property="cpf" title="${message(code: 'autorizadorProf.cpf.label', default: 'Cpf')}" />
-					
-						<g:sortableColumn property="email" title="${message(code: 'autorizadorProf.email.label', default: 'Email')}" />
-					
-						<g:sortableColumn property="setorResponsavel" title="${message(code: 'autorizadorProf.setorResponsavel.label', default: 'Setor Responsavel')}" />
-					
+						<th><g:message code = "autorizadorProf.nome.label" default= "Nome" /></th>
+						
+						<th><g:message code = "autorizadorProf.cpf.label" default= "Cpf" /></th>
+						
+						<th><g:message code = "autorizadorProf.email.label" default= "Email" /></th>
+						
+						<th><g:message code = "autorizadorProf.setorResponsavel.label" default= "Setor Responsável" /></th>
+																										
 					</tr>
 				</thead>
 				<tbody>
