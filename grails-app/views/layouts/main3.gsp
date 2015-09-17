@@ -13,20 +13,25 @@
 		<title><g:layoutTitle default="Acessowifi"/></title>
 
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		 
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<!-- <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
 		<link href="css/styles.css" rel="stylesheet" media="screen">
 		<link href="css/teste.css" rel="stylesheet"media="screen">
 		<g:layoutHead/>
+		
 </head>
 <body class="page">	
 	<div id="cabecalho">
 		<div id="grailsLogo">
 			<a class="home" href="${createLink(uri: '/')}">
 			<img src="images/awifi_logo.png" alt="Awifi"/>
+			</a>
 		</div>	
 		<div id="status-login">
 		</div><!-- status-login -->

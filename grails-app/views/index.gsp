@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="layout" content="main3">
+	
 	<title>Sistema de Solicitação de Acesso Wifi</title>
+	<meta name="layout" content="main3">
+	
 <script type="text/javascript">
 	$(document).ready(function(){
 	$(".msg").tooltip({
 	placement : 'right'
 });
 </script>
+
 </head>
 <body>
 <div id="site">
 	<div class="content packtlib" id="conteudo">
+
 			<div class="row">
 				<div class="col-md-4"></div>
 				<div class="menu1 col-md-4">
