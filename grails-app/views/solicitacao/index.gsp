@@ -26,7 +26,7 @@
 						
 						<th><g:message code = "solicitacao.status.label" default= "Status" /></th>
 						
-						<th><g:message code = "solicitacao.tipo.label" default= "Tipo" /></th>
+						<th><g:message code = "solicitacao.usuario.label" default= "Usuario" /></th>
 						
 						<th><g:message code = "solicitacao.data.label" default= "Data" /></th>
 																				
