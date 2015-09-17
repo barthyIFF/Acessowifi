@@ -8,11 +8,6 @@
 	</head>
 	<body>
 		<a href="#list-solicitacao" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>				
-				<li><g:remoteLink class="create" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]" /></g:remoteLink></li>				
-			</ul>
-		</div>
 		<div id="list-solicitacao" class="content scaffold-list" role="main">
 			<br><h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
@@ -26,7 +21,7 @@
 						
 						<th><g:message code = "solicitacao.status.label" default= "Status" /></th>
 						
-						<th><g:message code = "solicitacao.tipo.label" default= "Tipo" /></th>
+						<th><g:message code = "solicitacao.usuario.label" default= "Usuario" /></th>
 						
 						<th><g:message code = "solicitacao.data.label" default= "Data" /></th>
 																				

@@ -97,14 +97,13 @@ class SolicitacaoController {
 		ultimoId = ultimoId+1
 		//Colocando zeros a esquerrda para que fique compativel com a consulta Rest
 		String ultimoIdCom0s = String.format("%05d", ultimoId);
-		//Define o numProtocolo
+		//Define o numProtocolo 
 		solicitacaoInstance.numProtocolo =  dataFormatada+ultimoIdCom0s
 		
-		
-
-        //AutorizadorProf at = AutorizadorProf.findById(solicitacaoInstance.autorizadorProf)
-		//pp = solicitacaoInstance.autorizadorProf
-		
+		//Claudio - 17/09/15: Definindo o status inicial da solicitacao 
+		AutorizadorProf at = AutorizadorProf.findById(solicitacaoInstance.autorizador.id)
+		solicitacaoInstance.status = "AGUARDANDO APROVACAO de "+at.nome
+				
 		solicitacaoInstance.save flush:true
 
         request.withFormat {
