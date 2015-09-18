@@ -19,7 +19,7 @@
 </div>
 
 <div id="page-body" >
-	<h1>Sem bem Vindo, Autorizador</h1>
+	<h1>Sem bem Vindo, ${sec.username()}</h1>
 	<p>
 		Texto para o operador...Texto para o operador...Texto para o operador...<br>
 		Texto para o operador...Texto para o operador...Texto para o operador...<br>
