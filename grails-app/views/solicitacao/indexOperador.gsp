@@ -22,7 +22,7 @@
 			<p><b><u>Solicitações AGUARDANDO ENCERRAMENTO:</u></b></p> 
 			<br>			
 			<g:each in="${solicitacoesPorOperador}" var="sol" status="i">
-				<g:if test="${sol.status == 'Solicitacao APROVADA por '+sol.autorizador+'. Aguardando cadastro pelo operador: '+sol.operador}">
+				<g:if test="${sol.status == 'Solicitacao APROVADA. Aguardando cadastro pelo operador: '+sol.operador}">
     				<p>Protocolo: ${sol.numProtocolo}; Autorizador: ${sol.autorizador} -
 	    			<g:remoteLink class="encerraSol" action="encerraSol" update="page-body" id="${sol.id}">ENCERRAR</g:remoteLink> 
     				<g:remoteLink class="op_reprovaSol" action="op_reprovaSol" update="page-body" id="${sol.id}">REPROVAR</g:remoteLink>
