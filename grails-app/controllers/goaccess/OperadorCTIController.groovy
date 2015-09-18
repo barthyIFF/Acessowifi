@@ -98,7 +98,12 @@ class OperadorCTIController {
             notFound()
             return
         }
-
+		
+		
+		//Antes de apagar o cliente tem que apagar o ClientePapel
+		ClientePapel cp = ClientePapel.findByCliente(operadorCTIInstance)
+		cp.delete(flush:true)
+		
         operadorCTIInstance.delete flush:true
 
         request.withFormat {
