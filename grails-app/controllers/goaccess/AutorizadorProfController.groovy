@@ -12,7 +12,7 @@ class AutorizadorProfController {
 	
 	@Secured('ROLE_ADMIN')
 	def indexAntigo(Integer max) {
-		params.max = Math.min(max ?: 10, 100)
+		params.max = Math.min(max ?: 500, 500)
 		respond AutorizadorProf.list(params), model:[autorizadorProfInstanceCount: AutorizadorProf.count()]
 	}	
 	@Secured('ROLE_SUPERUSER')

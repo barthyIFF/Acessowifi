@@ -47,6 +47,10 @@
 					</h1>	
 					<g:formRemote name="solicitacao" url="[controller:'solicitacao', action:'consultaStatus']" update="page-body">
 		   				<label>Protocolo: </label>
+					<h1>Esse sistema bla bla bla	
+					</h1>	
+					<g:formRemote name="solicitacao" url="[controller:'solicitacao', action:'consultaStatus']" update="page-body">
+		   				<label>Teste00: </label>
 						<g:textField name="protocolo"/><br/>
 		    			<g:actionSubmit value="Teste01" action="consultaStatus"/>
 						<input type="submit" value="Test02"/>
@@ -71,6 +75,8 @@
 </p>
 			</div>
 	    </div><!-- row -->
+
+				    </div><!-- row -->
 		<div id="rodape">
 			<div id="copyright">
 			Copyright &copy; MPROF2014

@@ -10,7 +10,7 @@ class EquipamentoController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+        params.max = Math.min(max ?: 500, 500)
         respond Equipamento.list(params), model:[equipamentoInstanceCount: Equipamento.count()]
     }
 

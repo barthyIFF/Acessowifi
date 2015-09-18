@@ -14,7 +14,7 @@ class SolicitacaoController {
 	
 	@Secured('ROLE_ADMIN')
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+        params.max = Math.min(max ?: 500, 500)
         respond Solicitacao.list(params), model:[solicitacaoInstanceCount: Solicitacao.count()]
     }
 	
