@@ -17,7 +17,7 @@
 			<br>
 			
 			<%--Somente aguardando aprovacao --%>
-			<p><b><u>Solicitações AGUARDANDO APROVAÇÃO:</u></b></p>
+			<p><b><u>Solicitações AGUARDANDO APROVAÇÃO:</u></b></p> 
 			<br>			
 			<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">
 				<g:if test="${sol.status == 'AGUARDANDO APROVACAO de '+sol.autorizador}">
