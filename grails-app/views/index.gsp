@@ -43,25 +43,22 @@
 				<div class="col-md-4"></div>
 			</div><!-- row -->
 			<div class="row">
-			<div class="col-md-6">
-	<h1><br><br><br><br>
-		Esse sistema bla bla bla	
-		</h1>	
-			<g:formRemote name="solicitacao" url="[controller:'solicitacao', action:'consultaStatus']" update="page-body">
-   				<label>Teste00: </label>
-				<g:textField name="protocolo"/><br/>
-    			<g:actionSubmit value="Teste01" action="consultaStatus"/>
-				<input type="submit" value="Test02"/>
-			</g:formRemote>	
-		</div>
-		<div id="page-body" role="main">
-		<div id="controller-list" role="navigation">
-				
-			</div>
-			</div>
-			<div class="col-md-6">
-		<br><br><br><br><br><br><br><br><br><br><br>
-		------------------------------------------{Área de desenvolvimento. Será apagada antes da}------------------------------------------
+				<div class="col-md-3">
+					<h1>Esse sistema bla bla bla	
+					</h1>	
+					<g:formRemote name="solicitacao" url="[controller:'solicitacao', action:'consultaStatus']" update="page-body">
+		   				<label>Teste00: </label>
+						<g:textField name="protocolo"/><br/>
+		    			<g:actionSubmit value="Teste01" action="consultaStatus"/>
+						<input type="submit" value="Test02"/>
+					</g:formRemote>	
+				</div>
+				<div class="col-md-3" id="page-body" role="main">
+					<div id="controller-list" role="navigation">
+					</div>
+				</div>
+				<div class="col-md-6">
+						------------------------------------------{Área de desenvolvimento. Será apagada antes da}------------------------------------------
 <p>
 
 	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 12/09/15 - 17:43<br>
