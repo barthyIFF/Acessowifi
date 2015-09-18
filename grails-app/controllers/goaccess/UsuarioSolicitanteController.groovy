@@ -11,7 +11,7 @@ class UsuarioSolicitanteController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+        params.max = Math.min(max ?: 500, 500)
         respond UsuarioSolicitante.list(params), model:[usuarioSolicitanteInstanceCount: UsuarioSolicitante.count()]
     }
 

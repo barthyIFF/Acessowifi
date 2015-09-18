@@ -12,7 +12,7 @@
 	<h1>Menu - </h1>
 	<ul>		
 		<li><g:remoteLink controller="Solicitacao" action="indexAutorizador" update="page-body">Solicitações</g:remoteLink></li>
-		<li><a href="j_spring_security_logout">Fazer logout</a></li>	
+		<li><a href="../j_spring_security_logout">Fazer logout</a></li>	
 	</ul>
 </div>
 

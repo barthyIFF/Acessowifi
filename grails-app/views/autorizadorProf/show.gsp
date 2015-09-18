@@ -12,7 +12,7 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:remoteLink class="list" action="index" update="page-body"><g:message code="default.list.label" args="[entityName]" /></g:remoteLink></li>				
+				<li><g:remoteLink class="list" action="indexAntigo" update="page-body"><g:message code="default.list.label" args="[entityName]" /></g:remoteLink></li>				
 				<li><g:remoteLink class="create" action="create" update="page-body"><g:message code="default.new.label" args="[entityName]" /></g:remoteLink></li>				
 			</ul>
 		</div>
