@@ -70,8 +70,8 @@
 				</li>
 				</g:if>
 
-			<br><h1>Outros dados do Usuário Solicitante</h1><br>
-				<g:if test="${usuarioSolicitanteInstance?.nome}">
+			<br><h1>Outros dados do Usuário Solicitante</h1>
+			<br><g:if test="${usuarioSolicitanteInstance?.nome}">
 				<li class="fieldcontain">
 					<span id="nome-label" class="property-label"><g:message code="usuarioSolicitante.nome.label" default="Nome" /></span>
 					
@@ -133,7 +133,7 @@
 			<g:form url="[resource:usuarioSolicitanteInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
 				    <g:remoteLink class="edit" action="edit" resource="${usuarioSolicitanteInstance}" update="page-body"><g:message code="default.button.edit.label" default="Edit" /></g:remoteLink>				
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+                     <g:submitToRemote class="delete" update="page-body" url="[controller:'usuarioSolicitante', action:'delete', id:usuarioSolicitanteInstance.id]" value="${message(code: 'default.button.delete.label', default: 'Delete')}" ></g:submitToRemote>
 				</fieldset>
 			</g:form>
 		</div>
