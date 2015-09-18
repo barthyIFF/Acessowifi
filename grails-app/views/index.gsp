@@ -32,21 +32,12 @@
 						href="autorizadorProf/index">
 						<span class="glyphicon glyphicon-send"></span>
 						Autorizador</a></li>
-						<li><a class="link-normal msg" datatoggle="tooltip" 
-						title="Alunos Visitantes e Terceirizados"
-						href="#">
-						<span class="glyphicon glyphicon-user"></span>
-						Usuário</a></li>
 					</ul>
 				</div>
 				<div class="col-md-4"></div>
 			</div><!-- row -->
 			<div class="row">
 				<div class="col-md-3">
-					<h1>Sistema para solicitação de cadastro de equipamentos na rede do Isntituto Federal de Educação.	
-					</h1>	
-					<g:formRemote name="solicitacao" url="[controller:'solicitacao', action:'consultaStatus']" update="page-body">
-		   				<label>Protocolo: </label>
 					<h1>Esse sistema bla bla bla	
 					</h1>	
 					<g:formRemote name="solicitacao" url="[controller:'solicitacao', action:'consultaStatus']" update="page-body">
@@ -60,22 +51,6 @@
 					<div id="controller-list" role="navigation">
 					</div>
 				</div>
-				<div class="col-md-6">
-						------------------------------------------{Área de desenvolvimento. Será apagada antes da}------------------------------------------
-<p>
-
-	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 12/09/15 - 17:43<br>
-	Username logado = ${sec.loggedInUserInfo(field:'username')}
-		
-</p>
-
-<p>
-<br>
-	Click <a href="status/status">aqui</a> para acessar a página de teste do ajax! - Ultima atualizacao de Denis = 19/08/15 - 20:08
-</p>
-			</div>
-	    </div><!-- row -->
-
 				    </div><!-- row -->
 		<div id="rodape">
 			<div id="copyright">
