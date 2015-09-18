@@ -29,8 +29,17 @@ class SolicitacaoController {
 		[solicitacoesPorAutorizador:solicitacoesPorAutorizador]
 	}
 	
-	@Secured('ROLE_SUPERUSER')
-	//PENDENCIA: Aqui vai se chamar aprovaSolic e havera outra action de nome reprovaSolic
+	@Secured('ROLE_ADMIN')
+	def indexOperador(Integer max) {
+		//[Claudio - 17/09/15] Listando apenas as solicitacoes do username que está logado atualmente
+		User logado = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal()
+		OperadorCTI op = OperadorCTI.findByUsername(logado.username)
+		def solicitacoesPorOperador = Solicitacao.findAllByOperador(op)
+		[solicitacoesPorOperador:solicitacoesPorOperador]
+	}
+
+	
+	@Secured('ROLE_SUPERUSER')	
 	def aprovaSol(Solicitacao solicitacaoInstance) {
 		if (solicitacaoInstance == null) {
 			notFound()
@@ -43,14 +52,13 @@ class SolicitacaoController {
 		}
 		AutorizadorProf at = AutorizadorProf.findById(solicitacaoInstance.autorizador.id)
 		OperadorCTI op = OperadorCTI.findById(solicitacaoInstance.operador.id)
-		solicitacaoInstance.status = "Solicitacao APROVADA por "+at.nome+'. Aguardando cadastro pelo operador: '+op.nome
+		solicitacaoInstance.status = "Solicitacao APROVADA. Aguardando cadastro pelo operador: "+op.nome
 		solicitacaoInstance.save(flush:true)
 	    render "Solicitacao APROVADA com sucesso!"	
 				
 	}
 	
-	@Secured('ROLE_SUPERUSER')
-	//PENDENCIA: Aqui vai se chamar aprovaSolic e havera outra action de nome reprovaSolic
+	@Secured('ROLE_SUPERUSER')	
 	def reprovaSol(Solicitacao solicitacaoInstance) {
 		if (solicitacaoInstance == null) {
 			notFound()
@@ -63,6 +71,41 @@ class SolicitacaoController {
 		}
 		AutorizadorProf at = AutorizadorProf.findById(solicitacaoInstance.autorizador.id)		
 		solicitacaoInstance.status = "Solicitacao REPROVADA por: "+at.nome
+		solicitacaoInstance.save(flush:true)
+		render "Solicitacao REPROVADA com sucesso!"
+				
+	}
+	
+	@Secured('ROLE_ADMIN')
+	def encerraSol(Solicitacao solicitacaoInstance) {
+		if (solicitacaoInstance == null) {
+			notFound()
+			return
+		}
+
+		if (solicitacaoInstance.hasErrors()) {
+			respond solicitacaoInstance.errors, view:'indexAutorizador'
+			return
+		}		
+		solicitacaoInstance.status = 'Solicitacao FINALIZADA. Acesso a rede garantido.'
+		solicitacaoInstance.save(flush:true)
+		render "Solicitacao ENCERRADA com sucesso!"
+				
+	}
+	
+	@Secured('ROLE_ADMIN')
+	def op_reprovaSol(Solicitacao solicitacaoInstance) {
+		if (solicitacaoInstance == null) {
+			notFound()
+			return
+		}
+
+		if (solicitacaoInstance.hasErrors()) {
+			respond solicitacaoInstance.errors, view:'indexAutorizador'
+			return
+		}
+		OperadorCTI op = OperadorCTI.findById(solicitacaoInstance.operador.id)
+		solicitacaoInstance.status = "Solicitacao REPROVADA por: "+op.nome
 		solicitacaoInstance.save(flush:true)
 		render "Solicitacao REPROVADA com sucesso!"
 				

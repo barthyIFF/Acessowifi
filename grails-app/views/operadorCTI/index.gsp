@@ -11,6 +11,8 @@
 					<ul class="nav nav-pills nav-stacked">
 						<li><g:remoteLink class="link-normal" controller="Solicitacao" action="create" update="page-body">
 						<span class="glyphicon glyphicon-file"></span>&nbsp;Nova Solicitação</g:remoteLink></li>
+						<li><g:remoteLink class="link-normal" controller="Solicitacao" action="indexOperador" update="page-body">
+						<span class="glyphicon glyphicon-file"></span>&nbsp;Encerrar Solicitação</g:remoteLink></li>
 						<li><g:remoteLink class="link-normal" controller="Solicitacao" action="index" update="page-body">
 						<span class="glyphicon glyphicon-list-alt"></span>&nbsp;Lista de solicitacoes</g:remoteLink></li>
 						<li><g:remoteLink class="link-normal" controller="OperadorCTI" action="indexAntigo" update="page-body">
@@ -30,16 +32,21 @@
 					</ul>	
 				</div>
 				<div class="col-md-9" id="page-body">
-					<h1>Sem bem Vindo, Operador</h1>
+					<h1>Seja bem Vindo, ${sec.username()}!</h1>
 					<p>
-					Texto para o operador...Texto para o operador...Texto para o operador...<br>
-					Texto para o operador...Texto para o operador...Texto para o operador...<br>
-					Texto para o operador...Texto para o operador...Texto para o operador...<br>
 					<br>
-					PENDENCIA: tentar colocar aqui uma lista das solicitacoes pendentes, a serem encerradas!<br>
 					<br>
-					PENDENCIA EM CADASTRO DE OPERADORES E AUTORIZADORES: Tem que pegar o usuario e a senha<br>
-					informados e, automaticamente, tb fazer o cadastro em clientes, papelcliente e papel (autenticacao).
+						<%--Verifica as solicitacoes pendentes --%>
+						<g:if test="${solicitacoesPorOperadorEStatus?.size() == 0}">
+    						<p>Atualmente não existem solicitações pendentes em seu nome.</p>
+						</g:if>
+						<g:else>
+							<font color="red">Existe(m) ${solicitacoesPorOperadorEStatus?.size()} solicitações pendentes em seu nome.<br>
+							Você pode efetuar o cadastro dos equipamentos dessas solicitações na rede e em seguida encerra-las.<br>
+		 					Opcionalmente, caso haja algum problema técnico que impeça o cadastro, você também pode reprovar a solicitação.<br>
+		 					Para encerrar ou reprovar a(s) solicitação(ões) clique <g:remoteLink controller="Solicitacao" action="indexOperador" update="page-body">aqui</g:remoteLink> 
+		 					ou use o menu ao lado.</font>
+						</g:else>	
 					</p>
 				</div>
 			</div>

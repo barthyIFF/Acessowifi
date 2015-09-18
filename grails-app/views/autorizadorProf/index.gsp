@@ -18,7 +18,7 @@
 
 <div id="page-body" >
 	<%--Texto para o autorizador --%>
-	<h1>Sem bem Vindo, ${sec.username()}</h1>
+	<h1>Seja bem Vindo, ${sec.username()}!</h1>
 	<br>	
 	<%--Verifica as solicitacoes pendentes --%>
 	<g:if test="${solicitacoesPorAutorizadorEstatus?.size() == 0}">

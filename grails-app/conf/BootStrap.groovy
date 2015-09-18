@@ -181,7 +181,7 @@ class BootStrap {
 					def Solicitacao s = new Solicitacao()
 					s.data = data
 					s.numProtocolo = dataFormatada+"9999"+j
-					s.status = 'Solicitacao APROVADA por Fernando Henrique Cardoso. Aguardando cadastro pelo operador: Dilma Vana Rousseff'
+					s.status = 'Solicitacao APROVADA. Aguardando cadastro pelo operador: Dilma Vana Rousseff'
 					s.tipo = 'Tipo1'
 					s.autorizador = at2
 					s.operador = op2

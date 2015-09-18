@@ -34,7 +34,7 @@
 			<p><b><u>Solicitações APROVADAS:</u></b></p>
 			<br>
 			<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">
-				<g:if test="${sol.status == 'Solicitacao APROVADA por '+sol.autorizador+'. Aguardando cadastro pelo operador: '+sol.operador}">
+				<g:if test="${sol.status == 'Solicitacao APROVADA. Aguardando cadastro pelo operador: '+sol.operador}">
     				<p>Protocolo: ${sol.numProtocolo}; Usuário: ${sol.usuario}
 				</g:if>
 			</g:each>
