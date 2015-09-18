@@ -16,7 +16,7 @@
 			<table>
 			<thead>
 					<tr>
-					
+
 						<th><g:message code = "solicitacao.numProtocolo.label" default= "Num Protocolo" /></th>
 						
 						<th><g:message code = "solicitacao.status.label" default= "Status" /></th>
@@ -57,3 +57,4 @@
 		</div>
 	</body>
 </html>
+
