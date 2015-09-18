@@ -31,7 +31,7 @@ class SolicitacaoController {
 	
 	@Secured('ROLE_SUPERUSER')
 	//PENDENCIA: Aqui vai se chamar aprovaSolic e havera outra action de nome reprovaSolic
-	def mudaStatus(Solicitacao solicitacaoInstance) {
+	def aprovaSol(Solicitacao solicitacaoInstance) {
 		if (solicitacaoInstance == null) {
 			notFound()
 			return 
@@ -40,12 +40,31 @@ class SolicitacaoController {
 		if (solicitacaoInstance.hasErrors()) {
 			respond solicitacaoInstance.errors, view:'indexAutorizador'
 			return
-		}	
-		//def Solicitacao s = Solicitacao.get(solicitacaoInstance.id)
-		//s.save(flush:true)
-		solicitacaoInstance.status = "Aguardando Aprovaca"
+		}
+		AutorizadorProf at = AutorizadorProf.findById(solicitacaoInstance.autorizador.id)
+		OperadorCTI op = OperadorCTI.findById(solicitacaoInstance.operador.id)
+		solicitacaoInstance.status = "Solicitacao APROVADA por "+at.nome+'. Aguardando cadastro pelo operador: '+op.nome
 		solicitacaoInstance.save(flush:true)
 	    render "Solicitacao APROVADA com sucesso!"	
+				
+	}
+	
+	@Secured('ROLE_SUPERUSER')
+	//PENDENCIA: Aqui vai se chamar aprovaSolic e havera outra action de nome reprovaSolic
+	def reprovaSol(Solicitacao solicitacaoInstance) {
+		if (solicitacaoInstance == null) {
+			notFound()
+			return
+		}
+
+		if (solicitacaoInstance.hasErrors()) {
+			respond solicitacaoInstance.errors, view:'indexAutorizador'
+			return
+		}
+		AutorizadorProf at = AutorizadorProf.findById(solicitacaoInstance.autorizador.id)		
+		solicitacaoInstance.status = "Solicitacao REPROVADA por: "+at.nome
+		solicitacaoInstance.save(flush:true)
+		render "Solicitacao REPROVADA com sucesso!"
 				
 	}
 	
