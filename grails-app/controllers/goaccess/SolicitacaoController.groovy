@@ -40,7 +40,7 @@ class SolicitacaoController {
 		if (solicitacaoInstance.hasErrors()) {
 			respond solicitacaoInstance.errors, view:'indexAutorizador'
 			return
-		} 	
+		} 
 		AutorizadorProf at = AutorizadorProf.findById(solicitacaoInstance.autorizador.id)
 		OperadorCTI op = OperadorCTI.findById(solicitacaoInstance.operador.id)
 		solicitacaoInstance.status = "Solicitacao APROVADA por "+at.nome+'. Aguardando cadastro pelo operador: '+op.nome
