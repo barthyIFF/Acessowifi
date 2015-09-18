@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,31 +44,35 @@
 			</div><!-- row -->
 			<div class="row">
 			<div class="col-md-6">
-				<h3>Bem vindo ao Sistema Acesso Wifi</h3>
-				<p>Esse sistema bla bla bla			
-				<g:form controller="Solicitacao" action="consultaStatus">
-					<label>Teste00: </label>
-					<g:textField name="protocolo"/><br/>
-					<g:actionSubmit value="Teste01" action="consultaStatus"/>
-					<input type="submit" value="Test02"/>
-				</g:form>
-				</p>
-				<div id="controller-list" role="navigation">
-				</div>
+	<h1><br><br><br><br>
+		Esse sistema bla bla bla	
+		</h1>	
+			<g:formRemote name="solicitacao" url="[controller:'solicitacao', action:'consultaStatus']" update="page-body">
+   				<label>Teste00: </label>
+				<g:textField name="protocolo"/><br/>
+    			<g:actionSubmit value="Teste01" action="consultaStatus"/>
+				<input type="submit" value="Test02"/>
+			</g:formRemote>	
+		</div>
+		<div id="page-body" role="main">
+		<div id="controller-list" role="navigation">
+				
+			</div>
 			</div>
 			<div class="col-md-6">
-						------------------------------------------{Área de desenvolvimento. Será apagada antes da}------------------------------------------
-				<p>
-				
-					Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 12/09/15 - 16:49<br>
-					Username logado = ${sec.loggedInUserInfo(field:'username')}
-						
-				</p>
-				
-				<p>
-				<br>
-					Click <a href="status/status">aqui</a> para acessar a página de teste do ajax! - Ultima atualizacao de Denis = 19/08/15 - 20:08
-				</p>
+		<br><br><br><br><br><br><br><br><br><br><br>
+		------------------------------------------{Área de desenvolvimento. Será apagada antes da}------------------------------------------
+<p>
+
+	Click <a href="OutrasTarefas/indexInicial">aqui</a> para acessar a página inicial antiga! - Ultima atualizacao de Claudio = 12/09/15 - 17:43<br>
+	Username logado = ${sec.loggedInUserInfo(field:'username')}
+		
+</p>
+
+<p>
+<br>
+	Click <a href="status/status">aqui</a> para acessar a página de teste do ajax! - Ultima atualizacao de Denis = 19/08/15 - 20:08
+</p>
 			</div>
 	    </div><!-- row -->
 		<div id="rodape">
