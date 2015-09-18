@@ -9,7 +9,7 @@
 		<a href="#create-solicitacao" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 
 		<div id="create-solicitacao" class="content scaffold-create" role="main">
-			<br><h1>ATENÇÃO: Antes de criar uma solicitação, certifique-se de que já foram cadastrados o Autorizador, o Operador e o usuário da solicitação.</h1>
+			<br><h1>Antes de criar uma solicitação, certifique-se de que já foram cadastrados o Autorizador, o Operador e o usuário da solicitação.</h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
