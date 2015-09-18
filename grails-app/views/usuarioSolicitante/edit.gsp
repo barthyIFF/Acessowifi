@@ -33,7 +33,7 @@
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+					<g:submitToRemote class="save" update="page-body" url="[controller:'usuarioSolicitante', action:'update', id:usuarioSolicitanteInstance.id]" value="${message(code: 'default.button.update.label', default: 'Update')}" ></g:submitToRemote>
 				</fieldset>
 			</g:form>
 		</div>
