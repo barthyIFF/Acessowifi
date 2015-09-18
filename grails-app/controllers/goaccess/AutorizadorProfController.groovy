@@ -105,14 +105,16 @@ class AutorizadorProfController {
 		ClientePapel cp = ClientePapel.findByCliente(autorizadorProfInstance)		
 		cp.delete(flush:true)		
         autorizadorProfInstance.delete flush:true
+		
+		render "Autorizador deletado"
 
-        request.withFormat {
+        /*request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'AutorizadorProf.label', default: 'AutorizadorProf'), autorizadorProfInstance.id])
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }
-        }
+        }*/
     }
 
     protected void notFound() {

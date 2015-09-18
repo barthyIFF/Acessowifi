@@ -114,14 +114,16 @@ class OperadorCTIController {
 		cp.delete(flush:true)
 		
         operadorCTIInstance.delete flush:true
+		
+		render "Operador deletado!"
 
-        request.withFormat {
+       /* request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'OperadorCTI.label', default: 'OperadorCTI'), operadorCTIInstance.id])
                 redirect action:"index", method:"GET"
             }
             '*'{ render status: NO_CONTENT }
-        }
+        }*/
     }
 
     protected void notFound() {

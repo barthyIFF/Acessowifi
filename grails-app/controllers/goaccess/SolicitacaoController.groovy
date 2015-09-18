@@ -115,9 +115,9 @@ class SolicitacaoController {
 	def consultaStatus() {
 		Solicitacao s = Solicitacao.findByNumProtocolo(params.protocolo)
 		if (s == null)
-			render "Resposta do teste: Nao encontrada"
+			render "<h4>Consulta ao protocolo "+params.protocolo+":<font color='red'> Solicitacao nao encontrada.</font></h4>"
 		else
-			render "Resposta do teste: "+s.status
+			render "<h4>Consulta ao protocolo "+params.protocolo+": <font color='red'>"+s.status+"</font></h4>"
 		
 	}
 
