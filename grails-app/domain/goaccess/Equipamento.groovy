@@ -13,7 +13,7 @@ class Equipamento {
 	static belongsTo = Solicitacao
 	
     static constraints = {
-		ip(blank:false,unique:true)
+		ip(blank:false)
 		mac(nullable:false,blank:false)
     }
 }

@@ -38,13 +38,17 @@
 			</div><!-- row -->
 			<div class="row">
 				<div class="col-md-3">
-					<h1>Esse sistema bla bla bla	
-					</h1>	
+					Sistema de solicitação de acesso a rede wireless do Instituto Federal.
+					Para usa-lo clique em um dos perfis ao lado.<br>
+					Caso você seja um usuario que solicitou acesso ao sistema e está aguardando a liberação,
+					digite o número do seu protocolo de atendimento abaixo para consultar o status de sua 
+					solicitação. 
+						
 					<g:formRemote name="solicitacao" url="[controller:'solicitacao', action:'consultaStatus']" update="page-body">
-		   				<label>Teste00: </label>
+		   				<label>Protocolo: </label>
 						<g:textField name="protocolo"/><br/>
-		    			<g:actionSubmit value="Teste01" action="consultaStatus"/>
-						<input type="submit" value="Test02"/>
+		    			<g:actionSubmit value="Consultar" action="consultaStatus"/>
+						
 					</g:formRemote>	
 				</div>
 				<div class="col-md-3" id="page-body" role="main">
