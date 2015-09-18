@@ -90,7 +90,10 @@ class AutorizadorProfController {
             notFound()
             return
         }
-
+		
+		//Antes de apagar o cliente tem que apagar o ClientePapel
+		ClientePapel cp = ClientePapel.findByCliente(autorizadorProfInstance)		
+		cp.delete(flush:true)		
         autorizadorProfInstance.delete flush:true
 
         request.withFormat {
