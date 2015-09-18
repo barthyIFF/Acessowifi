@@ -29,7 +29,7 @@
 						<span class="glyphicon glyphicon-tasks"></span>&nbsp;Encerrar Solicitacoes (P)</g:remoteLink></li>
 						<li><a class="link-normal" href="j_spring_security_logout">
 						<span class="glyphicon glyphicon-log-out"></span>&nbsp;Fazer logout</a></li>
-					</ul>	
+					</ul>
 				</div>
 				<div class="col-md-9" id="page-body">
 					<h1>Seja bem Vindo, ${sec.username()}!</h1>
