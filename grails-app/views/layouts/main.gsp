@@ -10,7 +10,7 @@
 		<title><g:layoutTitle default="Grails"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-			<style type="text/css" media="screen">
+		<style type="text/css" media="screen">
 			
 			#menusuperior {
 				background-color: #eee;
@@ -83,13 +83,22 @@
 				margin: 0.25em 0;
 			}
 			}
+.footer {
+	background: #000;
+	color: #000;
+	clear: both;
+	font-size: 0.8em;
+	margin-top: 1.5em;
+	padding: 1em;
+	min-height: 1em;
+}
 						
 		</style>
 		<asset:stylesheet src="application.css"/>
 		<asset:javascript src="application.js"/>
 		<g:layoutHead/>
 	</head>
-	<body>	
+	<body class="page">	
 	<div id="grailsLogo" role="banner"><a class="home" href="${createLink(uri: '/')}"><asset:image src="awifi_logo.png" alt="Awifi"/></a>	
 		
 		</div>
