@@ -10,14 +10,14 @@
 		<a href="#list-solicitacao" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="list-solicitacao" class="content scaffold-list" role="main">
 		<br>
-			<h1> Sr. ${sec.username()}, as solicitações abaixo estão em seu nome.</h1><br>
+			<h1> Sr. ${sec.username()}, segue abaixo a lista com o histórico das solicitações em seu nome organizadas pelo status.</h1><br>
 			<%--Username logado = ${sec.loggedInUserInfo(field:'username')}<br>
 			${sec.username()}<br>--%>
 			<br>
 			<br>
 			
 			<%--Somente aguardando aprovacao --%>
-			<p><b><u>Solicitações aguardando aprovação:</u></b></p>
+			<p><b><u>Solicitações AGUARDANDO APROVAÇÃO:</u></b></p>
 			<br>			
 			<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">
 				<g:if test="${sol.status == 'AGUARDANDO APROVACAO de '+sol.autorizador}">
@@ -31,7 +31,7 @@
 			
 			
 			<%--Aprovadas --%>
-			<p><b><u>Solicitações que APROVADAS:</u></b></p>
+			<p><b><u>Solicitações APROVADAS:</u></b></p>
 			<br>
 			<g:each in="${solicitacoesPorAutorizador}" var="sol" status="i">
 				<g:if test="${sol.status == 'Solicitacao APROVADA por '+sol.autorizador+'. Aguardando cadastro pelo operador: '+sol.operador}">
@@ -39,7 +39,7 @@
 				</g:if>
 			</g:each>
 			<br>
-			
+			<br>
 			<%--Reprovadas --%>
 			<p><b><u>Solicitações REPROVADAS:</u></b></p>
 			<br>
@@ -49,7 +49,9 @@
 				<g:if test="${sol.status == 'Solicitacao REPROVADA por: '+sol.autorizador || sol.status == 'Solicitacao REPROVADA por: '+sol.operador}">
     				<p>Protocolo: ${sol.numProtocolo}; Usuário: ${sol.usuario} - ${sol.status} <p> <br>
 				</g:if>
-			</g:each><br>
+			</g:each>
+			<br>
+			<br>
 
 			<%--Finalizadas: acesso garantido. --%>
 			<p><b><u>Solicitações FINALIZADAS (acesso à rede garantido):</u></b></p>
