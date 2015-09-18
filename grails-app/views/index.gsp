@@ -14,7 +14,7 @@
 
 </head>
 <body>
-<div id="site">
+<div id="site"> 
 	<div class="content packtlib" id="conteudo">
 
 			<div class="row">
