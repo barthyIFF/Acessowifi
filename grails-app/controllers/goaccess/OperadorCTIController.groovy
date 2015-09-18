@@ -2,6 +2,8 @@ package goaccess
 import grails.plugin.springsecurity.annotation.Secured
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import org.springframework.security.core.userdetails.User
+import org.springframework.security.core.context.SecurityContextHolder
 
 @Transactional(readOnly = true)
 @Secured('ROLE_ADMIN')
@@ -10,13 +12,20 @@ class OperadorCTIController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def indexAntigo(Integer max) {
-        params.max = Math.min(max ?: 500, 500)
+        params.max = Math.min(max ?: 10, 100)
         respond OperadorCTI.list(params), model:[operadorCTIInstanceCount: OperadorCTI.count()]
     }
 
     def index(Integer max) {
-        params.max = Math.min(max ?: 500, 500)
-        respond OperadorCTI.list(params), model:[operadorCTIInstanceCount: OperadorCTI.count()]
+        /*params.max = Math.min(max ?: 10, 100)
+        respond OperadorCTI.list(params), model:[operadorCTIInstanceCount: OperadorCTI.count()]*/
+		
+		//[Claudio - 18/09/15] Listando apenas as solicitacoes do username que está logado atualmente
+		User logado = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal()
+		OperadorCTI op = OperadorCTI.findByUsername(logado.username)
+		//Listando somente o status de interesse
+		def solicitacoesPorOperadorEStatus = Solicitacao.findAllByOperadorAndStatus(op, "Solicitacao APROVADA. Aguardando cadastro pelo operador: "+op.nome)
+		[solicitacoesPorOperadorEStatus:solicitacoesPorOperadorEStatus]
     }
 
     def show(OperadorCTI operadorCTIInstance) {
@@ -124,4 +133,6 @@ class OperadorCTIController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+
 }
