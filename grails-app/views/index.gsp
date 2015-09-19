@@ -49,7 +49,7 @@
 						<g:textField name="protocolo"/><br/>
 		    			<g:actionSubmit value="Consultar" action="consultaStatus"/>						
 					</g:formRemote>	
-				</div>
+				</div> 
 				<div class="col-md-3" id="page-body" role="main">
 					<div id="controller-list" role="navigation">
 					</div>
