@@ -1,136 +1,4 @@
-@CHARSET "ISO-8859-1";
-/*ESTILO DAS PAGINAS LIGAO A OPERADOR CTI */
-#pub {
-	padding-top: 25px;
-	padding-bottom: 25px;
-	padding-right: 30px;
-	padding-left: 30px;
-}
-.verborda{
-	border:dotted;
-}
-.verborda2{
-	border:2px;
-}
-.link-normal {
-	background: white; /*#43CD80; */
-	color: black;
-	margin: 0px;
-	padding: 0px;
-	font-size:14px;
-}
-.link-normal a:houver{
- background-color: 	#9AFF9A;
-}
-#menu {
-	background-color: #eee;
-	border: .2em solid #fff;
-	float: left;
-	border-radius: 0.6em;
-}
-
-.footer {
-	background: #000;
-	color: #000;
-	clear: both;
-	font-size: 0.8em;
-	margin-top: 1.5em;
-	padding: 1em;
-	min-height: 1em;
-}	
-#page-body {
-
-}
-#cabecalho{
-}
-#grailsLogo {
-	background-color: #000000;
-	padding:10px;	
-	margin:0;
-	/*background-image: url(../images/img02.png);*/
-}
-.home{
-	
-}
-#conteudo{
-	margin:10px;
-}
-#rodape{
-}
-#status-login{
-	backgroud:gray;	
-	padding:20px;
-	text-align: right;
-}
-
-/* NAVIGATION MENU */
-
-.nav {
-	background-color:  white; /* #efefef; */
-	padding: 0.5em 0.75em;
-	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
-	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
-	        box-shadow: 0 0 3px 1px #aaaaaa;
-	zoom: 1;
-}
-
-.nav ul {
-	overflow: hidden;
-	padding-left: 0;
-	zoom: 1;
-}
-
-.nav li {
- 	display: block;
-	float: left;
-	list-style-type: none;
-	margin-right: 0.5em;
-	padding: 0; 
-}
-
-.nav a {
-	color: #666666;
-	display: block;
-	padding: 0.25em 0.7em;
-	text-decoration: none;
-    -moz-border-radius: 0.3em;
-	-webkit-border-radius: 0.3em;
-    border-radius: 0.3em; 
-}
-
-.nav a:active, .nav a:visited {
-	color: #666666;
-}
-
-.nav a:focus, .nav a:hover {
-	background-color: #999999; 
-	color: black; /*#ffffff;*/
-}
-
-.no-borderradius .nav a:focus, .no-borderradius .nav a:hover {
-	background-color: transparent;
-	color: #444444;
-	text-decoration: underline;
-}
-
-.nav a.home, .nav a.list, .nav a.create {
-	background-position: 0.7em center;
-	background-repeat: no-repeat;
-	text-indent: 25px;
-}
-
-.nav a.home {
-	background-image: url(../images/skin/house.png);
-}
-.nav a.list {
-	background-image: url(../images/skin/database_table.png);
-}
-
-.nav a.create {
-	background-image: url(../images/skin/database_add.png);
-}
-/*INFORMAÇÕES COLETADA DO AQUIVO STATUS3.CSS */
-* FINAL MENU */
+/* FINAL MENU */
 
 /* replace with .no-boxshadow body if you have modernizr available */
 .ie6 body,
@@ -172,6 +40,9 @@ img {
 }
 
 /* GENERAL */
+
+
+
 .content {
 }
 
@@ -210,8 +81,79 @@ img {
 	text-indent: -9999px;
 }
 
+/* NAVIGATION MENU */
+
+.nav {
+	background-color: #efefef;
+	padding: 0.1em 1em;
+	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
+	        box-shadow: 0 0 3px 1px #aaaaaa;
+	zoom: 1;
+}
+
+.nav ul {
+	overflow: hidden;
+	padding-left: 0;
+	zoom: 1;
+}
+
+.nav li {
+	display: block;
+	float: left;
+	list-style-type: none;
+	margin-right: 0.5em;
+	padding: 0;
+}
+
+.nav a {
+	color: #666666;
+	display: block;
+	padding: 0.25em 0.7em;
+	text-decoration: none;
+	   -moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	        border-radius: 0.3em;
+}
+
+.nav a:active, .nav a:visited {
+	color: #000000;
+	
+}
+
+.nav a:focus, .nav a:hover {
+	background-color: #999999;
+	color: #ffffff;
+	outline: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.no-borderradius .nav a:focus, .no-borderradius .nav a:hover {
+	background-color: transparent;
+	color: #444444;
+	text-decoration: underline;
+}
+
+.nav a.home, .nav a.list, .nav a.create {
+	background-position: 0.7em center;
+	background-repeat: no-repeat;
+	text-indent: 25px;
+}
+
+.nav a.home {
+	background-image: url(../images/skin/house.png);
+}
+
+.nav a.list {
+	background-image: url(../images/skin/database_table.png);
+}
+
+.nav a.create {
+	background-image: url(../images/skin/database_add.png);
+}
 
 /* CREATE/EDIT FORMS AND SHOW PAGES */
+
 fieldset,
 .property-list {
 	margin: 0.6em 1.25em 0 1.25em;
@@ -313,6 +255,7 @@ ul.one-to-many {
 ul.one-to-many li.add {
 	list-style-type: none;
 }
+
 /* EMBEDDED PROPERTIES */
 
 fieldset.embedded {
@@ -330,6 +273,7 @@ fieldset.embedded {
 fieldset.embedded legend {
 	margin: 0 1em;
 }
+
 /* MESSAGES AND ERRORS */
 
 .errors,
@@ -401,6 +345,7 @@ input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
 	-webkit-box-shadow: 0 0 0.5em #ffaaaa;
 	        box-shadow: 0 0 0.5em #ffaaaa;
 }
+
 /* TABLES */
 
 table {
@@ -483,6 +428,7 @@ th.desc a {
 th:hover, tr:hover {
 	background: #E1F2B6;
 }
+
 /* PAGINATION */
 
 .pagination {
@@ -598,4 +544,3 @@ a.skip {
 	position: absolute;
 	left: -9999px;
 }
-		
