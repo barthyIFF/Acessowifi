@@ -17,7 +17,7 @@
 </div>
 
 <div id="page-body" >
-	<%--Texto para o autorizador --%>
+	<%--Texto para o autorizador --%> 
 	<h1>Seja bem Vindo, ${sec.username()}!</h1>
 	<br>	
 	<%--Verifica as solicitacoes pendentes --%>
