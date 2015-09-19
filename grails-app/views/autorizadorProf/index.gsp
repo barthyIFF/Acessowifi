@@ -148,8 +148,12 @@
 			<div id="menu" >
 				<h1>Menu</h1>
 				<ul class="nav">		
-					<li><g:remoteLink controller="Solicitacao" action="indexAutorizador" update="page-body">Solicitações</g:remoteLink></li>
-					<li><a href="../j_spring_security_logout">Fazer logout</a></li>	
+					<li><g:remoteLink controller="Solicitacao" action="indexAutorizador" update="page-body">
+					<asset:image src="glyphicons-115-list.png" width="15" height="15" alt="botao solicitaco" />
+					Solicitações</g:remoteLink></li>
+					<li><a href="../j_spring_security_logout">
+					<asset:image src="glyphicons-388-log-out.png" width="15" height="15" alt="botao logout" />
+					Fazer logout</a></li>	
 				</ul>
 		</div>
 		</div>
