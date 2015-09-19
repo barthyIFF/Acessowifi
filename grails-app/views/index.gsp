@@ -47,8 +47,7 @@
 					<g:formRemote name="solicitacao" url="[controller:'solicitacao', action:'consultaStatus']" update="page-body">
 		   				<label>Protocolo: </label>
 						<g:textField name="protocolo"/><br/>
-		    			<g:actionSubmit value="Consultar" action="consultaStatus"/>
-						
+		    			<g:actionSubmit value="Consultar" action="consultaStatus"/>						
 					</g:formRemote>	
 				</div>
 				<div class="col-md-3" id="page-body" role="main">
