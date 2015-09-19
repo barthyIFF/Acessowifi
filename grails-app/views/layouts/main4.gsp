@@ -30,13 +30,7 @@
 			<img src="images/awifi_logo.png" alt="Awifi"/></a>
 		</div>	
 		<div id="status-login">
-				<div class="btn-group">
-					<button class="btn btn-success"> ${sec.loggedInUserInfo(field:'username')}</button>
-					<button data-toggle="dropdown" class="btn btn-success dropdown-toggle"><span class="caret"></span></button>
-					<ul class="dropdown-menu">
-						<li><a href="j_spring_security_logout">Logout</a></li>
-					</ul>
-				</div>
+				
 		</div><!-- status-login -->
 	</div> <!-- cabecalho -->
 
