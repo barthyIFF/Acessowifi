@@ -30,7 +30,7 @@
 		 ou use o menu ao lado.</p></font>
 	</g:else>			
 
-<div id="controller-list" role="navigation"></div>
+<div id="controller-list" role="navigation"></div> 
 </div>
 </body>
 </html>
