@@ -39,20 +39,24 @@
 						<div class="panel-heading">
 							<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion"
-							href="#packtpubcollapse1">Usuario</a>
+							href="#packtpubcollapse1">
+							<span class="glyphicon glyphicon-user"></span>
+							Usuário</a>
 							</h4>
 						</div>
 						<div id="packtpubcollapse1" class="panel-collapse collapse">
 							<div class="panel-body">
 								<g:formRemote name="solicitacao" url="[controller:'solicitacao', action:'consultaStatus']" update="page-body">
 				   				<label>Protocolo: </label>
-								<g:textField name="protocolo"/><br/>
-				    			<g:actionSubmit value="Consultar" action="consultaStatus"/>
+				   				<g:textField name="protocolo" class="form-control" placeholder="Digite o Protocolo"/><br/>
+				    			<span class="glyphicon glyphicon-search"></span>
+				    			<g:actionSubmit class="btn btn-success" value="Consultar" action="consultaStatus"/>
+				    		
 								</g:formRemote>	
 							</div>
 							<div id="page-body">
 							</div>
-				</div>
+						</div>
 						</div><!-- packtpucollapse1 -->
 					</div><!-- panel -->
 				</div><!-- panel-group -->

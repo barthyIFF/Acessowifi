@@ -1,16 +1,38 @@
 /*TESTANDO O CSS */
 .panel-group{
-	background:	#43CD80;
-	color: black;	
+	background:	white;
+	color: black;
 }
 .panel{
+background: white;
+broder:dotted red;
+}
+
+.panel-heading{
 background: #43CD80;
 	color: black;
 	margin: 5px;
-	padding: 20px;
-	font-size:20px;
-	text-align: center;
+	padding: 10px;
+	text-align: center;	
+
 }
+ .panel-heading>h4>a:focus,.panel-heading>h4>a:hover{
+ 	text-decoration:none;
+ 	background-color:#43CD80;   
+ 	color:white;
+ 	} 
+.panel-title{
+	font-size:20px;
+
+}
+ .panel-title>h4>a:focus,.panel-title>h4:a:hover{
+ 	text-decoration:none;
+ 	background-color:#54FF9F;   
+ 	color:white;
+ 	}
+ .panel-body{
+ 	border-style:ridge;
+ }	
 .link-normal {
 	background: #43CD80;
 	color: black;
@@ -26,7 +48,7 @@ background: #43CD80;
   background-size: cover; */
 }
 .link-normal a:houver{
- background-color: 	#9AFF9A;
+ background-color: 	white;/*#9AFF9A; ESTÁ SEM EFEITO*/
 }	
 .menu1{
   /* border:dotted red; */
@@ -127,9 +149,11 @@ ul{
  	display:block; 
  	padding: 10px; /*10px 15px */
  }
+ /*A COR DE FUNDO DO MENU É DEFINIDA AQUI */
  .nav>li>a:focus,.nav>li>a:hover{
  	text-decoration:none;
- 	background-color:#54FF9F; 
+ 	background-color: #43CD80; /*#54FF9F;*/ 
+ 	color:white; 
  	} 
  .nav>li.disabled>a{
  	color:#777;
