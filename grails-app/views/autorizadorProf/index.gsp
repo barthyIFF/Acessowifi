@@ -138,7 +138,7 @@
 <div id="pagina">
 	<div id=cabecalho>
 		<div id="grailsLogo" role="banner">
-		<a href="#"><asset:image src="awifi_logo.png" alt="Grails"/></a></div>
+		<a href="${createLink(uri: '/')}"><asset:image src="awifi_logo.png" alt="Grails"/></a></div>
 	</div>
 	<div id="status-login">
 	</div>
