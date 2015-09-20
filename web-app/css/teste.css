@@ -1,4 +1,16 @@
 /*TESTANDO O CSS */
+.panel-group{
+	background:	#43CD80;
+	color: black;	
+}
+.panel{
+background: #43CD80;
+	color: black;
+	margin: 5px;
+	padding: 20px;
+	font-size:20px;
+	text-align: center;
+}
 .link-normal {
 	background: #43CD80;
 	color: black;

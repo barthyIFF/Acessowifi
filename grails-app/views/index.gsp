@@ -32,29 +32,35 @@
 						href="autorizadorProf/index">
 						<span class="glyphicon glyphicon-send"></span>
 						Autorizador</a></li>
-					</ul>
+					
+				<!-- ATUALIZAÇÃO ACORDEON -->
+				<li><div class="panel-group" id="accordion">
+					<div class="panel">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+							href="#packtpubcollapse1">Usuario</a>
+							</h4>
+						</div>
+						<div id="packtpubcollapse1" class="panel-collapse collapse">
+							<div class="panel-body">
+								<g:formRemote name="solicitacao" url="[controller:'solicitacao', action:'consultaStatus']" update="page-body">
+				   				<label>Protocolo: </label>
+								<g:textField name="protocolo"/><br/>
+				    			<g:actionSubmit value="Consultar" action="consultaStatus"/>
+								</g:formRemote>	
+							</div>
+							<div id="page-body">
+							</div>
 				</div>
-				<div class="col-md-4"></div>
-			</div><!-- row -->
-			<div class="row">
-				<div class="col-md-3">
-					Sistema de solicitação de acesso a rede wireless do Instituto Federal.
-					Para usa-lo clique em um dos perfis ao lado.<br>
-					Caso você seja um usuario que solicitou acesso ao sistema e está aguardando a liberação,
-					digite o número do seu protocolo de atendimento abaixo para consultar o status de sua 
-					solicitação. 
-						
-					<g:formRemote name="solicitacao" url="[controller:'solicitacao', action:'consultaStatus']" update="page-body">
-		   				<label>Protocolo: </label>
-						<g:textField name="protocolo"/><br/>
-		    			<g:actionSubmit value="Consultar" action="consultaStatus"/>
-						
-					</g:formRemote>	
-				</div>
-				<div class="col-md-3" id="page-body" role="main">
-					<div id="controller-list" role="navigation">
-					</div>
-				</div>
+						</div><!-- packtpucollapse1 -->
+					</div><!-- panel -->
+				</div><!-- panel-group -->
+				</li>
+				</ul>
+									<!-- FIM ACORDEON -->
+				<!-- TESTANDO O ALERTA -->
+		
 				    </div><!-- row -->
 		<div id="rodape">
 			<div id="copyright">
