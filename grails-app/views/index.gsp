@@ -39,7 +39,8 @@
 						<div class="panel-heading">
 							<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion"
-							href="#packtpubcollapse1">
+							href="#packtpubcollapse1" datatoggle="tooltip" 
+							title="Alunos, Visitantes e Convidados">
 							<span class="glyphicon glyphicon-user"></span>
 							Usuário</a>
 							</h4>
