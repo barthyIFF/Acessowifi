@@ -20,7 +20,11 @@ background: #43CD80;
  	text-decoration:none;
  	background-color:#43CD80;   
  	color:white;
- 	} 
+ 	}
+ .panel-heading>h4>p{
+ 	color:black;
+ 	text-align:left;
+ 	}	 
 .panel-title{
 	font-size:20px;
 

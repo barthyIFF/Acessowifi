@@ -33,8 +33,33 @@
 			<img src="images/awifi_logo.png" alt="Awifi"/>
 			</a>
 		</div>	
-		<div id="status-login">
+		<div id="status-login">	
 		</div><!-- status-login -->
+					
+		<!-- ATUALIZAÇÃO ACORDEON -->
+				<div class="panel-group" id="accordion">
+					<div class="panel">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+							href="#packtpubcollapse2">
+							SOBRE O SISTEMA</a>
+							</h4>
+						</div>
+						<div id="packtpubcollapse2" class="panel-collapse collapse">
+							<p>
+							Sistema de solicitação de acesso a rede wireless do Instituto Federal. 
+							Para usá-lo clique em um dos perfis ao lado.
+							Caso você seja um usuário que solicitou acesso ao sistema e 
+							está aguardando a liberação, clique no botão usuário e digite o número do seu protocolo 
+							de atendimento para consultar o status de sua solicitação. 
+							</p>
+						</div><!-- packtpucollapse1 -->
+					</div><!-- panel -->
+				</div><!-- panel-group -->
+								<!-- FIM ACORDEON -->
+				<!-- TESTANDO O ALERTA -->
+		
 	</div> <!-- cabecalho -->
 	<g:layoutBody/>
 		<div class="footer">
